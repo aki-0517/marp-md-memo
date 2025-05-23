@@ -1,11 +1,44 @@
 # Dictyostelium discoideum ゲノムアセンブリ・ポリッシングまとめ
 
+## 目次
+- [Dictyostelium discoideum ゲノムアセンブリ・ポリッシングまとめ](#dictyostelium-discoideum-ゲノムアセンブリポリッシングまとめ)
+  - [目次](#目次)
+  - [背景知識](#背景知識)
+    - [Dictyostelium discoideum ゲノムの概要](#dictyostelium-discoideum-ゲノムの概要)
+      - [ゲノム配列の特徴](#ゲノム配列の特徴)
+  - [使用データ](#使用データ)
+  - [ONTリード長分布の可視化](#ontリード長分布の可視化)
+    - [Data](#data)
+  - [アセンブリ手法](#アセンブリ手法)
+    - [Quastによる評価](#quastによる評価)
+  - [ポリッシング手法](#ポリッシング手法)
+  - [現状](#現状)
+  - [今後の方針](#今後の方針)
+
 ## 背景知識
 
 - **核染色体数**: 6本
 - **extrachromosomal palindrome（rDNA）**: 約88kbの線状パリンドロームが約100コピー、核DNAの約20%を占める
 - **ミトコンドリアゲノム**: 約55.6kbが約200コピー
 - **リプリコン数**: 6本の核染色体 + rDNAパリンドローム + ミトコンドリアゲノム = 計8本（理想的なcontig数）
+
+---
+
+### Dictyostelium discoideum ゲノムの概要
+
+- **全長**: 約33.89 Mb（染色体アセンブリ：33,817,471 bp、浮遊コンティグ：69,589 bp）
+- **染色体数**: 6本
+- **カバレッジ**: 染色体1–6で9.1×～10.3×、全体平均8.3×
+- **コンティグ数**: 染色体アセンブリ上309本（155箇所にギャップ）、浮遊コンティグ34本
+- **ギャップ総推定長**: 155,750 bp（配列ギャップ・リピートギャップ・クローンギャップ含む）
+- **組み立て手法**: Whole-Chromosome Shotgun（WCS）＋HAPPYマッピング（3,902マーカー、平均8.7 kb間隔）
+
+#### ゲノム配列の特徴
+- **ATリッチ**: 全ゲノムの77.57%がA+T（G+Cは22.43%）
+- **CpG欠乏**: CpG頻度はGpCの62%、シトシンのメチル化が示唆される
+- **単純繰返し配列（SSR）**: ゲノム塩基の>11%（非コーディング領域で特に高頻度、ホモポリマーも多い）
+- **トランスポゾン**: 非LTRレトロトランスポゾンが多数、tRNA近傍への挿入が多い
+- **tRNA遺伝子**: 390本（真核生物として上位）、全感覚コドンをほぼ網羅、tandem duplicationが多い
 
 ## 使用データ
 
@@ -19,10 +52,6 @@
 
 - ONT
 
-![read-length](../public/read-length/image.png)
-
-### Result
-
 ```bash
 stats for Dicty_gDNA_NEB-2.fastq
 sum = 8359638019, n = 934886, ave = 8941.88, largest = 139714
@@ -35,6 +64,10 @@ N100 = 19, n = 934886
 N_count = 0
 Gaps = 0
 ```
+
+![read-length](../public/read-length/image.png)
+
+
 ※ 現在のプロジェクトはDictyostelium discoideumのゲノムアセンブリに焦点を当てており、ONTデータが主要なシーケンスデータとして使用されています。
 
 ## アセンブリ手法
@@ -81,40 +114,3 @@ Gaps = 0
    - ベストなアセンブリ結果をもとにscaffoldingツールを適用し、目標の8本に近づける
 3. **マルチアセンブリ戦略の検討**
    - 切れ目の異なる複数アセンブリを統合し、より長いcontigを目指す
-
----
-
-### 参考: 主なアセンブリ・ポリッシングコマンド
-
-#### Flye
-```bash
-flye --nano-raw Dicty_gDNA_NEB-2.fastq.gz -g 34m -o flye_assembly -t 8
-```
-#### Canu
-```bash
-canu -p dicty_canu -d canu_assembly genomeSize=34m -nanopore-raw Dicty_gDNA_NEB-2_half.fastq.gz maxThreads=8 maxMemory=32g useGrid=false gnuplotTested=true
-```
-#### Raven
-```bash
-raven -t 8 Dicty_gDNA_NEB-2_half.fastq.gz > raven_assembly.fasta
-```
-#### Shasta
-```bash
-shasta --input Dicty_gDNA_NEB-2_half.fastq --config Nanopore-Dec2019 --threads 8 --assemblyDirectory shasta_assembly
-```
-#### Quast
-```bash
-quast.py ./raven_assembly.fasta flye_assembly/assembly.fasta shasta_assembly/Assembly.fasta canu_assembly/dicty_canu.contigs.fasta -o quast_results_no_ref -t 8 -l Raven,Flye,Shasta,Canu
-```
-#### Pilon
-```bash
-java -Xmx64G -jar pilon.jar --genome canu_assembly/dicty_canu.contigs.fasta --bam merged.bam --output pilon_round1_snps_indels --fix snps,indels
-```
-#### Medaka
-```bash
-medaka_consensus -i Dicty_gDNA_NEB-2.fastq -d pilon_round2_polished.fasta -o medaka_out -t 8 -m r941_min_sup_g507
-```
-
----
-
-（このファイルは今後の進捗や考察も随時追記してください） 
