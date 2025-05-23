@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "md/memo/summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "summary"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "md/marp/marp01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for marp01"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "md/marp/marp01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from marp01"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "md/marp/marp01.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of marp01"
             }
           }
         ]
@@ -170,15 +170,31 @@
   },
   "active": "4fa1d890e1f9c7bf",
   "lastOpenFiles": [
-    "Untitled.md",
-    "README.md",
-    "md",
-    "md/memo/discription1.md",
-    "md/memo",
-    "md/marp",
-    "md/memo/discription2.md",
+    "md/public/read-length/image.png",
+    "md/public/canu-result/report.txt",
+    "md/public/canu-result/report.pdf",
+    "md/public/canu-result/image.png",
+    "md/public/canu-result",
+    "md/public/read-length",
+    "md/public/canu_result/image.png",
+    "image.png",
+    "md/public/files/tutorial.md",
+    "md/memo/summary.md",
+    "md/public/files",
+    "md/public/canu_result/report.txt",
+    "report.txt",
+    "md/public/canu_result/report.pdf",
+    "md/public/canu_result",
+    "md/public/report.pdf",
     "md/marp/marp01.md",
-    "Untitled.canvas",
-    "md/public/report.pdf"
+    "2025-05-22.md",
+    "md/public/README.md",
+    "May8.md",
+    "md/memo/discription1.md",
+    "README.md",
+    "2025-05-21.md",
+    "Untitled.md",
+    "md/memo/discription2.md",
+    "Untitled.canvas"
   ]
 }

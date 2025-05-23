@@ -1,0 +1,25 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    Raven      Flye       Shasta     Canu     
+# contigs (>= 0 bp)         28         33         36         14       
+# contigs (>= 1000 bp)      28         32         36         14       
+# contigs (>= 5000 bp)      28         29         29         14       
+# contigs (>= 10000 bp)     28         27         19         14       
+# contigs (>= 25000 bp)     28         24         16         14       
+# contigs (>= 50000 bp)     28         22         12         13       
+Total length (>= 0 bp)      35504430   34319985   33471541   34572512 
+Total length (>= 1000 bp)   35504430   34319203   33471541   34572512 
+Total length (>= 5000 bp)   35504430   34313958   33453163   34572512 
+Total length (>= 10000 bp)  35504430   34298486   33382783   34572512 
+Total length (>= 25000 bp)  35504430   34256344   33341075   34572512 
+Total length (>= 50000 bp)  35504430   34185574   33216516   34532754 
+# contigs                   28         33         36         14       
+Largest contig              5803050    5006538    12082896   8736265  
+Total length                35504430   34319985   33471541   34572512 
+GC (%)                      22.77      22.98      22.90      23.06    
+N50                         2694088    2870802    6719217    3611137  
+N90                         530561     913124     1724949    1925625  
+auN                         2685188.3  2912524.6  7047419.1  5400847.3
+L50                         5          5          2          3        
+L90                         16         13         6          8        
+# N's per 100 kbp           0.00       0.00       0.00       0.00     
