@@ -126,17 +126,31 @@ Gaps = 0
 
 ## 🛠️ Polishing Methods
 
-- **Pilon**: 2 rounds (ONT + Illumina reads)
-  - Limited improvement in accuracy
-- **Medaka**: 1 round (ONT reads)
+- **Pilon**: 2 rounds using ONT and Illumina reads  
+  - Reduced small indel errors significantly (indels per 100 kbp: **440.72 → 233.45**)  
+  - Slight increase in base mismatches (mismatches per 100 kbp: **125.06 → 128.52**)  
+
+- **Medaka**: 1 round with ONT reads  
+  - Further improved indel correction (**188.91 per 100 kbp**)  
+  - Largest contig increased: **8.74 Mb → 8.88 Mb**  
+  - Improved continuity (N50: **3.61 Mb → 3.65 Mb**)  
+  - Slight increase in mismatches (to **134.82 per 100 kbp**), expected from ONT polishing  
+
+- **Genome fraction (%):** improved slightly with each polish  
+  - Canu: **97.176%** → Pilon: **97.182%** → Medaka: **97.190%**
 
 ---
 
 ## 📈 Current Status
-
-- **Number of contigs:** 14
-- **Goal:** 8 (6 chromosomes + rDNA + mitochondria)
-- **Current best:** Canu (50%), Pilon (ONT50% + Illumina50%)
+ 
+- **# of contigs:** 14 (no change through polishing)  
+- **Continuity (N50):** Improved to **3.65 Mb**  
+- **Error rates:**  
+  - Mismatches: **134.82 / 100 kbp**  
+  - Indels: **188.91 / 100 kbp**  
+- **Genome fraction:** **97.19%**  
+- **Unaligned length:** ~431 kbp, likely corresponds to highly repetitive/unassembled regions  
+- **Remaining gaps:** 13 contigs ≥50 kbp; suggests one contig may be small mitochondrial or rDNA
 
 ---
 

@@ -97,13 +97,22 @@ Gaps = 0
 
 - **Pilon** (2 rounds with ONT and Illumina reads)
   - Limited improvement in accuracy
+  - Mismatch rate: 128.52/100kbp
+  - Indel rate: 233.45/100kbp
+  - Genome fraction: 97.182%
 - **Medaka** (1 round with ONT reads)
+  - Mismatch rate: 134.82/100kbp
+  - Indel rate: 188.91/100kbp
+  - Genome fraction: 97.190%
 
 ## Current Status
 
-- Number of contigs: 14
+- Number of contigs: 14 (consistent across all polishing methods)
 - Goal: 8 (6 chromosomes + 1 rDNA + 1 mitochondria)
-- Current best: Canu (50%), Pilon (ONT50% + Illumina50%)
+- Current status: Polishing sequence of Canu → Pilon (ONT50%) → Pilon (Illumina50%) → Medaka (ONT)
+- Total sequence length: ~34.7-35.0 Mb (reference: 34.2 Mb)
+- N50: ~3.6 Mb (similar across all polishing methods)
+- GC content: 22.79-23.06% (reference: 22.44%)
 
 ## Future Directions
 
