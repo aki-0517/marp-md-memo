@@ -13,6 +13,11 @@ style: |
 - **Significance**: Providing foundational information for cell differentiation, motility, and signal transduction research  
 
 ---
+# Purpose of This Research
+
+To obtain an accurate and high-quality genome sequence of *Dictyostelium discoideum* for advancing biological research.
+
+---
 
 ## Background: About *D. discoideum*
 
@@ -28,19 +33,34 @@ style: |
 
 ---
 
-## Current Genome Assembly Workflow
+## Genome Assembly Workflow
 
 1. **Sequence Data Acquisition**  
    - ONT (Long reads)  
    - Illumina (Short reads)  
 2. **Quality Assessment & Preprocessing**  
-   - Read quality confirmation with FastQC 
-1. **Assembly Execution**  
+   - Read quality confirmation 
+3. **Assembly Execution**  
    - Canu / Flye / Raven / Shasta -> Comparison
-1. **Polishing (Error Correction)**  
+4. **Polishing (Error Correction)**  
    - Pilon / Medaka  
 5. **Evaluation & Improvement**  
    - Quality assessment with QUAST → Reassembly or Scaffolding as needed  
+
+---
+
+## Comparison of ONT and Illumina Data
+
+|                | ONT Long Reads                | Illumina Short Reads         |
+|----------------|------------------------------|-----------------------------|
+| Read Length    | Very long (up to ~139 kb)    | Short (~150 bp)             |
+| Accuracy       | Lower (high error rate)       | Very high                   |
+| Error Type     | Indels, mismatches           | Rare, mostly substitutions  |
+| Strengths      | Resolves repeats, large SVs  | Ideal for polishing         |
+| Weaknesses     | Lower per-base accuracy       | Cannot span long repeats    |
+
+- ONT reads provide long-range information but have higher error rates.
+- Illumina reads are highly accurate and best for error correction.
 
 ---
 
@@ -50,6 +70,13 @@ style: |
 | ------------- | ------------------------------------- | --------------- |
 | ONT Long Reads    | `Dicty_gDNA_NEB-2.fastq`              | Max ~139 kb, High error rate |
 | Illumina Short Reads | `Stationary_S1_R1.fastq.gz` / `S1_R2` | High accuracy ~150 bp     |
+
+---
+
+## Key Terms for Read Length Analysis
+
+- **Read**: A single DNA sequence obtained from a sequencing machine.
+- **N50**: The read length at which 50% of the total bases are contained in reads of this length or longer. A higher N50 indicates longer reads on average.
 
 ---
 
@@ -79,9 +106,10 @@ N50 = 12,777 bp
 ## Assembly Experiment Overview
 
 - **Data Used**: ~50% of ONT long reads (4.2 Gb)
-  - Excessive coverage can lead to increased computation time and reduced accuracy
+  - Why 50%?...Excessive coverage can lead to increased computation time and reduced accuracy
+  - Also testing other coverage levels (e.g., 25% and 75%), but 50% was most accurate 
 
-- **Tool Characteristics**:
+- **Assembly Tool Characteristics**:
   - Canu: Powerful error correction, longer computation time
   - Flye: Strong with repetitive sequences, good memory efficiency
   - Shasta: Ultra-fast but slightly lower accuracy
@@ -89,7 +117,7 @@ N50 = 12,777 bp
 
 ---
 
-## Assembly Tool Comparison
+## Assembly Result Comparison
 
 ![bg right:45% vertical w:500px](../public/images/nx-graph.png)
 ![bg w:500px](../public/images/cumulative.png)
@@ -108,14 +136,30 @@ table {
 | N50        | 2.7 Mb  | 2.8 Mb  | 6.7 Mb  | 3.6 Mb  |
 | GC content (%)   | 22.8    | 23.0    | 22.9    | 23.1    |
 
-**Canu shows the best performance:**
+
+---
+
+## Assembly Selection: Reconsidering the Workflow
+
+**Canu may provide the best performance:**
 - Fewest contigs (14) → Closest to target (8)
 - Most accurate total length (34.6 Mb ≈ 34.2 Mb reference)
 - Well-balanced N50 and GC content
 
+**However...**
+- Based on feedback, it is important to thoroughly evaluate the accuracy of each assembly (e.g., by comparison with the reference genome and detailed metrics) before proceeding to polishing or scaffolding.
+- The workflow will be revised to select the most accurate assembly after comprehensive evaluation, rather than assuming Canu is best by default.
+
+---  
+## Evaluate Assembly Accuracy (Coverage)
+
+| **Canu**                       | **Flye**                       | **Shasta**                     |
+|:------------------------------:|:------------------------------:|:------------------------------:|
+| ![w:350px](../public/bandage/canu.png) | ![w:350px](../public/bandage/flye.png) | ![w:350px](../public/bandage/shasta.png) |
+
 ---
 
-## Polishing Experiment Overview
+## Polishing Experiment Overview (Canu)
 
 - **Procedure**:
   1. Pilon (2 consecutive rounds)
@@ -152,7 +196,7 @@ table {
 
 ---
 
-## Current Status and Challenges
+## Current Status (Canu)
 
 * **Number of contigs**: 14 (target is 8)
 
@@ -172,22 +216,14 @@ table {
 
 ## Future Directions
 
-1. **Consider Other Polishing Tools**
+1. **Confirm whether Canu truly provides the highest accuracy**
 
-   * Homopolish, NextPolish, etc.
-2. **Introduce Scaffolding**
+2. **Polishing**
+
+   * Pilon, Homopolish, NextPolish, etc.
+3. **Introduce Scaffolding**
 
    * Contig connection with RaGOO, SSPACE
-3. **Multi-assembly Integration**
+4. **Multi-assembly Integration**
 
    * Integrate multiple results for further accuracy improvement
-
-
----
-
-## Summary
-
-* Performed genome assembly using ONT + Illumina combination
-* Canu showed balanced results
-* Error correction with Pilon/Medaka
-* Next steps: Scaffolding & reducing contig number with other tools 
