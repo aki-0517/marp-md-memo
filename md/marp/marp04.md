@@ -132,14 +132,15 @@ table {
 
 ## Assembly Selection: Reconsidering the Workflow
 
-**Canu may provide the best performance:**
-- Fewest contigs (14) → Closest to target (8)
-- Most accurate total length (34.6 Mb ≈ 34.2 Mb reference)
-- Well-balanced N50 and GC content
+| Assembler | Strengths | Weaknesses / Notes |
+|-----------|-----------|--------------------|
+| **Canu**  | Fewest contigs (14), total length close to reference, well-balanced N50 and GC content | May not be best for continuity (N50), needs further evaluation |
+| **Shasta**| Highest continuity (N50, max contig length) | Slightly shorter total length, more contigs |
+| **Flye**  | Good coverage, avoids redundancy, memory efficient | Slightly more contigs, N50 lower than Shasta |
+| **Raven** | Maximum coverage, fast, low memory usage | Slightly redundant/over-assembled, more contigs |
 
-**However...**
-- Based on feedback, it is important to thoroughly evaluate the accuracy of each assembly (e.g., by comparison with the reference genome and detailed metrics) before proceeding to polishing or scaffolding.
-- The workflow will be revised to select the most accurate assembly after comprehensive evaluation, rather than assuming Canu is best by default.→ next step
+**Summary**
+**Canu** appears to provide the best balance (fewest contigs, good total length)
 
 ---  
 ## Evaluate Assembly Accuracy (Coverage)

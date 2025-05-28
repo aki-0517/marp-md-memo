@@ -1,0 +1,22 @@
+次やること
+
+### reference genomeと比べてどれが結果が良いか確かめる
+- https://dgenies.toulouse.inra.fr/run
+- mummer
+- ビジュアライゼーション
+
+### repetitive regions が改善されるかチェック
+- ddの論文など読みながら
+- ddのreference genomeと乖離が大きかったらダメ
+Shasta
+https://dgenies.toulouse.inra.fr/result/JthGm_20250528094946
+
+Canu
+https://dgenies.toulouse.inra.fr/result/F9jsq_20250528095556
+
+raven
+https://dgenies.toulouse.inra.fr/result/o7is7_20250528100404
+
+flye
+https://dgenies.toulouse.inra.fr/result/Aqoqe_20250528100901
+

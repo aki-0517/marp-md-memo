@@ -27,11 +27,48 @@ I tried different softowares for assembly.
 Canu is very good at fixing errors, but it is slow. Flye is good with repeated sequences and uses less memory. Shasta is very fast, but a bit less accurate. Raven is also fast and uses little memory.
 
 # Slide 9: Assembly Results
-After running these programs, I compared the results. I looked at things like the number of contigs, which are pieces of the genome, the size of the largest contig, the total length, the N50, and the GC content, which is the percentage of G and C letters in the DNA. 
-Canu gave the fewest contigs and a total length close to the real genome size.
+Let's compare the results of the different assembly tools.
 
-# Slide 10: Assembly Selection
-From this results, I thought Canu looks like the best program because it has the fewest contigs and the right genome size. However, I should compare my results with comparering the reference genome and look at detailed numbers to make sure.
+1. **Number of contigs (degree of fragmentation):**
+
+   Fewer contigs mean the genome is less fragmented and more continuous.  
+   Canu produced the fewest contigs, which is closest to the target chromosome number.
+
+2. **Maximum contig length:**
+
+   A longer maximum contig means larger chromosome fragments were assembled.  
+   Shasta achieved the longest contig by far.
+
+3. **Total assembly length:**
+
+   The closer to the known genome size (about 33.8 Mb), the better.  
+   Raven is a bit over, which may mean redundancy.  
+   Shasta is slightly short, which may mean missing regions.  
+   Flye and Canu are both close to the ideal.
+
+4. **N50 (measure of continuity):**
+
+   A higher N50 means more of the genome is in longer contigs.  
+   Shasta is the best for continuity.
+
+5. **GC content:**
+
+   All are close to the known value of 23%, so there is no problem here.
+
+# Slide 10: Overall Trends and Selection
+
+From the plots:
+- Shasta and Canu have a few long contigs that quickly reach the total genome length.
+- Shasta stands out for continuity, while Canu is best for having fewer, larger contigs.
+
+**How to choose:**
+1. If you want the highest continuity (longest fragments): Shasta
+2. If you want fewer contigs, close to the chromosome number, and good coverage: Canu
+3. If you want to avoid redundancy but maximize coverage: Flye
+4. If you want maximum coverage, even if a bit redundant: Raven
+
+**Conclusion:**
+- Canu is a balanced choice with fewer contigs and fewer errors.
 
 # Slide 11: Evaluate Assembly Accuracy
 To check how good my assembly is, I use bandage. 
