@@ -11,12 +11,14 @@
             "id": "4fa1d890e1f9c7bf",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "md/public/canu-result/report.pdf"
+                "file": "md/marp/scripts/marp04-script.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "report"
+              "icon": "lucide-file",
+              "title": "marp04-script"
             }
           }
         ]
@@ -168,6 +170,13 @@
   },
   "active": "4fa1d890e1f9c7bf",
   "lastOpenFiles": [
+    "assembly.png",
+    "md/public/images/assembly.png",
+    "md/public/images/dd.png",
+    "dd.png",
+    "md/public/canu-result/report.pdf",
+    "md/marp/scripts/marp04-script.md",
+    "md/marp/scripts",
     "md/public/bandage/shasta.png",
     "md/public/bandage/flye.png",
     "md/public/bandage/canu.png",
@@ -176,8 +185,6 @@
     "flye.png",
     "canu.png",
     "Screenshot 2025-05-28 at 14.17.28.png",
-    "Screenshot 2025-05-28 at 14.17.57.png",
-    "Screenshot 2025-05-28 at 14.18.17.png",
     "md/public/gfa/dicty_canu.final.assembly.gfa",
     "md/public/gfa/dicty_canu.contigs.gfa",
     "md/public/gfa/ShastaRun_Assembly.gfa",
@@ -185,8 +192,6 @@
     "md/public/polishing-quast/ShastaRun_Assembly.gfa",
     "md/public/polishing-quast/shasta_assembly_Assembly.gfa",
     "md/public/gfa/flye_assembly_assembly_graph.gfa",
-    "md/public/gfa/assembly_graph.gfa",
-    "md/public/gfa/Assembly.gfa",
     "md/memo/summary_en.md",
     "md/memo/summaryv2.md",
     "md/marp/marp01.md",
@@ -194,8 +199,6 @@
     "md/marp/marp04.md",
     "md/marp/marp03.md",
     "md/public/files/dd.md",
-    "md/public/images/polishing-nx.png",
-    "md/public/images/polishing-cumulative.png",
     "md/memo/summary.md",
     "md/memo/dd.md",
     "md/public/files/tutorial.md",

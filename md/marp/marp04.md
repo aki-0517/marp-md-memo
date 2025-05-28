@@ -13,13 +13,10 @@ style: |
 - **Significance**: Providing foundational information for cell differentiation, motility, and signal transduction research  
 
 ---
-# Purpose of This Research
-
-To obtain an accurate and high-quality genome sequence of *Dictyostelium discoideum* for advancing biological research.
-
----
 
 ## Background: About *D. discoideum*
+
+![bg right:40% w:400px](../public/images/dd.png)
 
 - Model organism of social amoeba  
 - Life cycle: Single-cell ⇄ Multicellular  
@@ -34,6 +31,8 @@ To obtain an accurate and high-quality genome sequence of *Dictyostelium discoid
 ---
 
 ## Genome Assembly Workflow
+
+![bg right:40% w:400px](../public/images/assembly.png)
 
 1. **Sequence Data Acquisition**  
    - ONT (Long reads)  
@@ -64,14 +63,6 @@ To obtain an accurate and high-quality genome sequence of *Dictyostelium discoid
 
 ---
 
-## Data Overview
-
-| Data Type         | File Name                                 | Characteristics              |
-| ------------- | ------------------------------------- | --------------- |
-| ONT Long Reads    | `Dicty_gDNA_NEB-2.fastq`              | Max ~139 kb, High error rate |
-| Illumina Short Reads | `Stationary_S1_R1.fastq.gz` / `S1_R2` | High accuracy ~150 bp     |
-
----
 
 ## Key Terms for Read Length Analysis
 
@@ -80,7 +71,7 @@ To obtain an accurate and high-quality genome sequence of *Dictyostelium discoid
 
 ---
 
-## ONT Read Length Distribution
+## Dictyostelium discoideum ONT Read Length Distribution
 
 ![bg right:45% w:500px](../public/images/read-length.png)
 
@@ -148,7 +139,7 @@ table {
 
 **However...**
 - Based on feedback, it is important to thoroughly evaluate the accuracy of each assembly (e.g., by comparison with the reference genome and detailed metrics) before proceeding to polishing or scaffolding.
-- The workflow will be revised to select the most accurate assembly after comprehensive evaluation, rather than assuming Canu is best by default.
+- The workflow will be revised to select the most accurate assembly after comprehensive evaluation, rather than assuming Canu is best by default.→ next step
 
 ---  
 ## Evaluate Assembly Accuracy (Coverage)
@@ -216,7 +207,7 @@ table {
 
 ## Future Directions
 
-1. **Confirm whether Canu truly provides the highest accuracy**
+1. **Confirm whether Canu truly provides the highest accuracy (try with other assembly results)**
 
 2. **Polishing**
 
