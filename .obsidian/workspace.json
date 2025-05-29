@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/may-28-memo.md",
+                "file": "md/memo/daily/may-29-memo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "may-28-memo"
+              "title": "may-29-memo"
             }
           }
         ]
@@ -170,6 +170,11 @@
   },
   "active": "4fa1d890e1f9c7bf",
   "lastOpenFiles": [
+    "md/memo/daily/may-28-memo.md",
+    "md/memo/daily/may-29-memo.md",
+    "md/public/fasta/flye_filtered_contigs.fasta",
+    "md/public/fasta/filtered_contigs.fasta",
+    "filtered_contigs.fasta",
     "md/public/fasta/medaka_consensus.fasta",
     "md/public/fasta/flye_assembly.fasta",
     "md/public/fasta/assembly.fasta",
@@ -177,13 +182,8 @@
     "md/public/fasta/raven_assembly.fasta",
     "md/public/fasta/pilon_round2_polished.fasta",
     "md/public/fasta/dicty_canu.contigs.fasta",
-    "md/public/fasta/consensus.fasta",
-    "md/public/fasta/Assembly.fasta",
-    "md/public/fasta",
-    "md/public/gfa/fasta",
     "md/memo/discription2.md",
     "md/memo/may-28-memo.md",
-    "md/memo/daily/may-28-memo.md",
     "md/marp/scripts/marp04-script.md",
     "md/memo/result.md",
     "Untitled.md",
