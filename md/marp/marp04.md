@@ -170,11 +170,9 @@ table {
 ---
 
 ## Evaluate Assembly Accuracy 
-
-| **Before Polishing**                       | **Pilon+Medaka**                       | **Shasta Assembly**                       |
-|:------------------------------:|:------------------------------:|:------------------------------:|
-| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/medaka.png) | ![w:470px](../public/images/shasta.png) |
-
+| **Canu**                       | **Flye**                       | **Shasta**                       | **Raven**                       |
+|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
+| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/flye.png) | ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/raven.png) |
 <!-- ## Dotplot Analysis: Assembly Quality Assessment
 
 ### ✅ **Shasta**
