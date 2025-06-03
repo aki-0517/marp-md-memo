@@ -13,7 +13,9 @@ style: |
 - **Significance**: Providing foundational information for cell differentiation, motility, and signal transduction research  
 
 <!--
-Hello everyone. Today, I will talk about my project to make a high-quality genome sequence for Dictyostelium discoideum. This is a social amoeba that scientists use to study basic life processes. I will explain the steps I took and why this work is important.
+Hello everyone. Today, I will talk about my project to make a high-quality genome sequence for Dictyostelium discoideum. 
+This is a social amoeba that scientists use to study basic life processes. 
+I will explain the steps I took and why this work is important.
 -->
 
 ---
@@ -55,7 +57,18 @@ Dictyostelium discoideum is special because it can live alone or join with other
    - Quality assessment with QUAST → Reassembly or Scaffolding as needed  
 
 <!--
-Here is the overall workflow. First, I get DNA sequence data using ONT for long reads and Illumina for short, accurate reads. I check the quality, assemble the DNA, polish to fix mistakes, and check the quality again. Each step helps improve the final genome.
+
+I used two types of DNA sequencing reads:
+Long reads from a ONT, and short but super-accurate reads from Illumina.
+Then I:
+
+Checked the quality of the data
+
+Used four different tools — Canu, Flye, Raven, and Shasta — to assemble the genome
+
+Fixed errors using two polishing tools: Pilon and Medaka
+
+Finally, we checked the results to see how good they were.
 -->
 
 ---
@@ -78,7 +91,8 @@ table {
 | Weaknesses     | Lower per-base accuracy       | Cannot span long repeats    |
 
 <!--
-I used two types of sequencing data. ONT gives very long DNA reads, but they have more errors. Illumina gives short but very accurate reads. The long ONT reads help build the genome, and the short Illumina reads help fix small mistakes. Using both gives the best results.
+
+By combining both read and execute assembly and polishing, I get the best result
 -->
 
 ---
@@ -88,13 +102,13 @@ I used two types of sequencing data. ONT gives very long DNA reads, but they hav
 ![bg right:45% w:500px](../public/images/read-length.png)
 
 ```bash
-# Total number of bases in the sequence
+# Total length of bases in the sequence
 sum = 8,359,638,019 bp  
 
 # Total number of reads
 n = 934,886 reads       
 
- # Average read length
+# Average read length
 mean length = 8,941.88 bp 
 
 # Length of the longest read
@@ -104,9 +118,7 @@ max length = 139,714 bp
 N50 = 12,777 bp        
 ```
 
-<!--
-This graph shows the length of ONT reads. There are about 930,000 reads, with an average length of 9,000 base pairs. The longest read is about 140,000 base pairs. N50 means half of the DNA is in reads longer than 12,777 base pairs. Having many long reads is good for making a complete genome.
--->
+<!-- N50 is a commonly used metric in genomics that represents the length at which 50% of the total sequence length is contained in reads of that length or longer. In other words, if we sort all reads by length and add up their lengths, N50 is the length of the shortest read that is part of the group of reads that together make up 50% of the total sequence length. A higher N50 value generally indicates better quality sequencing data, as it suggests we have more long reads available for assembly. -->
 
 ---
 
@@ -147,21 +159,54 @@ table {
 | Total length         | 35.5 Mb | 34.3 Mb | 33.5 Mb | 34.6 Mb |
 | N50        | 2.7 Mb  | 2.8 Mb  | 6.7 Mb  | 3.6 Mb  |
 
-<!--
-Here I compare the results from each assembly tool. Fewer contigs mean the genome is less fragmented. Shasta made the longest contig, but Canu made the fewest contigs, which is closer to the real chromosome number. The total length and N50 values show how complete and continuous the genome is. Shasta is best for long contigs, Canu is best for fewer contigs.
--->
+<!-- 1. **Number of contigs**: Represents how fragmented the assembly is. A lower number is generally better, as it indicates the genome is assembled into fewer, larger pieces. Canu produced the fewest contigs (14), suggesting the most complete assembly.
+
+2. **Largest contig**: Shows the size of the longest continuous sequence in the assembly. Shasta produced the largest contig (12.0 Mb), indicating it was able to assemble longer continuous regions than other tools.
+
+3. **Total length**: The sum of all contig lengths. All assemblers produced similar total lengths (33.5-35.5 Mb), which is close to the expected genome size, suggesting good coverage of the genome.
+
+4. **N50**: A measure of contig length distribution. 50% of the total assembly is in contigs of this size or larger. Shasta's N50 of 6.7 Mb is the highest, indicating it produced the most continuous assembly among the tools tested. -->
 
 ---
 
 ## Evaluate Assembly Accuracy 
 
-| **Canu**                       | **Flye**                       | **Shasta**                       | **Raven**                       |
-|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
-| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/flye.png) | ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/raven.png) |
+| **Before Polishing**                       | **Pilon+Medaka**                       | **Shasta Assembly**                       |
+|:------------------------------:|:------------------------------:|:------------------------------:|
+| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/medaka.png) | ![w:470px](../public/images/shasta.png) |
 
-<!--
-These graphs show how well each assembly matches the reference genome. Shasta's result is the cleanest, with six long diagonal lines matching the chromosomes. Canu and Flye are also good, but not perfect. Raven's result is more fragmented. This means Shasta is the most accurate, followed by Flye and Canu.
--->
+<!-- ## Dotplot Analysis: Assembly Quality Assessment
+
+### ✅ **Shasta**
+* Shows **near-perfect linear 1:1 alignment** (contigs align consistently along the reference)
+* **Minimal gaps and inversions** are observed
+* **Six distinct large continuous regions** → likely accurate reconstruction of chromosome structure
+
+### ⚠️ **Canu**
+* Generally good but:
+  * **Multiple gaps and inversions** (↘) in some contigs
+  * **Multiple contigs map to the same chromosome**, indicating fragmentation
+  * Some short contigs might be misassembled or unnecessary
+
+### ⚠️ **Flye**
+* Similar to Shasta but:
+  * **Notable misalignments and breaks** around chromosomes 3 and 6
+  * Linear structure is less clear in some regions
+
+### ⚠️ **Raven**
+* Most fragmented:
+  * **High number of short, fragmented contigs**
+  * **Frequent unaligned regions and orientation changes**
+  * Poor long-range continuity
+
+### ✅ Conclusion
+
+**Shasta > Canu ≈ Flye > Raven**
+
+* **Shasta**: Best preservation of chromosome-level structure
+* **Canu & Flye**: Good but not perfect
+* **Raven**: Requires additional polishing and scaffolding for research use
+ -->
 
 ---
 
@@ -177,9 +222,9 @@ table {
 | Tool      | Evaluation                | Comments                                                                                       |
 |-----------|---------------------------|-----------------------------------------------------------------------------------------------|
 | **Shasta**| ⭐ Best for structure      | - Longest contig (12 Mb), top N50 (6.7 Mb)<br>- Nx/cumulative plots: covers most with few contigs<br>- Highest contig count (36) |
-| **Canu**  | ⭐ High accuracy, low fragmentation | - Fewest contigs (14), good N50 (3.6 Mb), max contig 8.7 Mb<br>- Stable GC content<br>- Consistently strong in Nx/cumulative plots |
+| **Canu**  | ⭐ High accuracy, low fragmentation | - Fewest contigs (14), good N50 (3.6 Mb), max contig 8.7 Mb<br>- Consistently strong in Nx/cumulative plots |
 | **Raven** | △ Fast & practical        | - Longest total length (35.5 Mb), max contig 5.8 Mb<br>- N50/Nx lower than Shasta/Canu |
-| **Flye**  | △ Balanced but weaker     | - Similar contig/N50 to Raven<br>- Max contig smaller (5 Mb), total length moderate (34.3 Mb)<br>- Stable GC (23.0%) |
+| **Flye**  | △ Balanced but weaker     | - Similar contig/N50 to Raven<br>- Max contig smaller (5 Mb), total length moderate (34.3 Mb) |
 
 <!--
 This table summarizes the strengths of each tool. Shasta is best for long contigs, Canu is best for fewer contigs and high accuracy, Raven is fast, and Flye is balanced. We choose the tool based on what is most important for our project.
@@ -199,7 +244,8 @@ This table summarizes the strengths of each tool. Shasta is best for long contig
      - Strong in homopolymer region correction
 
 <!--
-After assembly, I polished the Canu result to try to improve accuracy even more. First, I used Pilon twice, then Medaka. Polishing helps fix small errors that remain after assembly.
+Canu produced the fewest number of contigs, and if this assembly is correct, we can expect significant improvement in accuracy through polishing. Therefore, we proceeded with the polishing step.
+First, I used Pilon twice, then Medaka. Polishing helps fix small errors that remain after assembly.
 -->
 
 ---
@@ -223,18 +269,26 @@ table {
 | Genome fraction (%)     | 96.234 | 96.892    | 97.182    | 97.190  |
 
 <!--
-This table shows how polishing improves the genome. After Pilon and Medaka, the mismatch and indel rates go down, and the genome fraction goes up. This means the genome is more accurate and covers more of the reference.
+
+The metrics shown in the table are:
+1. Mismatch rate (/100 kbp): Number of base substitutions per 100 kilobases. A lower value indicates better accuracy in base calling.
+2. Indel rate (/100 kbp): Number of insertions and deletions per 100 kilobases. A lower value shows better preservation of sequence length and structure.
+3. Genome fraction (%): Percentage of the reference genome covered by the assembly. A higher value indicates more complete genome coverage.
+
+The improvement in these metrics after polishing demonstrates that both Pilon and Medaka successfully enhanced the assembly quality by correcting errors and increasing genome coverage.
 -->
 
 ---
 
 ## Evaluate Accuracy Improvement
 
-| **Before Polishing**                       | **Pilon+Medaka**                       | 
-|:------------------------------:|:------------------------------:|
-| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/medaka.png) |
+| **Before Polishing**                       | **Pilon+Medaka**                       | **Shasta**                       |
+|:------------------------------:|:------------------------------:|:------------------------------:|
+| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/medaka.png) | ![w:470px](../public/images/shasta.png) |
 <!-- 
-These images show the genome before and after polishing. Before polishing, the green lines are broken and shifted, showing errors. After polishing, the lines are straighter and more connected, meaning the genome matches the reference better. Polishing is like proofreading a paper to fix mistakes. It makes the genome cleaner and more accurate.
+However, when comparing the dotplots, while the polishing steps significantly improved the Canu assembly, the overall quality still does not reach the level of the Shasta assembly. This suggests that while polishing can correct many errors, it cannot fully compensate for structural differences in the initial assembly. 
+
+The Shasta assembly is better chromosome-level structure and continuity remain unmatched even after extensive polishing of the Canu assembly.
 -->
 
 ---
@@ -256,4 +310,27 @@ These images show the genome before and after polishing. Before polishing, the g
 
 <!--
 In the future, I will polish the Shasta result, try more advanced polishing tools, use scaffolding to connect contigs, and combine the best parts of different assemblies. This will help make the genome even more complete and accurate.
+
+1. **Polishing Shasta Result**
+   - Apply Pilon and Medaka to the Shasta assembly
+   - This could potentially improve the already high-quality assembly further
+   - Focus on correcting any remaining small errors while maintaining the excellent chromosome-level structure
+
+2. **Advanced Polishing**
+   - Homopolish: Specifically targets homopolymer regions (stretches of identical nucleotides)
+   - NextPolish: An alternative polishing pipeline that might catch errors missed by other tools
+   - These tools can address specific types of errors that standard polishing might miss
+   - Particularly useful for improving accuracy in challenging genomic regions
+
+3. **Introduce Scaffolding**
+   - Apply scaffolding to connect contigs into larger sequences
+   - Use long-read data to bridge gaps between contigs
+   - This could help resolve any remaining structural issues
+   - Important for achieving chromosome-level assembly
+
+4. **Multi-assembly Integration**
+   - Combine best features from both Shasta and Canu assemblies
+   - Use Shasta's superior chromosome-level structure as the backbone
+   - Incorporate Canu's accurate regions where they show better quality
+   - This hybrid approach could potentially yield the best possible assembly
 -->
