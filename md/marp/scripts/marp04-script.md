@@ -14,8 +14,6 @@ To make the genome, I first get DNA sequence data using two methods. One is call
 ONT gives me very long DNA reads, but these have more mistakes. 
 Illumina gives me short reads, but they are very accurate. I use both types of data to get the best results. The long ONT reads help me see big parts of the genome, and the short Illumina reads help me fix small mistakes.
 
-# Slide 6: Key Terms
-Let me explain some important words. A "read" is one piece of DNA sequence that comes from the sequencing machine. "N50" is a special number that tells me how long the reads are, on average. If the N50 is higher, it means the reads are longer, which is usually better for assembling the genome.
 
 # Slide 7: ONT Read Length
 In Dictyostelium discoideum ONT data, I got about 8.3 billion base pairs in total, from about 930,000 reads. The average read was about 9,000 base pairs long. The longest read was about 140,000 base pairs. The N50 was about 13,000 base pairs. This means that half of all the DNA is in reads longer than 13,000 base pairs.
