@@ -4,25 +4,40 @@ theme: default
 paginate: true
 style: |
   section { font-size: 24px; }
+  /* カラーレジェンド用のスタイル */
+  .best   { background-color: #c8e6c9; } /* 緑系：最優良 */
+  .good   { background-color: #e8f5e9; } /* 薄緑：良 */
+  .fair   { background-color: #fff8e1; } /* 薄黄：まずまず */
+  .poor   { background-color: #ffebee; } /* 薄赤：要注意 */
+  th, td  { padding: 8px; text-align: center; }
+  table   { width: 100%; border-collapse: collapse; }
+  th      { background-color: #424242; color: white; }
+  td      { border: 1px solid #ddd; }
+  .caption { font-size: 18px; font-style: italic; margin-top: 8px; }
 ---
 
 # *Dictyostelium discoideum*  
 ## Genome Assembly & Polishing Summary
 
-- **Objective**: Construction of high-quality genome sequence for model organism *D. discoideum*  
-- **Significance**: Providing foundational information for cell differentiation, motility, and signal transduction research  
+- **Objective**: Construction of high-quality genome sequence for model organism (chromoosome level) *D. discoideum*  
+- **Significance**: Centromere structure, chromosome segregation machinery, co-evolution analysis 
 
 <!--
 Hello everyone. Today, I will talk about my analytics to make a high-quality genome sequence for Dictyostelium discoideum. 
 This is a social amoeba that scientists use to study basic life processes. 
-I will explain the steps I took and why this work is important.
+My goal is to build a high-quality genome sequence for the model organism Dictyostelium discoideum at the chromosome level. 
+
+This work is important because it will help studying the structure of centromeres, which are crucial for chromosome segregation during cell division. 
+Additionally, it will allow to analyze how different parts of the genome have evolved together, providing insights into the organism's biology and evolution.
+
+I will explain the steps I took.
 -->
 
 ---
 
 ## Background: About *D. discoideum*
 
-![bg right:40% w:400px](../public/images/dd.png)
+![bg right:40% w:400px](../public/images/dd.jpg)
 
 - Model organism of social amoeba  
 - Life cycle: Single-cell ⇄ Multicellular  
@@ -35,7 +50,10 @@ I will explain the steps I took and why this work is important.
 - Rich in simple sequence repeats (SSR) (>11%)
 
 <!--
-Dictyostelium discoideum is special because it can live alone or join with others to form a group. Its genome is about 34 million base pairs, with 6 chromosomes, many rDNA copies, and mitochondria. It has a lot of A and T, many tRNA genes, and many simple repeats. These features make it interesting for research.
+Dictyostelium discoideum's genome is about 34 million base pairs, organized into six chromosomes plus extrachromosomal rDNA units and mitochondrial genome. 
+
+It is highly AT-rich (roughly 77.6 %), contains around 390 tRNA genes, and more than 11 % of its sequence consists of simple sequence repeats.  Simple sequence repeats (SSRs), also known as microsatellites, are short DNA sequences consisting of 1–6 base pair motifs repeated in tandem.
+
 -->
 
 ---
@@ -86,7 +104,8 @@ By combining these two types of data, we can achieve high-quality genome assembl
 2. **Quality Assessment & Preprocessing**  
    - Read quality confirmation 
 3. **Assembly Execution**  
-   - Canu / Flye / Raven / Shasta -> Comparison
+   - Canu / Flye / Raven / Shasta 
+   → Comparison with QUAST
 4. **Polishing (Error Correction)**  
    - Pilon / Medaka  
 5. **Evaluation & Improvement**  
@@ -188,24 +207,64 @@ For assembly I tried different software: Canu is good at fixing errors but slow,
 <style scoped>
 table {
   width: 100%;
-  font-size: 20px;
+  font-size: 16px;
 }
 </style>
 
-| Metric         | Raven   | Flye    | Shasta  | Canu    |
-| ---------- | ------- | ------- | ------- | ------- |
-| contigs  | 28      | 33      | 36      | 14      |
-| Largest contig | 5.8 Mb  | 5.0 Mb  | 12.0 Mb | 8.7 Mb  |
-| Total length         | 35.5 Mb | 34.3 Mb | 33.5 Mb | 34.6 Mb |
-| N50        | 2.7 Mb  | 2.8 Mb  | 6.7 Mb  | 3.6 Mb  |
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Raven</th>
+      <th>Flye</th>
+      <th>Shasta</th>
+      <th>Canu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- contigs: 少ないほど優 -->
+    <tr>
+      <td><strong>contigs</strong></td>
+      <td class="fair">28</td>
+      <td class="poor">33</td>
+      <td class="poor">36</td>
+      <td class="best">14</td>
+    </tr>
+    <!-- Largest contig: 大きいほど優 -->
+    <tr>
+      <td><strong>Largest contig</strong></td>
+      <td class="good">5.8 Mb</td>
+      <td class="fair">5.0 Mb</td>
+      <td class="best">12.0 Mb</td>
+      <td class="good">8.7 Mb</td>
+    </tr>
+    <!-- Total length: 参照 ~34.2Mb に近いほど良 -->
+    <tr>
+      <td><strong>Total length (Expected ~34.2 Mb)</strong></td>
+      <td class="poor">35.5 Mb</td> <!-- 少し長すぎ -->
+      <td class="good">34.3 Mb</td>
+      <td class="poor">33.5 Mb</td> <!-- 少し短すぎ -->
+      <td class="good">34.6 Mb</td>
+    </tr>
+    <!-- N50: 大きいほど優 -->
+    <tr>
+      <td><strong>N50</strong></td>
+      <td class="fair">2.7 Mb</td>
+      <td class="fair">2.8 Mb</td>
+      <td class="best">6.7 Mb</td>
+      <td class="good">3.6 Mb</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <!-- 1. Number of contigs Represents how fragmented the assembly is. A lower number is generally better, as it indicates the genome is assembled into fewer, larger pieces. Canu produced the fewest contigs (14), suggesting the most complete assembly.
 
-2. **Largest contig** Shows the size of the longest continuous sequence in the assembly. Shasta produced the largest contig (12.0 Mb), indicating it was able to assemble longer continuous regions than other tools.
+1. **Largest contig** Shows the size of the longest continuous sequence in the assembly. Shasta produced the largest contig (12.0 Mb), indicating it was able to assemble longer continuous regions than other tools.
 
-3. **Total length** is The sum of all contig lengths. All assemblers produced similar total lengths (33.5-35.5 Mb), which is close to the expected genome size, suggesting good coverage of the genome.
+2. **Total length** is The sum of all contig lengths. All assemblers produced similar total lengths (33.5-35.5 Mb), which is close to the expected genome size, suggesting good coverage of the genome. Raven tends to leave some repeat or duplicated regions unmerged, resulting in a total length larger than the reference (Raven = 35.5 Mb). In contrast, Shasta may over-collapse or skip repeats, leading to a total length smaller than the reference (Shasta = 33.5 Mb).
 
-4. **N50** is A measure of contig length distribution as I explaines previous slide. Shasta's N50 of 6.7 Mb is the highest, indicating it produced the most continuous assembly among the tools tested. -->
+3. **N50** is A measure of contig length distribution as I explaines previous slide. Shasta's N50 of 6.7 Mb is the highest, indicating it produced the most continuous assembly among the tools tested. -->
 
 ---
 
@@ -215,7 +274,7 @@ table {
 | ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/flye.png) | ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/raven.png) |
 <!-- ## Dotplot Analysis: Assembly Quality Assessment
 
-Let me explain the results of the assembly quality assessment for each tool.
+I explain the results of the assembly quality assessment for each tool.
 First, Shasta showed almost perfect linear alignment. The contigs matched the reference genome very well, with minimal gaps or inversions. 
 There were six large continuous regions, which likely represent the six chromosomes. This suggests that Shasta reconstructed the chromosome structure very accurately.
 Canu also performed well, but there were some issues. I observed multiple gaps and inversions in some contigs. Also, several contigs mapped to the same chromosome, which means the assembly was more fragmented. Some short contigs might be misassembled or unnecessary.
@@ -251,13 +310,15 @@ Depending on what is most important for our project—such as having fewer conti
 
 ---
 
-## Polishing Experiment Overview (Canu)
+## Polishing Experiment Overview
+
+**Polishing**...Process of correcting errors in the assembled genome sequence to improve its accuracy.
 
 - **Procedure**:
-  1. Pilon (2 consecutive rounds)
+  1. Pilon
      - Using Illumina reads and ONT long reads
      - Effective for base substitution and indel corrections
-  2. Medaka (1 round)
+  2. Medaka
      - Using ONT reads
      - Pre-trained on ONT-specific error patterns
      - Strong in homopolymer region correction
@@ -270,7 +331,7 @@ First, I used Pilon twice, then Medaka. Polishing helps fix small errors that re
 
 ---
 
-## Polishing Method Comparison
+## Canu Polishing Result
 
 ![bg right:40% vertical w:450px](../public/images/polishing-nx.png)
 ![bg w:450px](../public/images/polishing-cumulative.png)
@@ -282,11 +343,40 @@ table {
 }
 </style>
 
-| Metric                | Raw Data | Pilon 1st | Pilon 2nd | Medaka |
-| ----------------- | ------ | --------- | --------- | ------- |
-| Mismatch rate (/100 kbp) | 256.34 | 165.23    | 128.52    | 134.82  |
-| Indel rate (/100 kbp)  | 458.67 | 289.12    | 233.45    | 188.91  |
-| Genome fraction (%)     | 96.234 | 96.892    | 97.182    | 97.190  |
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Raw Data</th>
+      <th>Pilon 1st</th>
+      <th>Pilon 2nd</th>
+      <th>Medaka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Mismatch rate (/100 kbp)</strong></td>
+      <td class="poor">256.34</td>
+      <td class="fair">165.23</td>
+      <td class="best">128.52</td>
+      <td class="good">134.82</td>
+    </tr>
+    <tr>
+      <td><strong>Indel rate (/100 kbp)</strong></td>
+      <td class="poor">458.67</td>
+      <td class="fair">289.12</td>
+      <td class="good">233.45</td>
+      <td class="best">188.91</td>
+    </tr>
+    <tr>
+      <td><strong>Genome fraction (%)</strong></td>
+      <td class="poor">96.234</td>
+      <td class="fair">96.892</td>
+      <td class="good">97.182</td>
+      <td class="best">97.190</td>
+    </tr>
+  </tbody>
+</table>
 
 <!--
 This is the result of Polishing
@@ -300,15 +390,21 @@ The improvement in these metrics after polishing demonstrates that both Pilon an
 
 ---
 
-## Evaluate Accuracy Improvement
+## Evaluate Canu Accuracy Improvement
 
-| **Before Polishing**                       | **Pilon+Medaka**                       | **Shasta**                       |
-|:------------------------------:|:------------------------------:|:------------------------------:|
-| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/medaka.png) | ![w:470px](../public/images/shasta.png) |
+| **Canu Before Polishing**                       | **Canu Pilon+Medaka**                       |
+|:------------------------------:|:------------------------------:|
+| ![w:470px](../public/images/canu.png) | ![w:470px](../public/images/medaka.png) |
 <!-- 
-However, when comparing the dotplots, while the polishing steps significantly improved the Canu assembly, the overall quality still does not reach the level of the Shasta assembly. This suggests that while polishing can correct many errors, it cannot fully compensate for structural differences in the initial assembly. 
+-->
 
-The Shasta assembly is better chromosome-level structure and continuity remain unmatched even after extensive polishing of the Canu assembly.
+---
+## Evaluate Shasta Accuracy Improvement
+
+| **Shasta Before Polishing**                       | **Shasta Pilon+Medaka**                       |
+|:------------------------------:|:------------------------------:|
+| ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/shasta.png) |
+<!-- 
 -->
 
 ---
