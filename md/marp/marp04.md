@@ -403,7 +403,7 @@ The improvement in these metrics after polishing demonstrates that both Pilon an
 
 | **Shasta Before Polishing**                       | **Shasta Pilon+Medaka**                       |
 |:------------------------------:|:------------------------------:|
-| ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/shasta.png) |
+| ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/shast.png) |
 <!-- 
 -->
 
@@ -411,7 +411,7 @@ The improvement in these metrics after polishing demonstrates that both Pilon an
 
 ## Future Directions
 
-1. **Polishing Shasta Result**
+1. **Compare Polishing Result**
    - Select better performing assembly for further improvement
 
 2. **Advanced Polishing**
