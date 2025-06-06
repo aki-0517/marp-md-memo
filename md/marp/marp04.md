@@ -39,21 +39,30 @@ I will explain the steps I took.
 
 ![bg right:40% w:400px](../public/images/dd.jpg)
 
-- Model organism of social amoeba  
-- Life cycle: Single-cell ⇄ Multicellular  
-- Genome size: ~34 Mb  
-- Chromosomes: 6 + rDNA (~88 kb×100 copies) + Mitochondria (~56 kb)
+* Model organism of social amoeba
+* Life cycle: Single-cell ⇄ Multicellular
+* Genome size: \~34.2 Mb
+* Chromosomes: 6 + extrachromosomal rDNA (\~88 kb × \~100 copies) + mitochondria (\~56 kb)
 
-**Genome Characteristics**:
-- AT-rich sequence composition (77.6%)
-- Numerous tRNA genes (390 copies)
-- Rich in simple sequence repeats (SSR) (>11%)
+**Genome Characteristics**
+
+* **AT-rich genome (77.6%)** – high AT content shapes chromatin structure.
+* **Numerous tRNA genes (≈ 390 copies)** – tRNA clusters act as safe harbors for retrotransposons. 
+* **SSR-rich (> 11%)** – dense simple‑sequence repeats generate assembly ambiguities but provide polymorphic markers.
 
 <!--
-Dictyostelium discoideum's genome is about 34 million base pairs, organized into six chromosomes plus extrachromosomal rDNA units and mitochondrial genome. 
+Speaker notes:
+The nuclear genome of *D. discoideum* is ~34 Mb across six chromosomes. In addition, ~100 copies of an 88 kb extrachromosomal rDNA palindrome and a 56 kb mitochondrial genome are present.
 
-It is highly AT-rich (roughly 77.6 %), contains around 390 tRNA genes, and more than 11 % of its sequence consists of simple sequence repeats.  Simple sequence repeats (SSRs), also known as microsatellites, are short DNA sequences consisting of 1–6 base pair motifs repeated in tandem.
+Key genomic quirks influence assembly strategy:
 
+● The genome is extremely AT‑rich (~77.6%)【turn0search0】【turn0search3】, which lowers sequence complexity and leads to polymerase slippage; long-read platforms (ONT/PacBio) mitigate this by spanning homopolymer tracts.
+
+● About 390 tRNA genes are dispersed genome‑wide【turn0search1】【turn0search6】. Their repetitive, nearly identical sequences can collapse during assembly; flanking unique sequence in long reads helps place them correctly.
+
+● >11 % of nucleotides lie in short simple‑sequence repeats (SSRs)【turn0search4】【turn0search10】. These repeats fragment short‑read assemblies but are useful later as polymorphic markers for linkage mapping and strain typing.
+
+Together these features justify a hybrid pipeline: long‑reads for contiguous assembly, Illumina for accuracy, followed by repeat‑aware polishers and manual curation at tRNA/SSR loci.
 -->
 
 ---
@@ -285,6 +294,49 @@ In conclusion, Shasta gave the best results for preserving chromosome-level stru
 
 ---
 
+## BUSCO Score
+
+<style scoped>
+table { width: 100%; font-size: 16px; }
+th, td { padding: 6px 8px; text-align: center; border: 1px solid #ddd; }
+th { background:#424242; color:#fff; }
+.best { background:#c8e6c9; }  /* most favorable */
+.good { background:#e8f5e9; }
+.fair { background:#fff8e1; }
+.poor { background:#ffebee; }
+</style>
+
+| Metric                    | **Canu**                             | **Shasta**                           | **Raven**                            | **Flye**                             | **Description & Ideal**                                                                            |
+| ------------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| **Complete (C)**          | <span class="best">94.9 %</span>     | <span class="good">91.4 %</span>     | <span class="best">94.9 %</span>     | <span class="best">94.9 %</span>     | Fraction of expected genes found completely. Higher is better (ideally > 95 %).                    |
+| • Single-copy (S)         | 236 (92.5 %)                         | 229 (89.8 %)                         | 235 (92.2 %)                         | 236 (92.5 %)                         | Single-copy orthologs without duplication. Should be high to show low redundancy (ideally > 90 %). |
+| • Duplicated (D)          | 6 (2.4 %)                            | 4 (1.6 %)                            | 7 (2.7 %)                            | 6 (2.4 %)                            | Orthologs found more than once. Low duplicated count is good (ideally < 5 %).                      |
+| **Fragmented (F)**        | 3 (1.2 %)                            | 3 (1.2 %)                            | 3 (1.2 %)                            | 3 (1.2 %)                            | Partial matches of expected genes. Lower is better (ideally < 2 %).                                |
+| **Missing (M)**           | <span class="best">10 (3.9 %)</span> | <span class="fair">19 (7.5 %)</span> | <span class="best">10 (3.9 %)</span> | <span class="best">10 (3.9 %)</span> | Genes not detected. Fewer missing is better (ideally < 5 %).                                       |
+| **Stop-codon errors (E)** | 2 (0.8 %)                            | 1 (0.4 %)                            | 2 (0.8 %)                            | 3 (1.2 %)                            | Complete genes containing internal stops. Few errors are acceptable (ideally < 1 %).               |
+| **Total BUSCOs (n)**      | 255                                  | 255                                  | 255                                  | 255                                  | Number of BUSCO groups searched. Always constant for the chosen lineage.                           |                 |
+
+<!--
+
+“Here is the BUSCO quality check for our two best assemblies.
+
+BUSCO scores help to check how complete the genome assembly is by looking for important genes that should be there.  
+Canu captures almost 95 % of all single-copy orthologs – really nice.  
+Shasta is still good at 91 %, but a little lower.
+
+For missing genes, Canu leaves only ten (3.9 %), while Shasta misses nineteen (7.5 %).  
+That’s why Canu looks better overall in completeness.
+
+On the other hand, the internal stop-codon warning is tiny for both: two hits in Canu (0.8 %), one hit in Shasta (0.4 %) – so no big concern.
+
+Take-home message:  
+If we prioritize completeness and low missing rate, Canu wins.  
+But Shasta is not far behind and still gives us that strong structure we saw earlier.”
+-->
+
+
+---
+
 ## Overall Assembly Evaluation
 
 <style scoped>
@@ -296,10 +348,10 @@ table {
 
 | Tool      | Evaluation                | Comments                                                                                       |
 |-----------|---------------------------|-----------------------------------------------------------------------------------------------|
-| **Shasta**| ⭐ Best for structure      | - Longest contig (12 Mb), top N50 (6.7 Mb)<br>- Nx/cumulative plots: covers most with few contigs<br>- Highest contig count (36) |
 | **Canu**  | ⭐ High accuracy, low fragmentation | - Fewest contigs (14), good N50 (3.6 Mb), max contig 8.7 Mb<br>- Consistently strong in Nx/cumulative plots |
+| **Shasta**| 🟢 Good for structure      | - Longest contig (12 Mb), top N50 (6.7 Mb)<br>- Nx/cumulative plots: covers most with few contigs<br>- Highest contig count (36) |
+| **Flye**  | △ Balanced     | - Similar contig/N50 to Raven<br>- Max contig smaller (5 Mb), total length moderate (34.3 Mb) |
 | **Raven** | △ Fast & practical        | - Longest total length (35.5 Mb), max contig 5.8 Mb<br>- N50/Nx lower than Shasta/Canu |
-| **Flye**  | △ Balanced but weaker     | - Similar contig/N50 to Raven<br>- Max contig smaller (5 Mb), total length moderate (34.3 Mb) |
 
 <!--
 This table summarizes the strengths of each assembly tool.
