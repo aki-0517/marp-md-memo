@@ -46,9 +46,10 @@ I will explain the steps I took.
 
 **Genome Characteristics**
 
-* **AT-rich genome (77.6%)** – high AT content shapes chromatin structure.
-* **Numerous tRNA genes (≈ 390 copies)** – tRNA clusters act as safe harbors for retrotransposons. 
-* **SSR-rich (> 11%)** – dense simple‑sequence repeats generate assembly ambiguities but provide polymorphic markers.
+* **AT-rich genome (77.6%)** – Challenges sequencing due to polymerase slippage, requiring long reads.
+* **Numerous tRNA genes (≈ 390 copies)** – Similar clustered genes complicate assembly, needing long reads for accurate placement.
+* **SSR-rich (> 11%)** – Dense repeats cause assembly ambiguities but can serve as markers.
+
 
 <!--
 Speaker notes:
