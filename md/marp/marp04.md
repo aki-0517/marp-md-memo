@@ -16,8 +16,14 @@ style: |
   .caption { font-size: 18px; font-style: italic; margin-top: 8px; }
 ---
 
-# *Dictyostelium discoideum*  
-## Genome Assembly & Polishing Summary
+# *Progress Report #1*  
+### 2025/6/9
+##### Akinobu Ono
+
+
+---
+
+# *Dictyostelium discoideum Genome Assembly*  
 
 - **Objective**: Construction of high-quality genome sequence for model organism (chromoosome level) *D. discoideum*  
 - **Significance**: Centromere structure, chromosome segregation machinery, co-evolution analysis 

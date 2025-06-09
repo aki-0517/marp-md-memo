@@ -185,6 +185,8 @@
   },
   "active": "99c272057b844e2a",
   "lastOpenFiles": [
+    "md/marp/ProgressReport#1.pdf",
+    "md/marp/marp04.pdf",
     "md/public/fasta/shasta_pilon_round1_snps_indels.fasta",
     "shasta_pilon_round1_snps_indels.fasta",
     "pilon_round1_snps_indels.fasta",
@@ -194,8 +196,6 @@
     "md/public/polishing-shasta-quast/report.html",
     "md/public/polishing-shasta-quast",
     "polishing-shasta-quast",
-    "md/public/polishing-canu-quast/report.txt",
-    "md/public/polishing-canu-quast/report.pdf",
     "md/public/images/shasta_pilon.png",
     "shasta_pilon.png",
     "md/memo/daily/may-29-memo.md",
