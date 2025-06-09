@@ -1,0 +1,25 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    Shasta_raw  Pilon_polished
+# contigs (>= 0 bp)         36          36            
+# contigs (>= 1000 bp)      36          36            
+# contigs (>= 5000 bp)      29          29            
+# contigs (>= 10000 bp)     19          19            
+# contigs (>= 25000 bp)     16          16            
+# contigs (>= 50000 bp)     12          12            
+Total length (>= 0 bp)      33471541    33544245      
+Total length (>= 1000 bp)   33471541    33544245      
+Total length (>= 5000 bp)   33453163    33525859      
+Total length (>= 10000 bp)  33382783    33455423      
+Total length (>= 25000 bp)  33341075    33413650      
+Total length (>= 50000 bp)  33216516    33288841      
+# contigs                   36          36            
+Largest contig              12082896    12110330      
+Total length                33471541    33544245      
+GC (%)                      22.90       22.83         
+N50                         6719217     6733752       
+N90                         1724949     1729143       
+auN                         7047419.1   7063421.0     
+L50                         2           2             
+L90                         6           6             
+# N's per 100 kbp           0.00        0.00          

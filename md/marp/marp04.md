@@ -250,7 +250,7 @@ table {
     </tr>
     <!-- Total length: 参照 ~34.2Mb に近いほど良 -->
     <tr>
-      <td><strong>Total length (Expected ~34.2 Mb)</strong></td>
+      <td><strong>Total length (Expected longer than ~34.2 Mb)</strong></td>
       <td class="poor">35.5 Mb</td> <!-- 少し長すぎ -->
       <td class="good">34.3 Mb</td>
       <td class="poor">33.5 Mb</td> <!-- 少し短すぎ -->
@@ -384,10 +384,7 @@ First, I used Pilon twice, then Medaka. Polishing helps fix small errors that re
 
 ---
 
-## Canu Polishing Result
-
-![bg right:40% vertical w:450px](../public/images/polishing-nx.png)
-![bg w:450px](../public/images/polishing-cumulative.png)
+<!-- ## Canu & Shasta Polishing Result
 
 <style scoped>
 table {
@@ -439,9 +436,7 @@ This is the result of Polishing
 3. Genome fraction (%): Percentage of the reference genome covered by the assembly. A higher value indicates more complete genome coverage.
 
 The improvement in these metrics after polishing demonstrates that both Pilon and Medaka successfully enhanced the assembly quality by correcting errors and increasing genome coverage.
--->
-
----
+--> -->
 
 ## Evaluate Canu Accuracy Improvement
 
@@ -454,9 +449,9 @@ The improvement in these metrics after polishing demonstrates that both Pilon an
 ---
 ## Evaluate Shasta Accuracy Improvement
 
-| **Shasta Before Polishing**                       | **Shasta Pilon+Medaka**                       |
+| **Shasta Before Polishing**                       | **Shasta Pilon**                       |
 |:------------------------------:|:------------------------------:|
-| ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/shast.png) |
+| ![w:470px](../public/images/shasta.png) | ![w:470px](../public/images/shasta_pilon.png) |
 <!-- 
 -->
 
