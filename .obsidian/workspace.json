@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/may-28-memo.md",
+                "file": "md/memo/daily/Jun-10-memo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "may-28-memo"
+              "title": "Jun-10-memo"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 370.5
   },
   "right": {
     "id": "086d12dbcca2797a",
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/marp/marp01.md",
+                "file": "md/memo/daily/Jun-10-memo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for marp01"
+              "title": "Backlinks for Jun-10-memo"
             }
           },
           {
@@ -170,7 +170,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 1149.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -185,7 +185,19 @@
   },
   "active": "99c272057b844e2a",
   "lastOpenFiles": [
+    "NanoPlot-report.html",
+    "md/memo/daily/may-28-memo.md",
+    "md/memo/daily/Jun-3-memo.md",
+    "md/memo/daily/Jun-10-memo.md",
     "md/marp/ProgressReport#1.pdf",
+    "md/marp/marp04.md",
+    "md/marp/scripts/marp04-script.md",
+    "md/marp/marp04_ja.md",
+    "md/marp/marp04_ja.mp",
+    "md/memo/daily/may-29-memo.md",
+    "md/marp/marp01.md",
+    "md/memo/discription2.md",
+    "md/memo/result.md",
     "md/marp/marp04.pdf",
     "md/public/fasta/shasta_pilon_round1_snps_indels.fasta",
     "shasta_pilon_round1_snps_indels.fasta",
@@ -194,12 +206,8 @@
     "md/public/polishing-shasta-quast/report.txt",
     "md/public/polishing-shasta-quast/report.pdf",
     "md/public/polishing-shasta-quast/report.html",
-    "md/public/polishing-shasta-quast",
-    "polishing-shasta-quast",
     "md/public/images/shasta_pilon.png",
     "shasta_pilon.png",
-    "md/memo/daily/may-29-memo.md",
-    "md/marp/scripts/marp04-script.md",
     "md/public/images/dd.jpg",
     "dd.jpg",
     "cumulative.png",
@@ -208,18 +216,12 @@
     "Screenshot 2025-06-05 at 14.48.57.png",
     "memo.md",
     "md/memo/shasta-break-analyze.md",
-    "md/memo/daily/may-28-memo.md",
     "md/public/images/raven.png",
     "md/public/images/shasta.png",
-    "md/memo/daily/Jun-3-memo.md",
     "md/memo/dd.md",
-    "md/marp/marp04.md",
     "md/memo/summaryv2.md",
-    "md/memo/discription2.md",
     "md/memo/may-28-memo.md",
-    "md/memo/result.md",
     "md/memo/summary_en.md",
-    "md/marp/marp01.md",
     "md/marp/marp02.md",
     "md/marp/marp03.md",
     "md/public/files/dd.md",
@@ -229,8 +231,6 @@
     "md/public/README.md",
     "May8.md",
     "md/memo/discription1.md",
-    "README.md",
-    "2025-05-21.md",
     "Untitled.canvas"
   ]
 }
