@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/marp/scripts/marp04-script.md",
+                "file": "md/memo/daily/may-29-memo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "marp04-script"
-            }
-          },
-          {
-            "id": "99c272057b844e2a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "md/memo/daily/Jun-10-memo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Jun-10-memo"
+              "title": "may-29-memo"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 461.5
   },
   "right": {
     "id": "086d12dbcca2797a",
@@ -109,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/Jun-10-memo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Jun-10-memo"
+              "title": "Backlinks"
             }
           },
           {
@@ -170,8 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1149.5,
-    "collapsed": true
+    "width": 701.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,29 +166,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99c272057b844e2a",
+  "active": "e54fb563be504d96",
   "lastOpenFiles": [
-    "NanoPlot-report.html",
+    "assembly2-results/shasta/fasta/Assembly.fasta",
+    "assembly2-results/shasta/fasta",
+    "assembly2-results/flye/fasta/assembly.fasta",
+    "assembly2-results/flye/fasta",
+    "assembly2-results/canu/fasta/dicty.unassembled.fasta",
+    "assembly2-results/canu/fasta/dicty.contigs.fasta",
+    "assembly2-results/canu/fasta",
+    "md/memo/daily/jun-16-memo.md",
+    "md/memo/daily/may-29-memo.md",
+    "Untitled.md",
     "md/memo/daily/may-28-memo.md",
-    "md/memo/daily/Jun-3-memo.md",
+    "md/memo/qc-assesment.md",
+    "md/memo/assenbly-assesment.md",
+    "assembly2-results/busco/summary.md",
+    "assembly2-results/busco/short_summary.specific.eukaryota_odb10.busco_shasta.txt",
+    "assembly2-results/busco/short_summary.specific.eukaryota_odb10.busco_flye.txt",
+    "assembly2-results/busco/short_summary.specific.eukaryota_odb10.busco_canu.txt",
+    "assembly2-results/busco",
+    "md/memo/daily/Jun-11-memo.md",
+    "ncbi_dataset/README.md",
     "md/memo/daily/Jun-10-memo.md",
-    "md/marp/ProgressReport#1.pdf",
+    "md/memo/daily/Jun-3-memo.md",
     "md/marp/marp04.md",
     "md/marp/scripts/marp04-script.md",
     "md/marp/marp04_ja.md",
-    "md/marp/marp04_ja.mp",
-    "md/memo/daily/may-29-memo.md",
     "md/marp/marp01.md",
     "md/memo/discription2.md",
     "md/memo/result.md",
-    "md/marp/marp04.pdf",
-    "md/public/fasta/shasta_pilon_round1_snps_indels.fasta",
-    "shasta_pilon_round1_snps_indels.fasta",
-    "pilon_round1_snps_indels.fasta",
-    "md/public/fasta/pilon_round1_snps_indels.fasta",
-    "md/public/polishing-shasta-quast/report.txt",
-    "md/public/polishing-shasta-quast/report.pdf",
-    "md/public/polishing-shasta-quast/report.html",
     "md/public/images/shasta_pilon.png",
     "shasta_pilon.png",
     "md/public/images/dd.jpg",
@@ -224,13 +214,6 @@
     "md/memo/summary_en.md",
     "md/marp/marp02.md",
     "md/marp/marp03.md",
-    "md/public/files/dd.md",
-    "md/memo/summary.md",
-    "md/public/files/tutorial.md",
-    "2025-05-22.md",
-    "md/public/README.md",
-    "May8.md",
-    "md/memo/discription1.md",
     "Untitled.canvas"
   ]
 }
