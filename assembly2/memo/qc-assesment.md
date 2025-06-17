@@ -1,3 +1,7 @@
+
+## ref data
+https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000004695.1/
+
 ## 📊 NanoPlot QC 評価（定量的）
 
 | 指標 | 結果 | 比較基準 | 評価 | コメント |
@@ -262,3 +266,83 @@ filtlong \
    * `BUSCO`, `QUAST`, `dotplot` による構造評価と完全性チェック
 
 ---
+
+## ## 定量的評価（フィルタ後）
+
+|指標|フィルタ後の結果|目標値・基準|評価|
+|---|---|---|---|
+|**カバレッジ**|**≈ 60×**|ONTアセンブリは30–60×が最適69, 75([biostars.org](https://www.biostars.org/p/363651/?utm_source=chatgpt.com "Good coverage value for de novo assembly with NanoPore Reads?"), [royalsocietypublishing.org](https://royalsocietypublishing.org/doi/10.1098/rstb.2020.0160?utm_source=chatgpt.com "Benchmarking Oxford Nanopore read assemblers for high-quality ..."))|✅|
+|**平均リード長**|**11,036 bp**|ONT理想5–15 kb、N50>10 kb76([gensoft.pasteur.fr](https://gensoft.pasteur.fr/docs/Flye/2.9/USAGE.html?utm_source=chatgpt.com "Flye manual"))|✅|
+|**リードN50**|**13,741 bp**|Flye推奨N50>10 kb76([gensoft.pasteur.fr](https://gensoft.pasteur.fr/docs/Flye/2.9/USAGE.html?utm_source=chatgpt.com "Flye manual"))|✅|
+|**最大リード長**|**139,714 bp**|>50 kbあればリピート越え可能87([nanoporetech.com](https://nanoporetech.com/applications/investigations/genome-assembly?utm_source=chatgpt.com "Assembly \| Oxford Nanopore Technologies"))|✅|
+|**平均品質スコア（Q）**|**14.7**|MedakaではQ>15が理想だが最低Q12以上75([cloud-span.github.io](https://cloud-span.github.io/nerc-metagenomics04-polishing/aio.html?utm_source=chatgpt.com "Polishing: Aio - GitHub Pages"))|⭕|
+|**Q>15 リード割合**|**66.3 %**|Medaka推奨：50 %超78([cloud-span.github.io](https://cloud-span.github.io/nerc-metagenomics04-polishing/aio.html?utm_source=chatgpt.com "Polishing: Aio - GitHub Pages"))|✅|
+|**Q>20 リード割合**|**2.5 %**|ONT限界だが理想は10 %超89([reddit.com](https://www.reddit.com/r/bioinformatics/comments/1e9kpw6/help_with_bacteria_long_read_closed_genome/?utm_source=chatgpt.com "Help with bacteria long read closed genome assembly - Reddit"))|❌|
+
+---
+
+## 各指標の理由と参考文献
+
+### 1. カバレッジ（量）
+
+- **最適カバレッジ**：ONTアセンブリでは 30–60×が推奨され、乱れの少ない構造的正確性を得やすい79([biostars.org](https://www.biostars.org/p/363651/?utm_source=chatgpt.com "Good coverage value for de novo assembly with NanoPore Reads?"), [royalsocietypublishing.org](https://royalsocietypublishing.org/doi/10.1098/rstb.2020.0160?utm_source=chatgpt.com "Benchmarking Oxford Nanopore read assemblers for high-quality ..."))。
+    
+- **過剰カバレッジのリスク**：エラーの誤った合意やリピート誤接続、計算負荷増大の原因となる79([biostars.org](https://www.biostars.org/p/363651/?utm_source=chatgpt.com "Good coverage value for de novo assembly with NanoPore Reads?"))。
+    
+
+### 2. リード長（構造分解能）
+
+- **平均長 5–15 kb**：Oxford Nanoporeのリード長として一般的な範囲で、10 kb以上あれば大半のリピート領域を越えやすい80([nanoporetech.com](https://nanoporetech.com/applications/investigations/genome-assembly?utm_source=chatgpt.com "Assembly | Oxford Nanopore Technologies"))。
+    
+- **N50>10 kb**：FlyeやRavenの初期disjointig構築に十分な長さとされる76([gensoft.pasteur.fr](https://gensoft.pasteur.fr/docs/Flye/2.9/USAGE.html?utm_source=chatgpt.com "Flye manual"))。
+    
+
+### 3. 品質スコア（精度）
+
+- **平均Qスコア**：Q12（誤り率約6％）以上がリードフィルタリングの下限目安75([cloud-span.github.io](https://cloud-span.github.io/nerc-metagenomics04-polishing/aio.html?utm_source=chatgpt.com "Polishing: Aio - GitHub Pages"))。
+    
+- **Q>15割合**：Medakaがモデル化を安定させるために50 %以上を推奨78([cloud-span.github.io](https://cloud-span.github.io/nerc-metagenomics04-polishing/aio.html?utm_source=chatgpt.com "Polishing: Aio - GitHub Pages"))。
+    
+- **Q>20割合**：ONTフローセル技術の現状では10 %超は難しいため、Illumina併用で補正するのが一般的82([reddit.com](https://www.reddit.com/r/bioinformatics/comments/1e9kpw6/help_with_bacteria_long_read_closed_genome/?utm_source=chatgpt.com "Help with bacteria long read closed genome assembly - Reddit"))。
+    
+
+### 4. 長距離構造（最大リード）
+
+- **最大リード長**：>50 kbのリードは大きなリピートや構造変異を正確に橋渡し可能88([nanoporetech.com](https://nanoporetech.com/applications/investigations/genome-assembly?utm_source=chatgpt.com "Assembly | Oxford Nanopore Technologies"))。
+    
+
+---
+
+## 推奨フィルタリング設定（Filtlong）
+
+```bash
+filtlong \
+  --min_length 3000 \
+  --min_mean_q 12 \
+  --target_bases 2000000000 \
+  Dicty_gDNA_NEB-2.fastq \
+  > Dicty_filtered.fastq
+```
+
+1. **--min_length 3000**  
+    短いリードは誤ブリッジやノイズ原因となるため除去80([melbournebioinformatics.org.au](https://www.melbournebioinformatics.org.au/tutorials/tutorials/hybrid_assembly/nanopore_assembly/?utm_source=chatgpt.com "Hybrid genome assembly - Nanopore and Illumina"))。
+    
+2. **--min_mean_q 12**  
+    誤り率約6％未満の安定したリードだけを残し、polishing効率を向上75([cloud-span.github.io](https://cloud-span.github.io/nerc-metagenomics04-polishing/aio.html?utm_source=chatgpt.com "Polishing: Aio - GitHub Pages"))。
+    
+3. **--target_bases 2000000000**  
+    34 Mb×60×=2.04 Gbに合わせ、過剰カバレッジを回避79([biostars.org](https://www.biostars.org/p/363651/?utm_source=chatgpt.com "Good coverage value for de novo assembly with NanoPore Reads?"))。
+    
+
+---
+
+## まとめ：この戦略の適切性
+
+- **量・長さ・精度**の各指標がFlyeやMedakaの要件を満たし、**リピート解析も有利な長さ**を確保。
+    
+- **Illumina併用polishing**（Pilon, NextPolish）で、残ったエラーも十分に補正可能。
+    
+- **BUSCO Complete >95 %**、**Contig数≒染色体数**が達成できれば、染色体レベルのアセンブリとして十分な品質です。
+    
+
+このQC戦略は、Flye推奨のカバレッジ・長さ、Medakaのpolishing要件を満たしつつ、過剰データを適切に絞り込むことで計算リソースとアセンブリ精度を最適化する、**最善かつ適切な方法**と言えます。
