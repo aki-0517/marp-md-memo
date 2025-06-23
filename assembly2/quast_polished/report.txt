@@ -1,0 +1,57 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     Canu_Polished  Flye_Polished
+# contigs (>= 0 bp)          41             16           
+# contigs (>= 1000 bp)       41             16           
+# contigs (>= 5000 bp)       41             15           
+# contigs (>= 10000 bp)      41             15           
+# contigs (>= 25000 bp)      40             15           
+# contigs (>= 50000 bp)      26             13           
+Total length (>= 0 bp)       35841794       34744195     
+Total length (>= 1000 bp)    35841794       34744195     
+Total length (>= 5000 bp)    35841794       34740038     
+Total length (>= 10000 bp)   35841794       34740038     
+Total length (>= 25000 bp)   35823352       34740038     
+Total length (>= 50000 bp)   35281531       34660719     
+# contigs                    41             16           
+Largest contig               5923086        12156340     
+Total length                 35841794       34744195     
+Reference length             34204973       34204973     
+GC (%)                       22.86          22.81        
+Reference GC (%)             22.44          22.44        
+N50                          3340021        3382267      
+NG50                         3340021        3382267      
+N90                          1245950        1728463      
+NG90                         1766319        2027319      
+auN                          3324743.8      6221091.3    
+auNG                         3483843.8      6319163.2    
+L50                          4              3            
+LG50                         4              3            
+L90                          11             8            
+LG90                         10             7            
+# misassemblies              731            670          
+# misassembled contigs       38             15           
+Misassembled contigs length  35718446       34740038     
+# local misassemblies        166            160          
+# scaffold gap ext. mis.     0              0            
+# scaffold gap loc. mis.     0              0            
+# unaligned mis. contigs     0              0            
+# unaligned contigs          0 + 20 part    0 + 14 part  
+Unaligned length             531612         424097       
+Genome fraction (%)          97.068         97.170       
+Duplication ratio            1.062          1.030        
+# N's per 100 kbp            0.00           0.00         
+# mismatches per 100 kbp     134.18         135.84       
+# indels per 100 kbp         146.76         140.94       
+Largest alignment            1447687        1448980      
+Total aligned length         35247025       34216551     
+NA50                         400139         400519       
+NGA50                        403196         402898       
+NA90                         34220          78414        
+NGA90                        83308          90812        
+auNA                         460105.7       470908.9     
+auNGA                        482123.3       478332.6     
+LA50                         28             27           
+LGA50                        26             26           
+LA90                         117            95           
+LGA90                        90             89           

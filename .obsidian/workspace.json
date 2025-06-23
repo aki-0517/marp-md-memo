@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "assembly2/memo/repe-regi.md",
+                "file": "assembly2/memo/chromosme-level-assembly-explain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "repe-regi"
+              "title": "chromosme-level-assembly-explain"
             }
           }
         ],
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/memo/repe-regi.md",
+                "file": "assembly2/memo/chromosme-level-assembly-explain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for repe-regi"
+              "title": "Backlinks for chromosme-level-assembly-explain"
             }
           },
           {
@@ -182,47 +182,48 @@
   },
   "active": "0cc2adc750c5e10b",
   "lastOpenFiles": [
-    "assembly2/memo/polishing.md",
-    "assembly2/memo/repe-regi.md",
     "assembly2/memo/assembly-assesment.md",
     "assembly2/memo/assembly-point.md",
     "assembly2/memo/qc-assesment.md",
     "assembly2/memo/chromosme-level-assembly-explain.md",
+    "assembly2/memo/polishing-assesment.md",
+    "assembly2/memo/repe-regi.md",
     "assembly2/memo/dicty-repetitive.md",
+    "md/memo/daily/jun-16-memo.md",
+    "md/memo/daily/jun-17-memo.md",
+    "md/memo/daily/Jun-11-memo.md",
+    "md/memo/daily/Jun-10-memo.md",
+    "md/memo/daily/Jun-3-memo.md",
+    "md/memo/assenbly-assesment.md",
+    "assembly2/quast_polished/report.pdf",
+    "assembly2/busco_polished/flye_short_summary.txt",
+    "assembly2/busco_polished/canu_short_summary.txt",
+    "assembly2/busco_polished/short_summary.txt",
+    "assembly2/memo/polishing.md",
+    "assembly2/quast_polished/report.txt",
+    "assembly2/quast_polished",
+    "assembly2/busco_polished",
+    "assembly2/canu/fasta/canu_polished_round1.fasta",
+    "assembly2/flye/fasta/flye_polished_round1.fasta",
     "md/public/images/dicty_ref_vs_asm_plot.png",
     "md/public/images/Pasted image 20250619105305.png",
     "md/public/images/Pasted image 20250619104843.png",
-    "md/memo/daily/jun-16-memo.md",
     "Pasted image 20250619105305.png",
     "Pasted image 20250619104843.png",
-    "md/memo/daily/jun-17-memo.md",
     "assembly2/quast/report.pdf",
     "assembly2/busco/summary.md",
     "dicty_ref_vs_asm_plot.png",
     "Untitled.md",
     "md/marp/scripts/marp04-script.md",
     "md/memo/qc-assesment.md",
-    "assembly2/memo",
     "md/memo/chromosme-level-assembly-explain.md",
-    "md/memo/assenbly-assesment.md",
     "md/memo/assembly-point.md",
-    "md/memo/daily/Jun-11-memo.md",
     "md/memo/dd.md",
-    "md/marp/ProgressReport#1.pdf",
     "md/marp/marp04_ja.md",
     "md/memo/daily/may-29-memo.md",
     "md/public/files/dd.md",
     "ncbi_dataset/README.md",
     "md/memo/summaryv2.md",
-    "md/memo/discription1.md",
-    "md/memo/daily/may-28-memo.md",
-    "assembly2/shasta/fasta/Assembly.fasta",
-    "assembly2/shasta/fasta",
-    "assembly2/flye/fasta/assembly.fasta",
-    "assembly2/flye/fasta",
-    "assembly2/canu/fasta/dicty.unassembled.fasta",
-    "assembly2/canu/fasta/dicty.contigs.fasta",
-    "assembly2/canu/fasta",
     "md/public/images/shasta_pilon.png",
     "shasta_pilon.png",
     "md/public/images/dd.jpg",

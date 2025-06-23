@@ -135,7 +135,7 @@ bwa mem -t 16 \
 samtools view -bS flye_illumina.sam | \
   samtools sort -@ 8 -o flye_illumina.sorted.bam && \
 samtools index flye_illumina.sorted.bam && \
-java -Xmx60G -jar pilon.jar \
+java -Xmx60G -jar ./miniconda3/pkgs/pilon-1.24-hdfd78af_0/share/pilon-1.24-0/pilon.jar \
   --genome assembly2/assembly-results/flye/assembly.fasta \
   --frags flye_illumina.sorted.bam \
   --output flye_polished_round1 \
@@ -159,7 +159,7 @@ bwa mem -t 16 \
 samtools view -bS canu_illumina.sam | \
   samtools sort -@ 8 -o canu_illumina.sorted.bam && \
 samtools index canu_illumina.sorted.bam && \
-java -Xmx60G -jar pilon.jar \
+java -Xmx60G -jar ./miniconda3/pkgs/pilon-1.24-hdfd78af_0/share/pilon-1.24-0/pilon.jar \
   --genome assembly2/assembly-results/canu/dicty.contigs.fasta \
   --frags canu_illumina.sorted.bam \
   --output canu_polished_round1 \
