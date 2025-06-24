@@ -1,0 +1,16 @@
+chr	-	contig_12	contig_12	0	61398	grey
+chr	-	contig_13	contig_13	0	1717044	grey
+chr	-	contig_16	contig_16	0	3030826	grey
+chr	-	contig_17	contig_17	0	1168260	grey
+chr	-	contig_18	contig_18	0	4157	grey
+chr	-	contig_19	contig_19	0	2240335	grey
+chr	-	contig_20	contig_20	0	2015900	grey
+chr	-	contig_22	contig_22	0	34879	grey
+chr	-	contig_24	contig_24	0	55428	grey
+chr	-	contig_27	contig_27	0	83754	grey
+chr	-	contig_3	contig_3	0	12078680	grey
+chr	-	contig_5	contig_5	0	4797941	grey
+chr	-	contig_6	contig_6	0	641012	grey
+chr	-	contig_7	contig_7	0	3363344	grey
+chr	-	contig_8	contig_8	0	44305	grey
+chr	-	contig_9	contig_9	0	3195187	grey
