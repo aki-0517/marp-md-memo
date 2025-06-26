@@ -1,7 +1,12 @@
 以下に、Medaka ポリッシュ後の Flye アセンブリ（`Flye_Medaka`）と、RagTag でスキャフォルディングを施したアセンブリ（`RagTag_Flye`）の主な指標を並べ、変化点を評価します。
 
+### flye
 ### https://dgenies.toulouse.inra.fr/result/zsKBd_20250625084856
-![[Pasted image 20250625161133.png]]
+<table>
+  <tr>
+    <td><img src="../../Pasted image 20250625161133.png" width="400"></td>
+  </tr>
+</table>
 ---
 
 ## 1. BUSCO 完全性（eukaryota\_odb10）
@@ -34,7 +39,7 @@
 > * **スキャフォールド数の減少**：16→11 へ統合され、より長い連続配列が得られている。
 > * **Scaffold N50 の大幅向上**：3 Mb → 8 Mb、約2.5倍の伸長。
 > * **コンティグ自体の構造は維持**：Contig N50 や最大長はほぼ同一。
-> * **ギャップ挿入**：わずかにギャップが入り（N’s per 100 kbp 1.43）、AGP→FASTA 変換時にギャップが追加されたことがわかるが、全体長・GC% はほぼ維持。
+> * **ギャップ挿入**：わずかにギャップが入り（N's per 100 kbp 1.43）、AGP→FASTA 変換時にギャップが追加されたことがわかるが、全体長・GC% はほぼ維持。
 
 ---
 
@@ -58,3 +63,21 @@
 * **最小限のギャップ導入**：若干のギャップが挿入されたものの、総塩基長や GC 比、誤り率にはほとんど影響なし。
 
 **効果的にスキャフォールド化が進み、より大規模な構造解析や下流解析に適したアセンブリとなりました。**
+
+
+
+
+
+### canu
+### https://dgenies.toulouse.inra.fr/result/avrwJ_20250626033035
+
+![[Pasted image 20250626103249.png]]
+
+
+
+<table>
+  <tr>
+    <td><img src="../../Pasted image 20250625161133.png" width="400"></td>
+    <td><img src="../../Pasted image 20250626103249.png" width="400"></td>
+  </tr>
+</table>
