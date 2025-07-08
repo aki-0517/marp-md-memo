@@ -23,14 +23,12 @@
             "id": "0cc2adc750c5e10b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "assembly2/memo/scffolding-assesment.md",
-                "mode": "source",
-                "source": false
+                "file": "assembly2/quast/scafolding/report.pdf"
               },
-              "icon": "lucide-file",
-              "title": "scffolding-assesment"
+              "icon": "lucide-file-text",
+              "title": "report"
             }
           },
           {
@@ -119,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/memo/scffolding-assesment.md",
+                "file": "assembly2/quast/scafolding/report.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for scffolding-assesment"
+              "title": "Backlinks for report"
             }
           },
           {
@@ -194,20 +192,19 @@
   },
   "active": "0cc2adc750c5e10b",
   "lastOpenFiles": [
+    "assembly2/memo/scffolding-assesment.md",
+    "assembly2/quast/scafolding/report.pdf",
     "report.pdf",
     "assembly2/quast/scafolding/report.txt",
-    "assembly2/quast/scafolding/report.pdf",
     "assembly2/busco/scaffolding/canu_short_summary.txt",
     "canu_short_summary.txt",
     "short_summary.txt",
-    "assembly2/memo/scffolding-assesment.md",
     "report.txt",
     "Pasted image 20250626103249.png",
     "assembly2/canu/fasta/ragtag.scaffold.fasta",
     "Pasted image 20250625161133.png",
     "assembly2/quast/scafolding",
     "assembly2/flye/fasta/ragtag.scaffold.fasta",
-    "assembly2/scafolding/report.pdf",
     "md/memo/daily/Jun-25-memo.md",
     "md/memo/daily/jun-17-memo.md",
     "md/memo/daily/jun-16-memo.md",
