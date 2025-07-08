@@ -2,12 +2,8 @@
 
 ### flye
 ### https://dgenies.toulouse.inra.fr/result/zsKBd_20250625084856
-<table>
-  <tr>
-    <td><img src="../../Pasted image 20250625161133.png" width="400"></td>
-  </tr>
-</table>
 ---
+![[Pasted image 20250708104017.png]]
 
 ## 1. BUSCO 完全性（eukaryota\_odb10）
 
@@ -78,7 +74,7 @@
 
 <table>
   <tr>
-    <td><img src="../../Pasted image 20250625161133.png" width="400"></td>
-    <td><img src="../../Pasted image 20250626103249.png" width="400"></td>
+    <td><img src="../../Pasted image 20250625161133.png" width="300"></td>
+    <td><img src="../../Pasted image 20250626103249.png" width="300"></td>
   </tr>
 </table>
