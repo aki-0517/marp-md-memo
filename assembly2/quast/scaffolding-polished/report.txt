@@ -1,0 +1,57 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     raw_flye     medaka_round2  scaffold_only  pilon_polished  medaka_polished
+# contigs (>= 0 bp)          16           16             11             11              11             
+# contigs (>= 1000 bp)       16           16             11             11              11             
+# contigs (>= 5000 bp)       15           15             10             10              10             
+# contigs (>= 10000 bp)      15           15             10             10              10             
+# contigs (>= 25000 bp)      15           15             10             10              10             
+# contigs (>= 50000 bp)      13           13             8              8               8              
+Total length (>= 0 bp)       34532450     34875198       34875698       34861082        34807692       
+Total length (>= 1000 bp)    34532450     34875198       34875698       34861082        34807692       
+Total length (>= 5000 bp)    34528293     34871041       34871541       34856925        34803535       
+Total length (>= 10000 bp)   34528293     34871041       34871541       34856925        34803535       
+Total length (>= 25000 bp)   34528293     34871041       34871541       34856925        34803535       
+Total length (>= 50000 bp)   34449109     34791638       34792138       34777534        34724309       
+# contigs                    16           16             11             11              11             
+Largest contig               12078680     12202900       12202900       12197133        12181105       
+Total length                 34532450     34875198       34875698       34861082        34807692       
+Reference length             34204973     34204973       34204973       34204973        34204973       
+GC (%)                       22.95        22.73          22.73          22.74           22.77          
+Reference GC (%)             22.44        22.44          22.44          22.44           22.44          
+N50                          3363344      3394368        8062995        8060236         8047075        
+NG50                         3363344      3394368        8062995        8060236         8047075        
+N90                          1717044      1735621        4041305        4039478         4033435        
+NG90                         1717044      2034585        4041305        4039478         4033435        
+auN                          6181024.9    6245131.2      8120809.9      8117212.2       8105654.3      
+auNG                         6240201.8    6367500.6      8280050.8      8272914.0       8248482.4      
+L50                          3            3              2              2               2              
+LG50                         3            3              2              2               2              
+L90                          8            8              5              5               5              
+LG90                         8            7              5              5               5              
+# misassemblies              663          669            675            675             674            
+# misassembled contigs       14           14             9              9               9              
+Misassembled contigs length  34472865     34815506       34816006       34801372        34748006       
+# local misassemblies        157          166            165            161             154            
+# scaffold gap ext. mis.     0            0              0              1               0              
+# scaffold gap loc. mis.     0            0              0              0               0              
+# unaligned mis. contigs     0            0              0              0               0              
+# unaligned contigs          0 + 14 part  0 + 14 part    0 + 9 part     0 + 9 part      0 + 9 part     
+Unaligned length             426867       424120         424840         426212          431209         
+Genome fraction (%)          97.163       97.171         97.158         97.172          97.168         
+Duplication ratio            1.024        1.034          1.036          1.035           1.033          
+# N's per 100 kbp            0.00         0.00           1.43           1.26            0.29           
+# mismatches per 100 kbp     127.02       141.98         142.23         139.15          136.03         
+# indels per 100 kbp         395.63       211.43         211.18         109.09          246.06         
+Largest alignment            1440049      1455312        1455203        1454451         1452265        
+Total aligned length         34002985     34350817       34390152       34374100        34315382       
+NA50                         400706       404380         404377         404186          403703         
+NGA50                        401037       405183         405183         404961          404264         
+NA90                         77988        78836          78836          78783           78641          
+NGA90                        82801        94458          94458          94427           90891          
+auNA                         471592.5     476715.4       476707.3       476499.9        475713.0       
+auNGA                        476107.5     486056.3       486055.0       485640.0        484095.4       
+LA50                         27           27             27             27              27             
+LGA50                        26           26             26             26              26             
+LA90                         94           94             94             94              94             
+LGA90                        91           87             87             87              88             
