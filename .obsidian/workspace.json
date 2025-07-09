@@ -23,12 +23,14 @@
             "id": "0cc2adc750c5e10b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "assembly2/quast/scafolding/report.pdf"
+                "file": "md/memo/daily/Jul-9-memo.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "report"
+              "icon": "lucide-file",
+              "title": "Jul-9-memo"
             }
           },
           {
@@ -117,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/quast/scafolding/report.pdf",
+                "file": "md/memo/daily/Jul-9-memo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for report"
+              "title": "Backlinks for Jul-9-memo"
             }
           },
           {
@@ -192,15 +194,16 @@
   },
   "active": "0cc2adc750c5e10b",
   "lastOpenFiles": [
+    "assembly2/memo/medaka_1-assesment.md",
+    "assembly2/memo/scffolding-assesment.md",
     "md/memo/daily/Jul-9-memo.md",
-    "assembly2/quast/scaffolding-polished/report.pdf",
     "assembly2/quast/scafolding/report.pdf",
+    "assembly2/quast/scaffolding-polished/report.pdf",
     "assembly2/quast/quast_polished2/report.pdf",
     "assembly2/memo/assembly-assesment.md",
     "assembly2/memo/repetitive-regions-analysis.md",
     "assembly2/memo/pilon_1-assesment.md",
     "assembly2/memo/qc-assesment.md",
-    "assembly2/memo/scffolding-assesment.md",
     "report.pdf",
     "assembly2/quast/scaffolding-polished/report.txt",
     "assembly2/quast/scaffolding-polished/report.html",
@@ -225,7 +228,6 @@
     "assembly2/busco/busco_1/summary.md",
     "assembly2/memo/pilon_1.md",
     "md/memo/daily/Jun-11-memo.md",
-    "assembly2/memo/medaka_1-assesment.md",
     "assembly2/memo/medaka_1.md",
     "md/memo/medaka_1-assesment.md",
     "md/memo/daily/may-28-memo.md",
@@ -237,7 +239,6 @@
     "md/public/images/Pasted image 20250619104843.png",
     "Pasted image 20250619105305.png",
     "Pasted image 20250619104843.png",
-    "assembly2/busco/summary.md",
     "Untitled.canvas"
   ]
 }

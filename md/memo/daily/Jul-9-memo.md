@@ -43,3 +43,13 @@ conda run -n medaka-env medaka_consensus \
 cp medaka_canu_polished_round1/consensus.fasta canu_medaka_polished.fasta
 
 ```
+
+https://genomebiology.biomedcentral.com/articles/10.1186/s13059-025-03578-7#Sec11:~:text=Repetitive%20sequence%20annotation,of%20each%20chromosome.
+
+やるべきこと
+
+repetetive region探す(片方で)
+その後 over探す
+
+
+1x2の方が長い(repetetiveがいっぱいある)
