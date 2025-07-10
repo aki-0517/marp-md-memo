@@ -1,0 +1,32 @@
+# BUSCO version is: 5.8.3 
+# The lineage dataset is: eukaryota_odb10 (Creation date: 2024-01-08, number of genomes: 70, number of BUSCOs: 255)
+# Summarized benchmarking in BUSCO notation for file /home/aki/assembly2/assembly-results/ragtag_canu_scaffold/canu_medaka_polished.fasta.masked
+# BUSCO was run in mode: euk_genome_min
+# Gene predictor used: miniprot
+
+	***** Results: *****
+
+	C:94.9%[S:92.2%,D:2.7%],F:1.2%,M:3.9%,n:255,E:1.7%	   
+	242	Complete BUSCOs (C)	(of which 4 contain internal stop codons)		   
+	235	Complete and single-copy BUSCOs (S)	   
+	7	Complete and duplicated BUSCOs (D)	   
+	3	Fragmented BUSCOs (F)			   
+	10	Missing BUSCOs (M)			   
+	255	Total BUSCO groups searched		   
+
+Assembly Statistics:
+	29	Number of scaffolds
+	37	Number of contigs
+	35906896	Total length
+	0.001%	Percent gaps
+	5 MB	Scaffold N50
+	4 MB	Contigs N50
+
+
+Dependencies and versions:
+	hmmsearch: 3.4
+	bbtools: 39.06
+	miniprot_index: 0.13-r248
+	miniprot_align: 0.13-r248
+	python: sys.version_info(major=3, minor=12, micro=2, releaselevel='final', serial=0)
+	busco: 5.8.3

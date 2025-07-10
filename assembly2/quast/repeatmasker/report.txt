@@ -1,0 +1,57 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     reference   flye_beforeRM  flye_afterRM  canu_beforeRM  canu_afterRM
+# contigs (>= 0 bp)          41          11             11            29             29          
+# contigs (>= 1000 bp)       41          11             11            29             29          
+# contigs (>= 5000 bp)       20          10             10            29             29          
+# contigs (>= 10000 bp)      11          10             10            29             29          
+# contigs (>= 25000 bp)      8           10             10            28             28          
+# contigs (>= 50000 bp)      7           8              8             18             18          
+Total length (>= 0 bp)       34204973    34807692       34807692      35906896       35906896    
+Total length (>= 1000 bp)    34204973    34807692       34807692      35906896       35906896    
+Total length (>= 5000 bp)    34138341    34803535       34803535      35906896       35906896    
+Total length (>= 10000 bp)   34076491    34803535       34803535      35906896       35906896    
+Total length (>= 25000 bp)   34038432    34803535       34803535      35888397       35888397    
+Total length (>= 50000 bp)   33998636    34724309       34724309      35518355       35518355    
+# contigs                    41          11             11            29             29          
+Largest contig               8484197     12181105       12181105      8126513        8126513     
+Total length                 34204973    34807692       34807692      35906896       35906896    
+Reference length             34204973    34204973       34204973      34204973       34204973    
+GC (%)                       22.44       22.77          22.77         22.80          22.80       
+Reference GC (%)             22.44       22.44          22.44         22.44          22.44       
+N50                          5450249     8047075        8047075       5589158        5589158     
+NG50                         5450249     8047075        8047075       5589158        5589158     
+N90                          3602379     4033435        4033435       3917967        3917967     
+NG90                         3602379     4033435        4033435       5009411        5009411     
+auN                          6010706.9   8105654.3      8105654.3     5893519.9      5893519.9   
+auNG                         6010706.9   8248482.4      8248482.4     6186761.4      6186761.4   
+L50                          3           2              2             3              3           
+LG50                         3           2              2             3              3           
+L90                          6           5              5             6              6           
+LG90                         6           5              5             5              5           
+# misassemblies              0           674            674           731            731         
+# misassembled contigs       0           9              9             26             26          
+Misassembled contigs length  0           34748006       34748006      35782662       35782662    
+# local misassemblies        0           154            154           167            167         
+# scaffold gap ext. mis.     0           0              0             0              0           
+# scaffold gap loc. mis.     0           0              0             0              0           
+# unaligned mis. contigs     0           0              0             0              0           
+# unaligned contigs          0 + 0 part  0 + 9 part     0 + 9 part    0 + 14 part    0 + 14 part 
+Unaligned length             0           431209         431209        546647         546647      
+Genome fraction (%)          100.000     97.168         97.168        97.083         97.083      
+Duplication ratio            1.001       1.033          1.033         1.064          1.064       
+# N's per 100 kbp            67.66       0.29           0.29          1.31           1.31        
+# mismatches per 100 kbp     0.00        136.03         136.03        137.57         137.57      
+# indels per 100 kbp         0.00        246.06         246.06        255.48         255.48      
+Largest alignment            8483997     1452265        1452265       1451587        1451587     
+Total aligned length         34203973    34315382       34315382      35295972       35295972    
+NA50                         5450149     403703         403703        400956         400956      
+NGA50                        5450149     404264         404264        404265         404265      
+NA90                         3602179     78641          78641         34573          34573       
+NGA90                        3602179     90891          90891         90099          90099       
+auNA                         6010371.9   475713.0       475713.0      462539.2       462539.2    
+auNGA                        6010371.9   484095.4       484095.4      485553.5       485553.5    
+LA50                         3           27             27            28             28          
+LGA50                        3           26             26            26             26          
+LA90                         6           94             94            115            115         
+LGA90                        6           88             88            88             88          

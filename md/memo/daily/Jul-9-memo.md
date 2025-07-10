@@ -44,6 +44,32 @@ cp medaka_canu_polished_round1/consensus.fasta canu_medaka_polished.fasta
 
 ```
 
+```bash
+quast.py   -o quast_canu_comparison_medaka   -R /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna   /home/aki/assembly2/assembly-results/canu/dicty.contigs.fasta   /home/aki/assembly2/assembly-results/ragtag_canu_scaffold/ragtag.scaffold.fasta   /home/aki/assembly2/assembly-results/ragtag_canu_scaffold/canu_medaka_polished.fasta   --threads 16   --labels canu_raw,canu_scaffold,canu_medaka_polished
+```
+```bash
+RepeatMasker \
+  -pa 8 \
+  -species "dictyostelium discoideum" \
+  -xsmall \
+  /home/aki/assembly2/assembly-results/ragtag_flye_scaffold/ragtag_medaka_polished.fasta
+
+```
+
+```bash
+quast.py \
+  -r /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna \
+  -o /home/aki/quast_repeatmasker_comparison \
+  -t 8 \
+  -l \
+    reference,flye_beforeRM,flye_afterRM,canu_beforeRM,canu_afterRM \
+  /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna \
+  /home/aki/assembly2/assembly-results/ragtag_flye_scaffold/ragtag_medaka_polished.fasta \
+  /home/aki/assembly2/assembly-results/ragtag_flye_scaffold/ragtag_medaka_polished.fasta.masked \
+  /home/aki/assembly2/assembly-results/ragtag_canu_scaffold/canu_medaka_polished.fasta \
+  /home/aki/assembly2/assembly-results/ragtag_canu_scaffold/canu_medaka_polished.fasta.masked
+```
+
 https://genomebiology.biomedcentral.com/articles/10.1186/s13059-025-03578-7#Sec11:~:text=Repetitive%20sequence%20annotation,of%20each%20chromosome.
 
 やるべきこと
