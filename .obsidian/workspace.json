@@ -23,14 +23,12 @@
             "id": "0cc2adc750c5e10b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "md/memo/daily/Jul-9-memo.md",
-                "mode": "source",
-                "source": false
+                "file": "assembly2/quast/canu-scaffolding-polished/report.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Jul-9-memo"
+              "icon": "lucide-file-text",
+              "title": "report"
             }
           },
           {
@@ -39,7 +37,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "assembly2/quast/quast_polished2/report.pdf"
+                "file": "assembly2/quast/flye-scaffolding-polished/report.pdf"
               },
               "icon": "lucide-file-text",
               "title": "report"
@@ -119,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/Jul-9-memo.md",
+                "file": "assembly2/quast/canu-scaffolding-polished/report.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Jul-9-memo"
+              "title": "Backlinks for report"
             }
           },
           {
@@ -194,24 +192,25 @@
   },
   "active": "0cc2adc750c5e10b",
   "lastOpenFiles": [
+    "assembly2/quast/flye-scaffolding-polished/report.pdf",
+    "assembly2/quast/canu-scaffolding-polished/report.pdf",
+    "assembly2/quast/scafolding/report.pdf",
+    "assembly2/quast/quast_polished2/report.pdf",
+    "md/memo/daily/Jul-9-memo.md",
+    "assembly2/quast/canu-scaffolding-polished/report.txt",
+    "assembly2/quast/canu-scaffolding-polished/report.html",
+    "assembly2/quast/canu-scaffolding-polished",
+    "assembly2/quast/flye-scaffolding-polished/report.txt",
+    "assembly2/quast/flye-scaffolding-polished/report.html",
+    "assembly2/quast/flye-scaffolding-polished",
+    "report.txt",
     "assembly2/memo/medaka_1-assesment.md",
     "assembly2/memo/scffolding-assesment.md",
-    "md/memo/daily/Jul-9-memo.md",
-    "assembly2/quast/scafolding/report.pdf",
-    "assembly2/quast/scaffolding-polished/report.pdf",
-    "assembly2/quast/quast_polished2/report.pdf",
     "assembly2/memo/assembly-assesment.md",
     "assembly2/memo/repetitive-regions-analysis.md",
     "assembly2/memo/pilon_1-assesment.md",
     "assembly2/memo/qc-assesment.md",
-    "report.pdf",
-    "assembly2/quast/scaffolding-polished/report.txt",
-    "assembly2/quast/scaffolding-polished/report.html",
-    "assembly2/quast/scaffolding-polished",
-    "assembly2/flye/fasta/ragtag_medaka_polished.fasta",
-    "ragtag_medaka_polished.fasta",
     "md/memo/daily/Jun-9-memo.md",
-    "report.txt",
     "assembly2/memo/final-assesment-1.md",
     "assembly2/memo/chromosme-level-assembly-explain.md",
     "md/memo/assenbly-assesment.md",
