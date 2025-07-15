@@ -79,3 +79,46 @@ repetetive region探す(片方で)
 
 
 1x2の方が長い(repetetiveがいっぱいある)
+
+
+```bash
+bedtools getfasta \
+  -fi assembly2/assembly-results/ragtag_flye_scaffold/ragtag_medaka_polished.fasta \
+  -bed canu_unique.bed \
+  -fo canu_unique.fa && \
+prokka \
+  --outdir prokka_canu_unique \
+  --prefix canu_unique \
+  --cpus 8 \
+  --compliant \
+  --force \
+  canu_unique.fa && \
+blastn \
+  -query canu_unique.fa \
+  -db dicty_nucl \
+  -out prokka_canu_unique/canu_unique.blastn.tsv \
+  -outfmt "6 qseqid sseqid pident length evalue bitscore stitle" \
+  -num_threads 8
+
+
+```
+
+
+```bash
+(prokka_env) [aki@tardis ~]$ ls -lh prokka_canu_unique/
+合計 4.5M
+-rw-rw-r-- 1 aki aki 1.2M  7月 15 12:04 canu_unique.blastn.tsv
+-rw-rw-r-- 1 aki aki  33K  7月 15 12:04 canu_unique.err
+-rw-rw-r-- 1 aki aki  44K  7月 15 12:04 canu_unique.faa
+-rw-rw-r-- 1 aki aki 122K  7月 15 12:04 canu_unique.ffn
+-rw-rw-r-- 1 aki aki 202K  7月 15 12:04 canu_unique.fna
+-rw-rw-r-- 1 aki aki 203K  7月 15 12:04 canu_unique.fsa
+-rw-rw-r-- 1 aki aki 397K  7月 15 12:04 canu_unique.gbk
+-rw-rw-r-- 1 aki aki 266K  7月 15 12:04 canu_unique.gff
+-rw-rw-r-- 1 aki aki 1.3M  7月 15 12:04 canu_unique.log
+-rw-rw-r-- 1 aki aki 732K  7月 15 12:04 canu_unique.sqn
+-rw-rw-r-- 1 aki aki  39K  7月 15 12:04 canu_unique.tbl
+-rw-rw-r-- 1 aki aki  14K  7月 15 12:04 canu_unique.tsv
+-rw-rw-r-- 1 aki aki   85  7月 15 12:04 canu_unique.txt
+```
+

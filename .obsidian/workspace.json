@@ -25,7 +25,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "assembly2/quast/repeatmasker/report.pdf"
+                "file": "assembly2/quast/flye-scaffolding-polished/report.pdf"
               },
               "icon": "lucide-file-text",
               "title": "report"
@@ -37,14 +37,14 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "assembly2/quast/flye-scaffolding-polished/report.pdf"
+                "file": "assembly2/quast/canu-scaffolding-polished/report.pdf"
               },
               "icon": "lucide-file-text",
               "title": "report"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/quast/repeatmasker/report.pdf",
+                "file": "assembly2/quast/canu-scaffolding-polished/report.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,26 +190,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0cc2adc750c5e10b",
+  "active": "d33719a382f4c341",
   "lastOpenFiles": [
-    "assembly2/busco/reppeatmasker/flye_afterRM_short_summary.txt",
-    "assembly2/busco/reppeatmasker/canu_afterRM_short_summary.txt",
-    "assembly2/busco/reppeatmasker",
-    "canu_afterRM_short_summary.txt",
-    "flye_afterRM_short_summary.txt",
+    "md/memo/daily/Jul-14-memo.md",
+    "assembly2/busco/scaffolding-polished/busco_ragtag_flye_summary.txt",
+    "assembly2/busco/scaffolding-polished/busco_ragtag_canu_summary.txt",
+    "assembly2/busco/scaffolding-polished",
+    "busco_ragtag_canu_summary.txt",
+    "busco_ragtag_flye_summary.txt",
     "md/memo/daily/Jul-9-memo.md",
+    "assembly2/quast/flye-scaffolding-polished/report.pdf",
+    "assembly2/quast/canu-scaffolding-polished/report.pdf",
+    "assembly2/memo/assembly-point.md",
+    "assembly2/memo/assembly-assesment.md",
+    "assembly2/memo/annotation.md",
     "assembly2/quast/repeatmasker/report.pdf",
-    "assembly2/quast/repeatmasker/report.txt",
-    "assembly2/quast/repeatmasker/report.html",
-    "assembly2/quast/repeatmasker",
-    "assembly2/quast/scafolding/repeatmasker",
-    "report.txt",
+    "assembly2/memo/repeatmasker-assesment.md",
     "assembly2/memo/repeatmasker.md",
+    "assembly2/memo/canu-flye.md",
+    "assembly2/memo/scffolding-assesment.md",
+    "Pasted image 20250715123812.png",
+    "Pasted image 20250715123730.png",
+    "Pasted image 20250715123425.png",
+    "Pasted image 20250715123412.png",
+    "assembly2/flye/fasta/ragtag_flye_medaka_polished.fasta",
+    "assembly2/canu/fasta/ragtag_canu_medaka_polished.fasta",
+    "md/memo/daily/jun-16-memo.md",
+    "md/memo/daily/Jun-10-memo.md",
+    "md/memo/daily/Jun-3-memo.md",
+    "assembly2/memo/repetitive-regions-analysis.md",
+    "md/memo/daily/jun-17-memo.md",
+    "md/memo/daily/may-28-memo.md",
+    "md/memo/daily/may-29-memo.md",
     "assembly2/memo/repe-regi.md",
     "assembly2/memo/medaka_1-assesment.md",
-    "assembly2/memo/scffolding-assesment.md",
-    "assembly2/memo/assembly-assesment.md",
-    "assembly2/memo/repetitive-regions-analysis.md",
     "assembly2/memo/pilon_1-assesment.md",
     "assembly2/memo/qc-assesment.md",
     "md/memo/daily/Jun-9-memo.md",
@@ -220,24 +234,9 @@
     "Pasted image 20250626103249.png",
     "Pasted image 20250625161133.png",
     "md/memo/daily/Jun-25-memo.md",
-    "md/memo/daily/jun-17-memo.md",
-    "md/memo/daily/jun-16-memo.md",
-    "md/memo/daily/Jun-10-memo.md",
     "Pasted image 20250625152819.png",
     "Pasted image 20250625152807.png",
-    "assembly2/busco/busco_1/summary.md",
-    "assembly2/memo/pilon_1.md",
-    "md/memo/daily/Jun-11-memo.md",
-    "assembly2/memo/medaka_1.md",
-    "md/memo/medaka_1-assesment.md",
-    "md/memo/daily/may-28-memo.md",
-    "md/memo/daily/Jun-3-memo.md",
-    "assembly2/memo/assembly-point.md",
     "md/public/images/dicty_ref_vs_asm_plot.png",
-    "md/public/images/Pasted image 20250619105305.png",
-    "md/public/images/Pasted image 20250619104843.png",
-    "Pasted image 20250619105305.png",
-    "Pasted image 20250619104843.png",
     "Untitled.canvas"
   ]
 }
