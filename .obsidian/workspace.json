@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "assembly2/memo/ragtag-pilon-canu-medaka.md",
+                "file": "md/memo/daily/jul-16.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ragtag-pilon-canu-medaka"
+              "title": "jul-16"
             }
           },
           {
@@ -27,7 +27,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "assembly2/quast/flye-scaffolding-polished/report.pdf"
+                "file": "assembly2/quast/scaffolding-pilon/report.pdf"
               },
               "icon": "lucide-file-text",
               "title": "report"
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/memo/ragtag-pilon-canu-medaka.md",
+                "file": "md/memo/daily/jul-16.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ragtag-pilon-canu-medaka"
+              "title": "Backlinks for jul-16"
             }
           },
           {
@@ -193,51 +193,52 @@
   },
   "active": "a2ab44afaf6e54f8",
   "lastOpenFiles": [
-    "assembly2/memo/ragtag-medaka-canu-flye.md",
-    "assembly2/memo/qc-assesment.md",
-    "assembly2/memo/ragtag-pilon-canu-medaka.md",
-    "Pasted image 20250715162351.png",
-    "Pasted image 20250715162318.png",
-    "Pasted image 20250715162302.png",
+    "Pasted image 20250716161624.png",
+    "md/memo/daily/Jun-25-memo.md",
+    "assembly2/quast/scaffolding-pilon/report.pdf",
     "md/memo/daily/Jul-14-memo.md",
-    "assembly2/memo/medaka-canu-flye.md",
-    "assembly2/flye/fasta/ragtag_polished_round1.fasta",
-    "ragtag_polished_round1.fasta",
-    "assembly2/canu/fasta/ragtag_canu_polished_round1.fasta",
-    "assembly2/canu/ragtag_canu_polished_round1.fasta",
-    "assembly2/canu/canu_polished_round1.fasta",
-    "canu_polished_round1.fasta",
-    "md/memo/daily/Jul-9-memo.md",
-    "assembly2/quast/canu-scaffolding-polished/report.pdf",
-    "assembly2/quast/canu-scaffolding-polished/report.txt",
-    "report.txt",
-    "report.pdf",
-    "assembly2/memo/repeatmasker-assesment.md",
-    "assembly2/memo/repetitive-regions-analysis.md",
-    "assembly2/memo/scaffolding-polishing-assesment.md",
-    "assembly2/memo/scffolding-assesment.md",
-    "assembly2/memo/assembly-point.md",
-    "assembly2/memo/assembly-assesment.md",
-    "assembly2/memo/repeatmasker.md",
-    "assembly2/memo/annotation.md",
-    "Pasted image 20250715123812.png",
-    "Pasted image 20250715123730.png",
-    "Pasted image 20250715123425.png",
-    "Pasted image 20250715123412.png",
     "md/memo/daily/jun-16-memo.md",
     "md/memo/daily/Jun-10-memo.md",
     "md/memo/daily/Jun-3-memo.md",
-    "md/memo/daily/jun-17-memo.md",
-    "md/memo/daily/may-28-memo.md",
-    "md/memo/daily/may-29-memo.md",
+    "flye_vs_canu_filtered_q.png",
+    "md/memo/daily/jul-16.md",
+    "assembly2/quast/flye-scaffolding-polished/report.pdf",
+    "assembly2/memo/ragtag-pilon-canu-flye.md",
+    "md/memo/daily/Jul-9-memo.md",
+    "Pasted image 20250716151009.png",
+    "flye_vs_canu.png",
+    "assembly2/flye/fasta/ragtag_flye_polished_round1.fasta",
+    "Pasted image 20250716145423.png",
+    "assembly2/quast/scaffolding-pilon/report.txt",
+    "report.txt",
+    "report.pdf",
+    "assembly2/quast/scaffolding-pilon",
+    "md/memo/dd.md",
+    "md/memo/assenbly-assesment.md",
+    "assembly2/memo/repeatmasker-assesment.md",
+    "assembly2/memo/repetitive-regions-analysis.md",
+    "assembly2/memo/scaffolding-polishing-assesment.md",
     "assembly2/memo/repe-regi.md",
+    "assembly2/memo/repeatmasker.md",
+    "assembly2/memo/ragtag-medaka-canu-flye.md",
+    "assembly2/memo/qc-assesment.md",
+    "assembly2/memo/pilon_1.md",
     "assembly2/memo/medaka_1-assesment.md",
-    "assembly2/memo/pilon_1-assesment.md",
-    "md/memo/daily/Jun-9-memo.md",
-    "assembly2/memo/final-assesment-1.md",
-    "Pasted image 20250708104017.png",
-    "Pasted image 20250626103249.png",
-    "Pasted image 20250625161133.png",
+    "assembly2/memo/medaka_1.md",
+    "assembly2/memo/chromosme-level-assembly-explain.md",
+    "assembly2/memo/assembly-assesment.md",
+    "assembly2/memo/annotation.md",
+    "assembly2/memo/assembly-point.md",
+    "assembly2/memo/dicty-repetitive.md",
+    "assembly2/quast/canu-scaffolding-polished/report.pdf",
+    "assembly2/busco/scaffolding-pilon/short_summary.specific.eukaryota_odb10.busco_flye.txt",
+    "assembly2/busco/scaffolding-pilon/short_summary.specific.eukaryota_odb10.busco_canu.txt",
+    "Pasted image 20250715162351.png",
+    "Pasted image 20250715162318.png",
+    "Pasted image 20250715162302.png",
+    "Pasted image 20250715123812.png",
+    "Pasted image 20250715123730.png",
+    "Pasted image 20250715123425.png",
     "Untitled.canvas"
   ]
 }

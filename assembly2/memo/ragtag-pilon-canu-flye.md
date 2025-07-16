@@ -7,3 +7,5 @@ https://dgenies.toulouse.inra.fr/result/txoZL_20250715091927
 https://dgenies.toulouse.inra.fr/result/U9e4Z_20250715092103
 
 ![[Pasted image 20250715162351.png]]
+
+![[Pasted image 20250716151009.png]]
