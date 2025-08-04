@@ -27,3 +27,6 @@ assembly2/assembly-results/quast_scaffold_combined/contigs_reports/Canu_Scaffold
 assembly2/quast_results_polished/contigs_reports/Canu_Polished.mis_contigs.fa
 assembly2/quast_results_polished/contigs_reports/Flye_Polished.mis_contigs.fa
 
+
+/home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna
+
