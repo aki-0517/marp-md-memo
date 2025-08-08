@@ -25,18 +25,15 @@
             "id": "d33719a382f4c341",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "assembly2/memo/te.md",
-                "mode": "source",
-                "source": false
+                "file": "assembly2/quast/flye-scaffolding-polished/report.pdf"
               },
-              "icon": "lucide-file",
-              "title": "te"
+              "icon": "lucide-file-text",
+              "title": "report"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/memo/te.md",
+                "file": "assembly2/memo/telomere.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +116,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for te"
+              "title": "Backlinks for telomere"
             }
           },
           {
@@ -182,12 +179,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e54fb563be504d96",
+  "active": "a2ab44afaf6e54f8",
   "lastOpenFiles": [
+    "md/memo/daily/may-29-memo.md",
+    "md/memo/daily/aug-8.md",
     "assembly2/memo/telomere.md",
-    "md/memo/daily/Jul-14-memo.md",
-    "md/memo/daily/Jul-9-memo.md",
+    "assembly2/memo/te.md",
     "assembly2/quast/flye-scaffolding-polished/report.pdf",
+    "assembly2/quast/scaffolding-pilon/report.pdf",
+    "assembly2/memo/ragtag-pilon-canu-flye.md",
+    "assembly2/memo/scaffolding-polishing-assesment.md",
+    "md/memo/daily/Jul-9-memo.md",
+    "md/memo/daily/jul-17.md",
+    "md/memo/daily/jun-17-memo.md",
+    "md/memo/daily/jun-16-memo.md",
+    "md/memo/daily/jul-16.md",
+    "md/memo/daily/aug-5.md",
+    "md/memo/daily/aug-4.md",
+    "md/memo/daily-summary.md",
+    "assembly2/memo/repe-regi.md",
+    "assembly2/memo/medaka_1-assesment.md",
+    "assembly2/memo/medaka_1.md",
+    "assembly2/memo/repetitive-regions-analysis.md",
+    "assembly2/memo/repeatmasker.md",
+    "assembly2/memo/repeatmasker-assesment.md",
+    "md/memo/daily/Jul-14-memo.md",
     "assembly2/flye/fasta/igv/ragtag_polished_round1.fasta",
     "assembly2/flye/fasta/igv/telomere_hits.sorted.bam.bai",
     "assembly2/flye/fasta/igv/telomere_hits.sorted.bam",
@@ -195,35 +211,16 @@
     "telomere_hits.sorted.bam.bai",
     "telomere_hits.sorted.bam",
     "ragtag_polished_round1.fasta",
-    "md/memo/daily/aug-4.md",
-    "md/memo/daily/jul-16.md",
-    "md/memo/daily/jul-17.md",
-    "assembly2/memo/te.md",
     "assembly2/memo/annotation.md",
-    "assembly2/memo/ragtag-pilon-canu-flye.md",
     "md/memo/daily/may-28-memo.md",
-    "md/memo/daily/may-29-memo.md",
-    "md/memo/daily/jun-16-memo.md",
-    "md/memo/daily/jun-17-memo.md",
     "md/memo/daily/Jun-25-memo.md",
     "md/memo/discription2.md",
-    "md/memo/discription1.md",
-    "md/memo/result.md",
-    "md/memo/shasta-break-analyze.md",
-    "md/memo/summary.md",
     "flye_vs_canu.png",
-    "assembly2/quast/scaffolding-pilon/report.pdf",
     "assembly2/quast/canu-scaffolding-polished/report.pdf",
     "Pasted image 20250716161624.png",
-    "md/memo/daily/Jun-10-memo.md",
-    "md/memo/daily/Jun-3-memo.md",
     "flye_vs_canu_filtered_q.png",
     "Pasted image 20250716151009.png",
     "Pasted image 20250716145423.png",
-    "md/memo/dd.md",
-    "md/memo/assenbly-assesment.md",
-    "assembly2/memo/repeatmasker-assesment.md",
-    "assembly2/memo/repetitive-regions-analysis.md",
     "Pasted image 20250715162351.png",
     "Pasted image 20250715162318.png",
     "Pasted image 20250715162302.png",
