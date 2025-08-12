@@ -1,0 +1,2 @@
+reoeatmoduler, repeatmaskerやって、それをigvにあげると、centromereがわかりやすくなる。
+rDNA領域がわかったので、それを使って、igvで可視化することで、もう片方がrDNAだとわかる。
