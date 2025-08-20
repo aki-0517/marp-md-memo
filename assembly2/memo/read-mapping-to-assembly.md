@@ -208,6 +208,22 @@ samtools flagstat mapping_bowtie2_sorted.bam
     
 
 これらの手順により、Illuminaリードを用いてアセンブリの網羅性と正確性を評価することができます。
+```bash
+  164576795 (100.00%) were paired; of these:
+    62654905 (38.07%) aligned concordantly 0 times
+    70565108 (42.88%) aligned concordantly exactly 1 time
+    31356782 (19.05%) aligned concordantly >1 times
+    ----
+    62654905 pairs aligned concordantly 0 times; of these:
+      29866310 (47.67%) aligned discordantly 1 time
+    ----
+    32788595 pairs aligned 0 times concordantly or discordantly; of these:
+      65577190 mates make up the pairs; of these:
+        20741240 (31.63%) aligned 0 times
+        11819615 (18.02%) aligned exactly 1 time
+        33016335 (50.35%) alig
+```
+
 
 はい、承知いたしました。
 
@@ -280,3 +296,90 @@ samtools flagstat mapping_minimap2_sr_sorted.bam
 Bowtie2の時と同様に、**`mapped`**（マッピングされたリードの割合）と **`properly paired`**（ペアとして正しくマッピングされたリードの割合）のパーセンテージを確認することで、アセンブリの網羅性を評価できます。
 
 この方法を使えば、Bowtie2よりも高速に評価を完了できる可能性が高いです 🚀。
+
+# 結果
+```bash
+(base) [aki@tardis ~]$ samtools flagstat mapping_minimap2_sr_sorted.bam
+330259133 + 0 in total (QC-passed reads + QC-failed reads)
+329153590 + 0 primary
+0 + 0 secondary
+1105543 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+319240206 + 0 mapped (96.66% : N/A)
+318134663 + 0 primary mapped (96.65% : N/A)
+329153590 + 0 paired in sequencing
+164576795 + 0 read1
+164576795 + 0 read2
+294941372 + 0 properly paired (89.61% : N/A)
+307807028 + 0 with itself and mate mapped
+10327635 + 0 singletons (3.14% : N/A)
+3588200 + 0 with mate mapped to a different chr
+1164893 + 0 with mate mapped to a different chr (mapQ>=5)
+```
+
+
+
+
+
+
+このコマンドは、マッピングからソートまでを中間ファイルなしで一気に実行し、成功した場合にのみ (`&&`)、作成されたBAMファイルに対して `flagstat` を実行します。(326193.pts-1.tardis)
+
+Bash
+
+```
+minimap2 -ax map-ont /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna Dicty_gDNA_NEB-2.fastq | samtools view -bS | samtools sort -o mapping_minimap2_sorted.bam && samtools flagstat mapping_minimap2_sorted.bam
+```
+
+---
+
+### コマンドの解説
+
+- **`minimap2 ... | samtools view -bS`**
+    
+    - `minimap2` のマッピング結果 (SAM形式) はファイルに保存されず、標準出力を通じて直接 `samtools view` に渡されます。
+        
+    - `samtools view` はそのSAM形式のデータをBAM形式に変換します。
+        
+- **`... | samtools sort -o mapping_minimap2_sorted.bam`**
+    
+    - `samtools view` が出力したBAMデータは、さらにパイプを通じて `samtools sort` に渡されます。
+        
+    - `samtools sort` はそのデータをゲノム位置で並べ替え、最終的な `mapping_minimap2_sorted.bam` ファイルとして保存します。
+        
+- **`&& samtools flagstat mapping_minimap2_sorted.bam`**
+    
+    - `&&` は、左側のコマンド（マッピングとソート）が**成功した場合にのみ**、右側のコマンドを実行します。
+        
+    - BAMファイルが無事に作成された後、`samtools flagstat` が実行され、マッピング率などの統計情報が表示されます。
+
+
+
+```bash
+minimap2 -ax map-ont /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna Dicty_gDNA_NEB-2.fastq | samtools view -bS | samtools sort -o mapping_minimap2_sorted.bam && samtools flagstat mapping_minimap2_sorted.bam
+```
+```bash
+1682093 + 0 in total (QC-passed reads + QC-failed reads)
+934886 + 0 primary
+273373 + 0 secondary
+473834 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+1680713 + 0 mapped (99.92% : N/A)
+933506 + 0 primary mapped (99.85% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+```
+
+```bash
+minimap2 -ax sr -t 8 \ /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna \ ./Dicty-genome/Stationary_S1_R1.fastq.gz \ ./Dicty-genome/Stationary_S1_R2.fastq.gz | \ samtools view -bS - | \ samtools sort -o mapping_minimap2_sr_sorted.bam && \ samtools flagstat mapping_minimap2_sr_sorted.bam
+```
+```bash
+
+```

@@ -15,6 +15,15 @@
 | F: 断片 (Fragmented)  | 1.2%         | 1.2%         | ±0  |     |
 | M: 欠損 (Missing)     | 3.9%         | 3.9%         | ±0  |     |
 
+| Metric                     | `Flye_Medaka` | `RagTag_Flye` | Change |     |
+| -------------------------- | ------------- | ------------- | ------ | --- |
+| C: Completeness (Complete) | 94.9%         | 94.9%         | ±0     |     |
+| – S: Single-copy (Single)  | 93.3%         | 93.3%         | ±0     |     |
+| – D: Duplicated (copy)     | 1.6%          | 1.6%          | ±0     |     |
+| F: Fragmented              | 1.2%          | 1.2%          | ±0     |     |
+| M: Missing                 | 3.9%          | 3.9%          | ±0     |     |
+|                            |               |               |        |     |
+
 > **評価**：BUSCO 完全性はまったく変わらず、基盤となる遺伝子コンテンツの喪失や重複は起きていません。
 
 ---
@@ -44,9 +53,14 @@
 * **Total length**：34.875 Mb → 34.876 Mb（±0.001 Mb）
 * **Genome fraction**：97.171% → 97.158%（わずかに低下）
 * **ミスマッチ／インデル率**：
-
   * mismatches per 100 kbp: 141.98 → 142.23
   * indels per 100 kbp: 211.43 → 211.18
+
+- **Total length**: 34.875 Mb → 34.876 Mb (±0.001 Mb)
+- **Genome fraction**: 97.171% → 97.158% (slight decrease)
+- **Mismatch/indel rates**:
+  - mismatches per 100 kbp: 141.98 → 142.23
+  - indels per 100 kbp: 211.43 → 211.18
 
 > いずれもごく小幅な変動で、スキャフォールド化による品質劣化は見られません。
 

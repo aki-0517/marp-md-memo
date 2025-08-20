@@ -13,10 +13,24 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "assembly2/quast/scaffolding-pilon/report.pdf"
+                "file": "assembly2/quast/flye-scaffolding-polished/report.pdf"
               },
               "icon": "lucide-file-text",
               "title": "report"
+            }
+          },
+          {
+            "id": "6879f4ffd243f6a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "assembly2/memo/repeatmasker.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "repeatmasker"
             }
           },
           {
@@ -25,16 +39,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/aug13.md",
+                "file": "assembly2/memo/scaffolding-polishing-assesment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aug13"
+              "title": "scaffolding-polishing-assesment"
+            }
+          },
+          {
+            "id": "bba53318934f62ac",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "assembly2/quast/quast_1/report.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "report"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -107,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/aug13.md",
+                "file": "assembly2/quast/quast_1/report.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +143,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for aug13"
+              "title": "Backlinks for report"
             }
           },
           {
@@ -172,6 +198,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -180,17 +207,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d33719a382f4c341",
+  "active": "bba53318934f62ac",
   "lastOpenFiles": [
-    "assembly2/memo/read-mapping-to-assembly.md",
-    "assembly2/memo/repeatmasker.md",
-    "md/memo/daily/aug13.md",
     "md/memo/daily/aug-8.md",
+    "md/memo/daily/aug-12.md",
+    "md/memo/daily/aug13.md",
+    "md/memo/daily/aug19.md",
+    "assembly2/memo/read-mapping-to-assembly.md",
+    "assembly2/quast/flye-scaffolding-polished/report.pdf",
+    "assembly2/quast/quast_polished2/report.pdf",
+    "assembly2/quast/scaffolding-pilon/report.pdf",
+    "assembly2/quast/repeatmasker/report.pdf",
+    "md/memo/daily/aug20.md",
+    "md/memo/daily/jul-17.md",
+    "assembly2/memo/repeatmasker.md",
+    "md/memo/daily/Jul-14-memo.md",
+    "assembly2/memo/ragtag-pilon-canu-flye.md",
+    "assembly2/memo/scaffolding-polishing-assesment.md",
+    "assembly2/memo/scffolding-assesment.md",
+    "assembly2/memo/assembly-assesment.md",
+    "assembly2/busco/busco_1/summary.md",
+    "assembly2/memo/ragtag-medaka-canu-flye.md",
+    "assembly2/memo/qc-assesment.md",
     "assembly2/memo/archive-repeatmasker.md",
     "assembly2/memo/arcive-repeatmasker-assesment.md",
-    "md/memo/daily/Jul-14-memo.md",
-    "assembly2/quast/scaffolding-pilon/report.pdf",
-    "md/memo/daily/aug-12.md",
     "assembly2/To visualize repeats in the genome.md",
     "To visualize repeats in the genome.md",
     "Pasted image 20250812171321.png",
@@ -203,27 +243,13 @@
     "assembly2/flye/fasta/igv/ragtag_polished_round1.fasta.fai",
     "ragtag_polished_round1.fasta.fai",
     "md/memo/daily/Jul-9-memo.md",
-    "md/memo/daily/jul-17.md",
     "md/memo/daily/jul-16.md",
     "md/memo/daily/jun-17-memo.md",
     "md/memo/daily/may-29-memo.md",
-    "md/memo/daily/may-28-memo.md",
-    "md/memo/daily/Jun-25-memo.md",
-    "md/memo/daily/Jun-10-memo.md",
-    "md/memo/daily/jun-16-memo.md",
     "assembly2/flye/fasta/igv/sorted_alignment.bam.bai",
     "assembly2/flye/fasta/igv/sorted_alignment.bam",
-    "sorted_alignment.bam.bai",
-    "sorted_alignment.bam",
-    "assembly2/memo/rDNA.md",
-    "assembly2/flye/fasta/assembly_graph.gfa",
     "Pasted image 20250812153840.png",
     "Pasted image 20250812153820.png",
-    "assembly2/memo/ragtag-pilon-canu-flye.md",
-    "assembly2/memo/medaka_1.md",
-    "assembly2/memo/dicty-repetitive.md",
-    "assembly2/memo/bandage.md",
-    "md/memo/daily/Jun-3-memo.md",
     "flye_vs_canu.png",
     "Pasted image 20250716161624.png",
     "flye_vs_canu_filtered_q.png",

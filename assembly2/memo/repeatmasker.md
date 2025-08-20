@@ -22,8 +22,6 @@ RepeatModelerが解析できるように、FASTAファイルを専用のデー�
   * **目的**: `ragtag_polished_round1.fasta` ファイルからNCBI-BLAST用のデータベースを構築します。
   * **コマンド**:
 
-<!-- end list -->
-
 ```bash
 BuildDatabase -name ragtag_db -engine ncbi ragtag_polished_round1.fasta
 ```
@@ -41,8 +39,6 @@ BuildDatabase -name ragtag_db -engine ncbi ragtag_polished_round1.fasta
 
   * **目的**: 繰り返し配列ファミリーを同定し、コンセンサス配列のライブラリ（カスタムライブラリ）を作成します。
   * **コマンド**:
-
-<!-- end list -->
 
 ```bash
 RepeatModeler -database ragtag_db -engine ncbi -pa 8
