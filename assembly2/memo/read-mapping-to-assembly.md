@@ -221,7 +221,8 @@ samtools flagstat mapping_bowtie2_sorted.bam
       65577190 mates make up the pairs; of these:
         20741240 (31.63%) aligned 0 times
         11819615 (18.02%) aligned exactly 1 time
-        33016335 (50.35%) alig
+        33016335 (50.35%) aligned >1 times
+93.70% overall alignment rate
 ```
 
 
@@ -381,5 +382,21 @@ minimap2 -ax map-ont /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GC
 minimap2 -ax sr -t 8 \ /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna \ ./Dicty-genome/Stationary_S1_R1.fastq.gz \ ./Dicty-genome/Stationary_S1_R2.fastq.gz | \ samtools view -bS - | \ samtools sort -o mapping_minimap2_sr_sorted.bam && \ samtools flagstat mapping_minimap2_sr_sorted.bam
 ```
 ```bash
-
+[bam_sort_core] merging from 35 files and 1 in-memory blocks...
+331453393 + 0 in total (QC-passed reads + QC-failed reads)
+329153590 + 0 primary
+0 + 0 secondary
+2299803 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+305050986 + 0 mapped (92.03% : N/A)
+302751183 + 0 primary mapped (91.98% : N/A)
+329153590 + 0 paired in sequencing
+164576795 + 0 read1
+164576795 + 0 read2
+277395756 + 0 properly paired (84.28% : N/A)
+289577062 + 0 with itself and mate mapped
+13174121 + 0 singletons (4.00% : N/A)
+4152190 + 0 with mate mapped to a different chr
+1835028 + 0 with mate mapped to a different chr (mapQ>=5)
 ```
