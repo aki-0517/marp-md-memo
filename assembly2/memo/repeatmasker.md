@@ -66,7 +66,7 @@ RepeatModelerで作成したカスタムライブラリを使い、元のゲノ�
 <!-- end list -->
 
 ```bash
-RepeatMasker -lib [生成されたRMディレクトリ]/consensi.fa.classified -gff -pa 8 ragtag_polished_round1.fasta
+RepeatMasker -lib RM_3794378.TueAug191046142025/consensi.fa.classified -gff -pa 8 ragtag_polished_round1.fasta
 ```
 
   * **説明**:
