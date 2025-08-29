@@ -1,0 +1,129 @@
+
+########################################################
+##### Extensive de-novo TE Annotator (EDTA) v2.0.0  ####
+##### Shujun Ou (shujun.ou.1@gmail.com)             ####
+########################################################
+
+
+
+2025年  8月 29日 金曜日 13:26:38 JST	Dependency checking:
+				All passed!
+
+2025年  8月 29日 金曜日 13:26:39 JST	The longest sequence ID in the genome contains 24 characters, which is longer than the limit (13)
+				Trying to reformat seq IDs...
+				Attempt 1...
+2025年  8月 29日 金曜日 13:26:39 JST	Seq ID conversion successful!
+
+2025年  8月 29日 金曜日 13:26:39 JST	Obtain raw TE libraries using various structure-based programs: 
+2025年  8月 29日 金曜日 13:26:39 JST	EDTA_raw: Check dependencies, prepare working directories.
+
+2025年  8月 29日 金曜日 13:26:40 JST	Start to find LTR candidates.
+
+2025年  8月 29日 金曜日 13:26:40 JST	Identify LTR retrotransposon candidates from scratch.
+
+2025年  8月 29日 金曜日 13:26:40 JST	Existing raw result ragtag_polished_round1.fasta.masked.mod.harvest.scn found!
+				Will use this for further analyses.
+
+2025年  8月 29日 金曜日 13:26:40 JST	Existing raw result ragtag_polished_round1.fasta.masked.mod.finder.combine.scn found!
+				Will use this for further analyses.
+
+awk: 致命的: cannot open file `ragtag_polished_round1.fasta.masked.mod.pass.list' for reading: そのようなファイルやディレクトリはありません
+Warning: LOC list - is empty.
+Error: Could not load sequence. Empty file or bad format.
+
+	perl filter_gff3.pl file.gff3 file.list > new.gff3
+
+2025年  8月 29日 金曜日 13:26:47 JST	Warning: The LTR result file has 0 bp!
+
+2025年  8月 29日 金曜日 13:26:47 JST	Start to find TIR candidates.
+
+2025年  8月 29日 金曜日 13:26:47 JST	Identify TIR candidates from scratch.
+
+Species: others
+Traceback (most recent call last):
+  File "/home/aki/miniconda3/envs/EDTA2/share/EDTA/bin/TIR-Learner2.5/Module3_New/getDataset.py", line 12, in <module>
+    from tensorflow.python.keras.utils import to_categorical
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/tensorflow/__init__.py", line 28, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 63, in <module>
+    from tensorflow.python.framework.framework_lib import *  # pylint: disable=redefined-builtin
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/tensorflow/python/framework/framework_lib.py", line 25, in <module>
+    from tensorflow.python.framework.ops import Graph
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 54, in <module>
+    from tensorflow.python.platform import app
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 23, in <module>
+    from absl.app import run as _run
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/absl/app.py", line 37, in <module>
+    from absl import flags
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/absl/flags/__init__.py", line 35, in <module>
+    from absl.flags import _argument_parser
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/absl/flags/_argument_parser.py", line 82, in <module>
+    class ArgumentParser(Generic[_T], metaclass=_ArgumentParserCache):
+TypeError: metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases
+cat: '*-+-DTA.fa': そのようなファイルやディレクトリはありません
+cat: '*-+-DTC.fa': そのようなファイルやディレクトリはありません
+cat: '*-+-DTH.fa': そのようなファイルやディレクトリはありません
+cat: '*-+-DTM.fa': そのようなファイルやディレクトリはありません
+cat: '*-+-DTT.fa': そのようなファイルやディレクトリはありません
+cat: '*-+-NonTIR.fa': そのようなファイルやディレクトリはありません
+cat: '*-+-*-+-*.gff3': そのようなファイルやディレクトリはありません
+rm: '*-+-*-+-*.gff3' を削除できません: そのようなファイルやディレクトリはありません
+Traceback (most recent call last):
+  File "/home/aki/miniconda3/envs/EDTA2/share/EDTA/bin/TIR-Learner2.5/Module3_New/CombineAll.py", line 75, in <module>
+    f_m3=removeDupinSingle("%s.gff3"%(genome_Name+spliter+"Module3"))
+  File "/home/aki/miniconda3/envs/EDTA2/share/EDTA/bin/TIR-Learner2.5/Module3_New/CombineAll.py", line 57, in removeDupinSingle
+    f=pd.read_csv(file,header=None,sep="\t") #shujun
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/pandas/io/parsers.py", line 688, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/pandas/io/parsers.py", line 454, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/pandas/io/parsers.py", line 948, in __init__
+    self._make_engine(self.engine)
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/pandas/io/parsers.py", line 1180, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/site-packages/pandas/io/parsers.py", line 2010, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 540, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/home/aki/miniconda3/envs/EDTA2/share/EDTA/bin/TIR-Learner2.5/Module3/GetAllSeq.py", line 32, in GetListFromFile
+    f=open(file,"r+")
+FileNotFoundError: [Errno 2] No such file or directory: 'TIR-Learner_FinalAnn.gff3'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aki/miniconda3/envs/EDTA2/share/EDTA/bin/TIR-Learner2.5/Module3/GetAllSeq.py", line 63, in <module>
+    pool.map(GetListFromFile,fileList) #shujun
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/multiprocessing/pool.py", line 266, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/aki/miniconda3/envs/EDTA2/lib/python3.6/multiprocessing/pool.py", line 644, in get
+    raise self._value
+FileNotFoundError: [Errno 2] No such file or directory: 'TIR-Learner_FinalAnn.gff3'
+mv: 'TIR-Learner/*FinalAnn*.gff3' を stat できません: そのようなファイルやディレクトリはありません
+mv: 'TIR-Learner/*FinalAnn*.fa' を stat できません: そのようなファイルやディレクトリはありません
+Can't open ./TIR-Learner-Result/TIR-Learner_FinalAnn.fa: そのようなファイルやディレクトリはありません at /home/aki/miniconda3/envs/EDTA2/share/EDTA/util/rename_tirlearner.pl line 19.
+Warning: LOC list ragtag_polished_round1.fasta.masked.mod.TIR.ext30.list is empty.
+Error: Could not load sequence. Empty file or bad format.
+Can't open ./TIR-Learner-Result/TIR-Learner_FinalAnn.gff3: そのようなファイルやディレクトリはありません.
+Warning: The TIR result file has 0 bp!
+
+2025年  8月 29日 金曜日 13:26:51 JST	Start to find Helitron candidates.
+
+2025年  8月 29日 金曜日 13:26:51 JST	Existing result file ragtag_polished_round1.fasta.masked.mod.Helitron.raw.fa found!
+				Will keep this file without rerunning this module.
+				Please specify --overwrite 1 if you want to rerun this module.
+
+2025年  8月 29日 金曜日 13:26:51 JST	Finish finding Helitron candidates.
+
+2025年  8月 29日 金曜日 13:26:51 JST	Execution of EDTA_raw.pl is finished!
+
+ERROR: Raw LTR results not found in ragtag_polished_round1.fasta.masked.mod.EDTA.raw/ragtag_polished_round1.fasta.masked.mod.LTR.raw.fa
+	If you believe the program is working properly, this may be caused by the lack of intact LTRs in your genome. Consider to use the --force 1 parameter to overwrite this check

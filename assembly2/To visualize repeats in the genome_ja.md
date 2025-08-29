@@ -420,11 +420,12 @@ Bash
 # --anno 1 で、最終的なアノテーションまで実行します
 # --threads は利用可能なCPUコア数に合わせて調整してください
 EDTA.pl \
-    --genome ../"$GENOME" \
-    --species Others \
-    --step all \
-    --anno 1 \
-    --threads 8
+  --genome ../"$GENOME" \
+  --species Others \
+  --step all \
+  --anno 1 \
+  --threads 8 \
+  --force 1
 
 # 上記コマンドの `&` はバックグラウンド実行を意味します。
 # 実行状況は `tail -f EDTA.log` でリアルタイムに確認できます。
