@@ -132,7 +132,7 @@ mkdir -p RM_masked_output_ref_chromesome1/edta_results
 cd RM_masked_output_ref_chromesome1/edta_results
 
 # EDTA 実行（CPUコア数は適宜変更）
-EDTA.pl --genome ../chromosome1.fna.masked --species Others --step all --anno 1 --threads 8
+EDTA.pl --genome ../chromosome1.fna --species Others --step all --anno 1 --threads 8
 ```
 
 - 実行後、`chromosome1.fna.mod.EDTA.intact.gff3` や `chromosome1.fna.mod.EDTA.TEanno.gff3` が生成されます。

@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/aug29.md",
+                "file": "md/memo/daily/sep3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aug29"
+              "title": "sep3"
             }
           }
         ],
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/aug29.md",
+                "file": "md/memo/daily/sep3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for aug29"
+              "title": "Backlinks for sep3"
             }
           },
           {
@@ -225,30 +225,30 @@
   },
   "active": "bba53318934f62ac",
   "lastOpenFiles": [
-    "assembly2/igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.TIR.intact.raw.gff3",
-    "assembly2/igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.TIR.intact.gff3",
-    "assembly2/igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.Helitron.intact.raw.gff3",
-    "assembly2/igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.Helitron.intact.gff3",
-    "assembly2/igv_tracks/fasta",
-    "assembly2/igv_tracks",
-    "igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.TIR.intact.raw.gff3",
-    "igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.TIR.intact.gff3",
-    "igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.Helitron.intact.raw.gff3",
-    "igv_tracks/fasta/ragtag_polished_round1.fasta.masked.mod.Helitron.intact.gff3",
-    "igv_tracks/fasta",
+    "md/memo/daily/Jul-14-memo.md",
+    "assembly2/flye/fasta/ragtag_ltr_candidates_for_IGV_renamed.bed",
+    "md/memo/daily/sep3.md",
+    "assembly2/flye/fasta/igv/ragtag_ltr_candidates_for_IGV.bed",
+    "assembly2/flye/fasta/ragtag_ltr_candidates_for_IGV.bed",
+    "assembly2/ref/fasta/ltr_internal_for_IGV.bed",
+    "assembly2/ref/fasta/ltr_candidates_detailed_for_IGV.bed",
+    "assembly2/ref/fasta/DIRS_for_IGV.bed",
+    "LTR/chromosome1.fna.masked.mod.nmtf.pass.list",
+    "LTR/chromosome1.fna.masked.mod.retriever.all.scn",
+    "LTR/chromosome1.fna.masked.mod.defalse",
+    "LTR/chromosome1.LTR.merged.unique.gff3",
+    "md/memo/daily/aug29.md",
     "md/memo/daily/may-29-memo.md",
     "md/memo/daily/aug27.md",
     "md/memo/daily/aug28.md",
     "md/memo/daily/may-28-memo.md",
     "md/memo/daily/Jun-25-memo.md",
     "assembly2/To visualize repeats in the genome_ja.md",
-    "md/memo/daily/aug29.md",
     "assembly2/memo/repeatmasker.md",
     "md/memo/daily/aug26.md",
     "md/memo/daily/aug25.md",
     "assembly2/memo/rDNA.md",
     "md/memo/daily/aug21.md",
-    "md/memo/daily/Jul-14-memo.md",
     "Pasted image 20250828170802.png",
     "md/memo/daily/jul-16.md",
     "Pasted image 20250828163717.png",
@@ -262,7 +262,6 @@
     "assembly2/memo/repetitive-regions-analysis.md",
     "assembly2/To visualize repeats in the genome.md",
     "assembly2/memo/assembly-point.md",
-    "assembly2/memo/arcive-repeatmasker-assesment.md",
     "Pasted image 20250812171321.png",
     "Pasted image 20250812162312.png",
     "Pasted image 20250812162129.png",
