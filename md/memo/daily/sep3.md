@@ -22,7 +22,7 @@ Can't find label LTR at /home/aki/miniconda3/envs/EDTA2/share/EDTA/EDTA.pl line 
 ```
 
 
-### LTRharvest を使った LTR 検出
+### LTRharvest 
 ```bash
 gt suffixerator -db chromosome1.fna -indexname chromosome1 -tis -suf -lcp -des -ssp -sds -dna
 
