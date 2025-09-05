@@ -168,7 +168,7 @@ awk 'BEGIN{OFS="\t"} {if($11 ~ /DIRS/) print $5,$6,$7,$11}' ragtag_polished_roun
 
 ## 1️⃣ 前提
 
-- ゲノム FASTA: `genome.fasta`
+- ゲノム FASTA: assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
     
 - Dfam ライブラリ: `/home/aki/Dfam-RepeatMasker.lib`
     
@@ -239,100 +239,6 @@ head DIRS_masked_output/genome.DIRS.bed
 - `grep "DIRS"` の代わりに `grep -i "DIRS"` にすると大文字小文字を無視できます
     
 
----
-
-## 前提
-
-- RagTag 結果 BED: `DIRS_ragtag.bed`
-    
-- RepeatMasker DIRS BED: `DIRS_masked_output/genome.DIRS.bed`
-    
-- マージ後の BED: `genome.DIRS.merged.bed`
-    
-
----
-
-## 1️⃣ BED ファイルをソート
-
-BED をマージする前に、**chromosome / scaffold 順 + start 順** にソートします。
-
-```bash
-sort -k1,1 -k2,2n DIRS_ragtag.bed > DIRS_ragtag.sorted.bed
-sort -k1,1 -k2,2n DIRS_masked_output/genome.DIRS.bed > genome.DIRS.sorted.bed
-```
-
----
-
-## 2️⃣ BED をマージ
-
-`bedtools merge` を使って重複領域を統合します。
-
-```bash
-bedtools merge -i DIRS_ragtag.sorted.bed > DIRS_ragtag.merged.bed
-bedtools merge -i genome.DIRS.sorted.bed > genome.DIRS.merged.bed
-```
-
-もし **両方の情報を一緒にしたい** 場合は:
-
-```bash
-cat DIRS_ragtag.sorted.bed genome.DIRS.sorted.bed | sort -k1,1 -k2,2n | bedtools merge > genome.DIRS.ragtag_merged.bed
-```
-
-- これで RagTag と RepeatMasker 両方の DIRS 領域を統合できます
-    
-
----
-
-## 3️⃣ IGV 用に確認
-
-IGV は BED をそのまま読み込めます:
-
-```bash
-ls -lh genome.DIRS.ragtag_merged.bed
-head genome.DIRS.ragtag_merged.bed
-```
-
-- 列は最低限 **chromosome, start, end** があれば OK
-    
-- 必要なら `name` カラムや `score` を追加して色分け表示可能
-    
-
----
-
-## 4️⃣ オプション: カラーラベル付き BED
-
-例えば RepeatMasker の DIRS を赤、RagTag を青で表示したい場合:
-
-```bash
-# RepeatMasker DIRS (赤)
-awk '{print $1"\t"$2"\t"$3"\tDIRS_RM\t0\t+"}' genome.DIRS.sorted.bed > genome.DIRS_RM.color.bed
-
-# RagTag DIRS (青)
-awk '{print $1"\t"$2"\t"$3"\tDIRS_RagTag\t0\t+"}' DIRS_ragtag.sorted.bed > DIRS_ragtag.color.bed
-
-# 結合
-cat genome.DIRS_RM.color.bed DIRS_ragtag.color.bed | sort -k1,1 -k2,2n > genome.DIRS.merged.color.bed
-```
-
-- IGV で `color by name` を選択すれば赤・青で可視化可能です
-    
-
----
-
-💡 ポイント
-
-- `bedtools merge` で start/end が重なる領域を統合
-    
-- 名前やスコア情報は `awk` で追加可能
-    
-- IGV での表示は BED の最低限の 3 列でも可能
-    
-
----
-
-必要なら、僕が **RagTag 全染色体と DIRS を統合して IGV トラックセットを作るワンライナー** を作ることもできます。  
-作りますか？
-
 
 
 
@@ -386,7 +292,7 @@ RepeatClassifier -consensi chromosome1.LTRharvest.fasta
 ## 3. DIRS のみ抽出
 
 ```bash
-grep -w "DIRS" chromosome1.LTRharvest.fasta.out > DIRS_hits.out
+grep -w "DIRS" chromosome1.LTRharvest.fasta.classified
 ```
 
 - BED 形式に変換する例：
@@ -425,3 +331,46 @@ awk 'BEGIN{OFS="\t"} {if($11 ~ /DIRS/) print $5,$6,$7,$11}' chromosome1.LTRharve
 
 
 
+
+# 968876.pts-54.tardis
+---
+
+## 1️⃣ RepeatMasker 実行
+
+```bash
+RepeatMasker -pa 4 -lib /home/aki/Dfam-RepeatMasker.lib -gff -dir DIRS_masked_output_chr1 -engine ncbi chromosome1.fna
+```
+
+- `-pa 4` → 並列 4 スレッド
+    
+- `-lib` → Dfam ライブラリを指定
+    
+- `-gff` → GFF3 形式で出力
+    
+- `-dir` → 出力ディレクトリ
+    
+
+出力は `DIRS_masked_output_chr1/chromosome1.fna.out.gff` になります。
+
+---
+
+## 2️⃣ DIRS のみ抽出
+
+GFF 出力から `DIRS` タイプの行だけを抽出します：
+
+```bash
+grep -i "DIRS" DIRS_masked_output_chr1/chromosome1.fna.out.gff > DIRS_masked_output_chr1/chromosome1.DIRS.gff
+```
+
+---
+
+💡 ポイント：
+
+- chromosome1.fna のみを対象にしているので、出力 GFF の `seqid` も chromosome 1 のみに対応します。
+    
+- 出力ディレクトリは chromosome ごとに分けておくと整理しやすいです。
+    
+
+---
+
+もし希望であれば、この処理を**全染色体に対して自動化する簡単なシェルスクリプト**も作れます。作りますか？
