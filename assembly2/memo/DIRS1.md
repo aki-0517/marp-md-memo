@@ -36,7 +36,7 @@ gff2bed < DIRS1_nolow_output/fir-chromesome1.fna.out.gff > DIRS1_nolow_output/fi
 
 これで、シンプルリピートを除外し、`dd_dirs1.fasta`配列に特化したヒット領域のみを抽出したBEDファイルが作成されます。👍
 
-
+![[Pasted image 20250908124103.png]]
 
 
 # AX4 chromesome1
@@ -78,3 +78,49 @@ gff2bed < DIRS_masked_output_chr1/chromosome1.fna.out.gff > DIRS_masked_output_c
 ```
 
 これで、`chromosome1.fna`の中から、あなたが指定したDIRS-1配列と相同性のある領域だけを抽出したBEDファイルが作成されます。👍
+
+![[Pasted image 20250908124022.png]]
+
+
+
+# Ragtag
+---
+
+### ## 1️⃣ RepeatMasker 実行
+
+`RepeatMasker`のライブラリをDfamから`dd_dirs1.fasta`に変更し、シンプルリピートを無視する`-nolow`オプションを追加します。
+
+Bash
+
+```
+RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output -engine ncbi -nolow assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
+```
+
+- **`-lib dd_dirs1.fasta`**: **【修正点】** Dfamの代わりに、あなたの特定のDIRS-1配列ファイルを指定します。
+    
+- **`-nolow`**: **【修正点】** シンプルリピートの検索を無効にし、`dd_dirs1.fasta`との相同性だけを探します。
+    
+
+---
+
+### ## 2️⃣ DIRS のみ抽出（不要になります）
+
+`dd_dirs1.fasta`のみをライブラリとして使用したため、出力にはDIRS-1のヒットしか含まれません。したがって、`grep`で"DIRS"を抽出するこのステップは**不要**です。
+
+---
+
+### ## 3️⃣ BED 形式に変換
+
+`grep`が不要になったので、RepeatMaskerが直接出力したGFFファイルを`gff2bed`の入力として使います。
+
+Bash
+
+```
+gff2bed < DIRS_masked_output/ragtag_polished_round1.fasta.out.gff > DIRS_masked_output/ragtag.DIRS.bed
+```
+
+これで、アセンブリ全体の中から、あなたが指定した特定のDIRS-1配列と相同性のある領域だけを抽出したBEDファイルが完成します。👍
+
+![[Pasted image 20250908124351.png]]
+
+
