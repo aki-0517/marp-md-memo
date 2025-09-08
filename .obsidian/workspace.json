@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/aug29.md",
+                "file": "md/memo/daily/sep8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aug29"
+              "title": "sep8"
             }
           },
           {
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/aug29.md",
+                "file": "md/memo/daily/sep8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for aug29"
+              "title": "Backlinks for sep8"
             }
           },
           {
@@ -211,30 +211,31 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
+    "Pasted image 20250908144209.png",
+    "assembly2/flye/fasta/igv/bed/rdna_on_assembly.sorted.bam.bai",
+    "assembly2/flye/fasta/igv/bed/rdna_on_assembly.sorted.bam",
+    "assembly2/flye/fasta/igv/bed/rdna_alignments_all.bed",
+    "rdna_on_assembly.sorted.bam",
+    "rdna_on_assembly.sorted.bam.bai",
+    "rdna_alignments.bed",
+    "md/memo/daily/sep5.md",
+    "rdna_alignments_all.bed",
+    "md/memo/daily/sep8.md",
+    "md/memo/daily/Jul-14-memo.md",
+    "md/memo/daily/aug29.md",
     "md/memo/daily/aug28.md",
     "md/memo/daily/aug27.md",
     "md/memo/daily/aug26.md",
     "md/memo/daily/aug25.md",
     "md/memo/daily/aug20.md",
     "md/memo/daily/aug21.md",
-    "md/memo/daily/aug29.md",
     "assembly2/memo/DIRS1.md",
     "assembly2/flye/fasta/igv/ragtag.DIRS1.bed",
     "ragtag.DIRS1.bed",
     "Pasted image 20250908124351.png",
     "ragtag.DIRS.bed",
-    "md/memo/daily/sep5.md",
     "Pasted image 20250908124103.png",
     "Pasted image 20250908124022.png",
-    "assembly2/ref/fasta/chromosome1.DIRS1.bed",
-    "chromosome1.DIRS1.bed",
-    "chromosome1.DIRS.bed",
-    "md/memo/daily/sep8.md",
-    "assembly2/fir/fasta/fir-chromesome1.DIRS1.bed",
-    "fir-chromesome1.DIRS1.bed",
-    "md/memo/daily/Jul-14-memo.md",
-    "fir-chromesome1.DIRS1-02.bed",
-    "assembly2/fir/fasta/fir-chromesome1.fna.masked.fai",
     "md/memo/daily/sep4.md",
     "md/memo/daily/sep3.md",
     "md/memo/daily/may-29-memo.md",

@@ -130,3 +130,202 @@ gff2bed < DIRS1_nolow_output/fir-chromesome1.fna.out.gff > DIRS1_nolow_output/fi
 ```
 
 これで、シンプルリピートを除外し、`dd_dirs1.fasta`配列に特化したヒット領域のみを抽出したBEDファイルが作成されます。👍
+
+
+
+
+Dictyostelium discoideum（社会性アメーバ）のアセンブリ結果において、rDNAを含むコンティグ NC_000895.1 がテロメアとして機能していることをIGVで視覚的に確認するための手順を以下にまとめます。
+
+この作業の要点は、「**メインのアセンブリゲノムをリファレンスとしてIGVに読み込み、そこへrDNAコンティグをマッピングした結果をトラックとして表示する**」ことです。これにより、各染色体（scaffold）のどの位置にrDNA配列が存在するかが一目瞭然となります。
+
+---
+
+### ## 手順の概要
+
+1. **準備**: 必要なソフトウェア（`samtools`, `minimap2`）を準備します。
+    
+2. **rDNA配列の抽出**: `ragtag_polished_round1.fasta` から `NC_000895.1` の配列だけを抜き出し、別のFASTAファイルとして保存します。
+    
+3. **アライメント**: 抽出したrDNA配列を、元のゲノムアセンブリ全体（`ragtag_polished_round1.fasta`）にマッピングします。
+    
+4. **IGVでの可視化**: IGVにゲノムアセンブリを読み込み、アライメント結果を表示して各染色体の末端を確認します。
+    
+
+---
+
+### ## ステップ1：準備
+
+作業を始める前に、ターミナル（コマンドライン）で以下のツールが利用可能であることを確認してください。もしインストールされていなければ、Condaなどを使ってインストールします。
+
+- **samtools**: FASTAファイルの操作や、アライメント結果（SAM/BAM形式）の変換に必要です。
+    
+- **minimap2**: 高速な配列アライナー。コンティグ同士のアライメントに適しています。
+    
+- **IGV (Integrative Genomics Viewer)**: 結果を可視化するためのデスクトップアプリケーション。
+    
+
+Bash
+
+```
+# Condaを使ったインストール例
+conda create -n mapping_tools -c bioconda samtools minimap2
+conda activate mapping_tools
+```
+
+---
+
+### ## ステップ2：rDNA配列 (`NC_000895.1`) の抽出
+
+まず、巨大なアセンブリファイルからrDNAの配列だけを抜き出します。`samtools faidx` を使うのが最も確実で簡単です。
+
+1. FASTAファイルのインデックスを作成
+    
+    これにより、samtoolsが高速に特定の配列へアクセスできるようになります。
+    
+    Bash
+    
+    ```
+    samtools faidx assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
+    ```
+    
+    実行すると、同階層に `.fai` ファイルが生成されます。
+    
+2. 特定の配列を抽出
+    
+    インデックスを利用して NC_000895.1 の配列を抽出し、rdna.fasta という名前で保存します。
+    
+    Bash
+    
+    ```
+    samtools faidx assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta NC_000895.1_RagTag_pilon > rdna.fasta
+    ```
+    
+    ⚠️ 注意点:
+    
+    FASTAファイル内のヘッダー名が NC_000895.1 と完全に一致している必要があります。もしうまくいかない場合は、grep ">" ragtag_polished_round1.fasta コマンドでヘッダー名の一覧を確認してください。
+    
+
+---
+
+### ## ステップ3：rDNAをゲノムアセンブリへアライメント
+
+次に、抽出した `rdna.fasta` を、元の `ragtag_polished_round1.fasta` 全体に対してマッピングし、その位置情報を記録したBAMファイルを作成します。
+
+1. minimap2でアライメント
+    
+    asm5 プリセットは、アセンブリ結果同士を比較する際に適しています。
+    
+    Bash
+    
+    ```
+    minimap2 -ax asm5 \
+      assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta \
+      rdna.fasta > rdna_on_assembly.sam
+    ```
+    
+    これにより、アライメント結果が `rdna_on_assembly.sam` というSAMファイルに出力されます。
+    
+2. SAMをソート済みBAMに変換
+    
+    IGVで効率よく表示するために、SAMファイルをバイナリ形式のBAMファイルに変換し、ゲノム上の位置でソートします。
+    
+    Bash
+    
+    ```
+    samtools view -bS rdna_on_assembly.sam | samtools sort -o rdna_on_assembly.sorted.bam
+    ```
+    
+3. BAMファイルのインデックスを作成
+    
+    IGVがBAMファイル内のデータに高速アクセスするために、インデックスファイル（.bai）を作成します。
+    
+    Bash
+    
+    ```
+    samtools index rdna_on_assembly.sorted.bam
+    ```
+    
+    実行すると、`rdna_on_assembly.sorted.bam.bai` というファイルが生成されます。
+    
+
+これで、IGVで表示するためのファイル（`ragtag_polished_round1.fasta`, `rdna_on_assembly.sorted.bam`, `rdna_on_assembly.sorted.bam.bai`）がすべて揃いました。
+
+---
+
+![[Pasted image 20250908144209.png]]
+
+
+That result is exactly what we'd expect, and it confirms your alignment worked correctly!
+
+It shows that the rDNA contig (`NC_000895.1_RagTag_pilon`, the "read" in column 4) aligned perfectly to the reference scaffold of the same name (`NC_000895.1_RagTag_pilon`, column 1) from start (`0`) to end (`55553`). This is the main, perfect **"self-alignment"**.
+
+---
+
+### ## Why isn't the telomere information there?
+
+The original goal was to find where rDNA aligns to the **ends of other chromosomes**.
+
+By default, aligners like `minimap2` are optimized to find the single **best location** for a given sequence. In this case, the best location for the rDNA sequence is, of course, itself. It finds this perfect match and doesn't actively report the other, lower-quality matches at the telomeres of different chromosomes.
+
+---
+
+### ## Solution: Re-run the alignment to find all locations 🗺️
+
+We need to tell `minimap2` to report not just the best hit, but also all the **secondary alignments**. We can do this by adding a few options to the command.
+
+#### ### Step 1: Re-run `minimap2` to find secondary alignments
+
+Run this modified `minimap2` command. The new options, `-N 50` and `-p 0`, tell it to report up to 50 secondary (alternative) alignments without filtering them by score.
+
+Bash
+
+```
+minimap2 -ax asm5 -N 50 -p 0 \
+  assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta \
+  rdna.fasta > rdna_on_assembly_all.sam
+```
+
+#### ### Step 2: Convert the new SAM to a sorted BAM
+
+Bash
+
+```
+samtools view -bS rdna_on_assembly_all.sam | samtools sort -o rdna_on_assembly_all.sorted.bam
+```
+
+#### ### Step 3: Convert the new BAM to a BED file
+
+Bash
+
+```
+bedtools bamtobed -i rdna_on_assembly_all.sorted.bam > rdna_alignments_all.bed
+```
+
+---
+
+### ## Expected Result
+
+Now, when you look inside the new file, `rdna_alignments_all.bed`, you should see many more lines:
+
+Bash
+
+```
+head rdna_alignments_all.bed
+```
+
+The output should look something like this:
+
+- The **first line** will be the same perfect self-alignment as before.
+    
+- **Subsequent lines** should show alignments to the other chromosomes, likely with start positions near `0` or end positions that match the full length of that chromosome. These are the telomeric hits you were looking for!
+    
+
+**Example of expected output:**
+
+```
+NC_000895.1_RagTag_pilon   0       55553   NC_000895.1_RagTag_pilon   60   +
+NC_007087.3_RagTag_pilon   0       8532    NC_000895.1_RagTag_pilon   40   +
+NC_007087.3_RagTag_pilon   4951120 4959406 NC_000895.1_RagTag_pilon   40   -
+NC_007088.5_RagTag_pilon   0       9104    NC_000895.1_RagTag_pilon   42   +
+...
+```
