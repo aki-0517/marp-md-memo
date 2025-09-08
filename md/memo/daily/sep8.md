@@ -329,3 +329,16 @@ NC_007087.3_RagTag_pilon   4951120 4959406 NC_000895.1_RagTag_pilon   40   -
 NC_007088.5_RagTag_pilon   0       9104    NC_000895.1_RagTag_pilon   42   +
 ...
 ```
+
+
+
+
+
+
+# 次にすること
+
+1. canuでもdirs1特定までやる。-> 長さ比較をやって、どっちの方が精度いいか確かめる
+2. ax4とax2のdirs1の長さと構造の比較をする。シンテニー比較する以下のように![[Pasted image 20250908154103.png]]
+https://genomebiology.biomedcentral.com/articles/10.1186/s13059-025-03578-7/figures/6
+3. de novoで、まだわかってないrepeatも特定する
+4. rdnaをちゃんとうまく特定する
