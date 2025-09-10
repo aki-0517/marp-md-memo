@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "assembly2/memo/repeatmasker.md",
+                "file": "md/memo/daily/sep10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "repeatmasker"
+              "title": "sep10"
             }
           },
           {
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assembly2/memo/repeatmasker.md",
+                "file": "md/memo/daily/sep10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for repeatmasker"
+              "title": "Backlinks for sep10"
             }
           },
           {
@@ -211,13 +211,14 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
-    "assembly2/flye/fasta/igv/bed/all_repeats.bed",
-    "md/memo/daily/sep10.md",
-    "all_repeats.bed",
     "assembly2/memo/repeatmasker.md",
+    "assembly2/memo/repetitive-regions-analysis.md",
+    "md/memo/daily/sep10.md",
+    "md/memo/daily/sep5.md",
+    "assembly2/flye/fasta/igv/bed/all_repeats.bed",
+    "all_repeats.bed",
     "assembly2/memo/DIRS1.md",
     "md/memo/daily/sep8.md",
-    "md/memo/daily/sep5.md",
     "synteny_comparison.png",
     "synteny_analysis.py",
     "ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/chromosome1.fna",
@@ -239,7 +240,6 @@
     "assembly2/flye/fasta/igv/bed/rdna_on_assembly.sorted.bam",
     "assembly2/flye/fasta/igv/bed/rdna_alignments_all.bed",
     "rdna_on_assembly.sorted.bam",
-    "rdna_on_assembly.sorted.bam.bai",
     "md/memo/daily/aug29.md",
     "md/memo/daily/aug28.md",
     "md/memo/daily/aug27.md",

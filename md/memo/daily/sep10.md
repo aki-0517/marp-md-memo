@@ -243,3 +243,31 @@ cat RM_3794378.TueAug191046142025/round-2/family-*.fa \
 
 ### 4. **目的**
 これらのファイルは、ゲノムアセンブリ（`ragtag_polished_round1.fasta`）内の反復配列を同定・分類し、IGVなどの可視化ツールでリピート領域を表示するために作成されました。特に、セントロメア領域の特定やゲノム構造の理解に役立てられています。
+
+
+
+
+
+
+
+
+
+ 968876.pts-54.tardis
+```bash
+nohup RepeatModeler -database ragtag_db -pa 20 >& run.out &
+```
+
+
+1471231.pts-54.tardis
+```bash
+nohup RepeatModeler -database canu_db -pa 20 >& run.out &
+```
+
+```
+tail -f run.out
+```
+
+
+
+https://kazumaxneo.hatenablog.com/entry/2020/07/03/073000
+

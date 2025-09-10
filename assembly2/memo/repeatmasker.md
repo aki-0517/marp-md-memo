@@ -42,6 +42,7 @@ BuildDatabase -name ragtag_db -engine ncbi ragtag_polished_round1.fasta
 
 ```bash
 RepeatModeler -database ragtag_db -engine ncbi -pa 8
+# nohup RepeatModeler -database ragtag_db -threads 20 >& run.out &
 ```
 
   * **説明**:
