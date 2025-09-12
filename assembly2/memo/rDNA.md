@@ -1,3 +1,55 @@
+
+まず、`RepeatMasker` を使用して、ゲノムアセンブリ (`ragtag_polished_round1.fasta`) に対して、あなたのrDNA配列 (`rdna_sequence.fasta`) がどこに存在するかをマッピングします。
+
+**Bash**
+
+Bash
+
+```
+RepeatMasker -pa 4 -lib rdna_sequence.fasta -gff -dir rDNA_masked_output -engine ncbi -nolow assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
+```
+
+- **`-lib rdna_sequence.fasta`**: **【変更点】** DIRS配列の代わりに、rDNA配列を含むFASTAファイルをカスタムライブラリとして指定します。
+    
+- **`-dir rDNA_masked_output`**: **【変更点】** 出力先ディレクトリをrDNA用に変更します。これにより、以前のDIRSの結果と混ざるのを防ぎます。
+    
+- **`-nolow`**: シンプルリピートや低複雑性領域を無視し、`rdna_sequence.fasta`との相同性がある領域のみを検索します。
+    
+
+---
+
+### ## 3️⃣ BED 形式に変換
+
+最後に、`RepeatMasker` が出力したGFFファイルを、IGVで読み込めるBED形式に変換します。
+
+**Bash**
+
+Bash
+
+```
+gff2bed < rDNA_masked_output/ragtag_polished_round1.fasta.out.gff > rDNA_masked_output/ragtag.rDNA.bed
+```
+
+これで、`rDNA_masked_output` ディレクトリ内に `ragtag.rDNA.bed` というファイルが生成されます。
+
+![[Pasted image 20250912150840.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Archive
 ご提示の統計情報、ありがとうございます。Flyeでアセンブルされた11本のコンティグの中から、_Dictyostelium discoideum_（社会性アメーバ）のrDNA（リボソームDNA）コンティグを特定するには、いくつかのバイオインフォマティクス的なアプローチが必要です。統計データだけでは断定できませんが、アセンブリの出力ファイルを用いることで、高い確度で特定することが可能です。
 
 有力な方法は主に以下の3つです。
