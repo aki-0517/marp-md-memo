@@ -50,7 +50,7 @@ gff2bed < DIRS_masked_output_canu/canu_polished_round1.fasta.out.gff > DIRS_mask
 
 
 
-
+# 377189.pts-54.tardis
 
 はい、承知いたしました。`RepeatModeler`と`RepeatMasker`の一連の手順を、`canu_polished_round1.fasta` ファイル向けに修正します。
 
@@ -266,6 +266,7 @@ nohup RepeatModeler -database canu_db -pa 20 >& run.out &
 ```
 tail -f run.out
 ```
+
 
 
 
