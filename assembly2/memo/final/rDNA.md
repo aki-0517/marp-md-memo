@@ -9,6 +9,10 @@ Bash
 RepeatMasker -pa 4 -lib rdna_sequence.fasta -gff -dir rDNA_masked_output -engine ncbi -nolow assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
 ```
 
+```
+RepeatMasker -pa 4 -lib rdna_sequence.fasta -gff -dir rDNA_masked_output_canu -engine ncbi -nolow assembly2/assembly-results/ragtag_canu_scaffold/canu_polished_round1.fasta
+```
+
 - **`-lib rdna_sequence.fasta`**: **【変更点】** DIRS配列の代わりに、rDNA配列を含むFASTAファイルをカスタムライブラリとして指定します。
     
 - **`-dir rDNA_masked_output`**: **【変更点】** 出力先ディレクトリをrDNA用に変更します。これにより、以前のDIRSの結果と混ざるのを防ぎます。
@@ -27,7 +31,11 @@ RepeatMasker -pa 4 -lib rdna_sequence.fasta -gff -dir rDNA_masked_output -engine
 Bash
 
 ```
-gff2bed < rDNA_masked_output/ragtag_polished_round1.fasta.out.gff > rDNA_masked_output/ragtag.rDNA.bed
+gff2bed < rDNA_masked_output_canu/canu_polished_round1.fasta.out.gff > rDNA_masked_output_canu/canu.rDNA.bed
+```
+
+```
+gff2bed < rDNA_masked_output_canu/ragtag_polished_round1.fasta.out.gff > rDNA_masked_output/ragtag.rDNA.bed
 ```
 
 これで、`rDNA_masked_output` ディレクトリ内に `ragtag.rDNA.bed` というファイルが生成されます。

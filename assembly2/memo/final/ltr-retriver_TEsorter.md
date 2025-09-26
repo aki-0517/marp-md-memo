@@ -71,6 +71,17 @@ Bash
 
 ```
 # ゲノムファイルのパスを設定
+GENOME="assembly2/assembly-results/ragtag_canu_scaffold/canu_polished_round1.fasta"
+
+# 出力ファイルの接頭辞を設定
+PREFIX="canu_polished_round1"
+
+# 使用するCPUスレッド数を設定（環境に合わせて調整してください）
+THREADS=16
+```
+
+```
+# ゲノムファイルのパスを設定
 GENOME="assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta"
 
 # 出力ファイルの接頭辞を設定
@@ -116,7 +127,7 @@ LTRharvest と LTR_FINDER の出力を一つのファイルにまとめます。
 Bash
 
 ```
-cat ${PREFIX}.harvest.scn ${GENOME}.finder.combine.scn > ${PREFIX}.rawLTR.scn
+cat ${PREFIX}.harvest.scn canu_polished_round1.fasta.finder.combine.scn > ${PREFIX}.rawLTR.scn
 ```
 
 ### ステップ3: LTR_retriever の実行
@@ -175,6 +186,12 @@ Whole-genome LTR-RT annotation by the non-redundant library
 gff2bed < ragtag_polished_round1.fasta.mod.pass.list.gff3 > ragtag_polished_round1.fasta.mod.pass.list.bed
 
 sed 's/_R\t/_RagTag_pilon\t/g' ragtag_polished_round1.fasta.mod.pass.list.bed > ragtag_polished_round1.fasta.mod.pass.list.fixed.bed
+```
+
+```bash
+gff2bed < canu_polished_round1.fasta.mod.pass.list.gff3 > canu_polished_round1.fasta.mod.pass.list.bed
+
+sed 's/_R\t/_RagTag_pilon\t/g' canu_polished_round1.fasta.mod.pass.list.bed > canu_polished_round1.fasta.mod.pass.list.fixed.bed
 ```
 
 
@@ -236,6 +253,16 @@ TEsorter assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.
     -score 1
 ```
 
+```
+TEsorter assembly2/assembly-results/ragtag_canu_scaffold/canu_polished_round1.fasta \
+    -genome \
+    -p 20 \
+    -prob 0.9 \
+    -cov 30 \
+    -eval 1e-5 \
+    -score 1
+```
+
 **コマンドの解説:**
 
 - **`assembly2/assembly-results/...fasta`**: 解析対象のゲノムファイルです。
@@ -288,7 +315,7 @@ TEsorter assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.
 ```bash
 gff2bed < ragtag_polished_round1.fasta.rexdb.dom.gff3 > ragtag_polished_round1.fasta.rexdb.dom.bed
 
-
+gff2bed < canu_polished_round1.fasta.rexdb.dom.gff3 > canu_polished_round1.fasta.rexdb.dom.bed
 ```
 
 

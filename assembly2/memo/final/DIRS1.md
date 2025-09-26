@@ -96,6 +96,12 @@ Bash
 RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output -engine ncbi -nolow assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
 ```
 
+
+```
+RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output_canu -engine ncbi -nolow assembly2/assembly-results/ragtag_canu_scaffold/canu_polished_round1.fasta
+```
+
+
 - **`-lib dd_dirs1.fasta`**: **【修正点】** Dfamの代わりに、あなたの特定のDIRS-1配列ファイルを指定します。
     
 - **`-nolow`**: **【修正点】** シンプルリピートの検索を無効にし、`dd_dirs1.fasta`との相同性だけを探します。
@@ -114,6 +120,10 @@ RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output -engine ncbi
 `grep`が不要になったので、RepeatMaskerが直接出力したGFFファイルを`gff2bed`の入力として使います。
 
 Bash
+
+```
+gff2bed < DIRS_masked_output_canu/canu_polished_round1.fasta.out.gff > DIRS_masked_output_canu/canu.DIRS.bed
+```
 
 ```
 gff2bed < DIRS_masked_output/ragtag_polished_round1.fasta.out.gff > DIRS_masked_output/ragtag.DIRS.bed
