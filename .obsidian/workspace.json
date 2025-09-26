@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/sep19.md",
+                "file": "md/memo/daily/aug26.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sep19"
+              "title": "aug26"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/aug29.md",
+                "file": "assembly2/To visualize repeats in the genome_ja.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aug29"
+              "title": "To visualize repeats in the genome_ja"
             }
           },
           {
@@ -63,7 +63,8 @@
               "title": "ltr-retriver_TEsorter"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -136,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/sep19.md",
+                "file": "assembly2/To visualize repeats in the genome_ja.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for sep19"
+              "title": "Backlinks for To visualize repeats in the genome_ja"
             }
           },
           {
@@ -210,48 +211,49 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2ab44afaf6e54f8",
+  "active": "6879f4ffd243f6a1",
   "lastOpenFiles": [
-    "md/memo/daily/sep26.md",
-    "Pasted image 20250926150234.png",
+    "canu_polished_round1.fasta.out",
+    "assembly2/memo/final/rDNA.md",
+    "assembly2/memo/final/DIRS1.md",
     "assembly2/memo/final/ltr-retriver_TEsorter.md",
-    "md/memo/daily/Jul-14-memo.md",
+    "md/memo/daily/sep26.md",
     "md/memo/daily/aug29.md",
+    "md/memo/daily/aug26.md",
+    "md/memo/daily/aug27.md",
+    "md/memo/daily/aug28.md",
+    "assembly2/memo/ragtag-pilon-canu-flye.md",
+    "assembly2/memo/te.md",
+    "assembly2/memo/repeatmasker.md",
+    "md/memo/daily/sep12.md",
+    "md/memo/daily/sep19.md",
+    "Pasted image 20250926150234.png",
+    "md/memo/daily/Jul-14-memo.md",
     "md/memo/daily/sep10.md",
     "assembly2/canu/fasta/igv/ltrretriver_canu_polished_round1.fasta.mod.pass.list.fixed.bed",
     "assembly2/canu/fasta/igv/canu_polished_round1.fasta.mod.pass.list.fixed.bed",
     "canu_polished_round1.fasta.mod.pass.list.fixed.bed",
-    "md/memo/daily/aug28.md",
-    "md/memo/daily/aug27.md",
-    "md/memo/daily/aug26.md",
     "md/memo/daily/aug21.md",
     "md/memo/daily/jul-16.md",
     "md/memo/daily/jul-17.md",
     "assembly2/canu/fasta/igv/TEsorter_canu_polished_round1.fasta.rexdb.dom.bed",
     "TEsorter_canu_polished_round1.fasta.rexdb.dom.bed",
     "canu_polished_round1.fasta.rexdb.dom.bed",
-    "assembly2/memo/final/rDNA.md",
-    "assembly2/memo/repeatmasker.md",
     "assembly2/canu/fasta/igv/canu_polished_round1.fasta.masked.fai",
     "assembly2/canu/fasta/igv/canu.rDNA.bed",
     "canu.rDNA.bed",
-    "assembly2/memo/final/DIRS1.md",
     "assembly2/canu/fasta/igv/canu.DIRS.bed",
     "md/memo/daily/sep8.md",
-    "md/memo/daily/sep19.md",
     "assembly2/memo/final-assesment-1.md",
     "assembly2/memo/DIRS1.md",
     "assembly2/memo/rDNA.md",
-    "md/memo/daily/sep12.md",
     "md/memo/daily/sep5.md",
     "Pasted image 20250919163820.png",
     "Pasted image 20250912150840.png",
     "md/memo/daily/sep4.md",
     "md/memo/daily/sep3.md",
-    "assembly2/memo/repetitive-regions-analysis.md",
     "synteny_comparison.png",
     "Pasted image 20250908154103.png",
-    "assembly2/memo/ragtag-pilon-canu-flye.md",
     "Pasted image 20250908124022.png",
     "Pasted image 20250908124103.png",
     "Pasted image 20250908124351.png",
