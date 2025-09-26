@@ -172,3 +172,8 @@ RM_3794378.TueAug191046142025/round-4/family-*.fa > custom_repeats.fa
 RepeatMasker -pa 4 -lib custom_repeats.fa -dir RM_masked_output assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
 ```
 
+
+```bash
+RepeatMasker -pa 4 -lib custom_repeats_canu.fa -dir RM_masked_output_canu assembly2/assembly-results/ragtag_canu_scaffold/canu_polished_round1.fasta
+```
+
