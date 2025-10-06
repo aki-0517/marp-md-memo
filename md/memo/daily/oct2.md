@@ -82,7 +82,7 @@ conda install -c bioconda plotsr
 ステップ1で作成した座標ファイル（`.coords`）と元のFASTAファイルを使って、SyRiを実行します。
 
 ```bash
-syri -c ${PREFIX}.coords -r ${REF} -q ${QRY} --prefix ${PREFIX}_syri
+syri -c ${PREFIX}.coords -d ${PREFIX}.filter.delta -r ${REF} -q ${QRY} --prefix ${PREFIX}_syri --no-chrmatch
 ```
 
   * `-c`: 入力となる`.coords`ファイルを指定します。
@@ -129,7 +129,7 @@ syri -c ${PREFIX}.coords -r ${REF} -q ${QRY} --prefix ${PREFIX}_syri
     準備が整ったら、`plotsr`を実行してプロットを作成します。
 
     ```bash
-    plotsr --sr ${PREFIX}_syri.out --genomes genomes.txt -H 10 -W 15 -o ${PREFIX}_plot.pdf
+    plotsr --sr flye_vs_canu_syrisyri.out --genomes genomes.txt -H 10 -W 15 -o flye_vs_canu_plot.pdf
     ```
 
       * `--sr`: SyRiの出力ファイル (`.out`) を指定します。

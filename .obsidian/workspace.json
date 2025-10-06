@@ -25,14 +25,12 @@
             "id": "6879f4ffd243f6a1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "md/memo/daily/oct2.md",
-                "mode": "source",
-                "source": false
+                "file": "flye_vs_canu_plot.pdf"
               },
-              "icon": "lucide-file",
-              "title": "oct2"
+              "icon": "lucide-file-text",
+              "title": "flye_vs_canu_plot"
             }
           },
           {
@@ -137,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/oct2.md",
+                "file": "flye_vs_canu_plot.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for oct2"
+              "title": "Backlinks for flye_vs_canu_plot"
             }
           },
           {
@@ -213,15 +211,20 @@
   },
   "active": "6879f4ffd243f6a1",
   "lastOpenFiles": [
-    "md/memo/daily/Jul-14-memo.md",
     "md/memo/daily/oct2.md",
+    "flye_vs_canu.png",
+    "flye_vs_canu_plot.pdf",
     "assembly2/memo/ragtag-pilon-canu-flye.md",
+    "assembly2/memo/ragtag-medaka-canu-flye.md",
+    "assembly2/memo/scaffolding-polishing-assesment.md",
+    "flye_vs_canu_plot.png",
+    "md/memo/daily/sep26.md",
+    "md/memo/daily/Jul-14-memo.md",
     "assembly2/quast/quast_polished1/report.pdf",
     "assembly2/quast/quast_polished2/report.pdf",
     "md/memo/daily/oct-1.md",
     "Pasted image 20250919163820.png",
     "Pasted image 20250926150234.png",
-    "md/memo/daily/sep26.md",
     "assembly2/logs/fasta/flye_vs_canu.bam.bai",
     "assembly2/logs/fasta/flye_vs_canu.bam",
     "assembly2/logs/fasta",
@@ -235,7 +238,6 @@
     "md/memo/daily/sep19.md",
     "assembly2/memo/read-mapping-to-assembly.md",
     "assembly2/To visualize repeats in the genome_ja.md",
-    "canu_polished_round1.fasta.out",
     "assembly2/memo/final/rDNA.md",
     "assembly2/memo/final/ltr-retriver_TEsorter.md",
     "md/memo/daily/aug29.md",
@@ -248,17 +250,12 @@
     "md/memo/daily/aug21.md",
     "md/memo/daily/jul-16.md",
     "md/memo/daily/jul-17.md",
-    "md/memo/daily/sep8.md",
-    "assembly2/memo/final-assesment-1.md",
-    "assembly2/memo/DIRS1.md",
     "Pasted image 20250912150840.png",
     "synteny_comparison.png",
     "Pasted image 20250908154103.png",
     "Pasted image 20250908124022.png",
     "Pasted image 20250908124103.png",
     "Pasted image 20250908124351.png",
-    "Pasted image 20250828170802.png",
-    "Pasted image 20250828163717.png",
     "Untitled.canvas"
   ]
 }
