@@ -33,7 +33,7 @@ PREFIX="flye_vs_canu"
 
 # delta-filterのオプションを -1 から -m に変更
 # これにより、1対多や多対多のアライメントが保持される
-delta-filter -m -q -r ${PREFIX}.delta > ${PREFIX}.m-to-m.filter.delta
+delta-filter -m ${PREFIX}.delta > ${PREFIX}.m-to-m.filter.delta
 
 # 座標情報の抽出（入力ファイル名を変更）
 show-coords -THrd ${PREFIX}.m-to-m.filter.delta > ${PREFIX}.m-to-m.coords
@@ -95,15 +95,12 @@ QRY="assembly2/assembly-results/ragtag_canu_scaffold/canu_polished_round1.fasta"
 OUT_PREFIX="flye_vs_canu_syri_mtom"
 
 # --- 以下を1コマンドとして実行 ---
-delta-filter -m -q -r ${PREFIX}.delta > ${PREFIX}.m-to-m.filter.delta && \
+delta-filter -m ${PREFIX}.delta > ${PREFIX}.m-to-m.filter.delta && \
 show-coords -THrd ${PREFIX}.m-to-m.filter.delta > ${PREFIX}.m-to-m.coords && \
 syri -c ${PREFIX}.m-to-m.coords \
      -d ${PREFIX}.m-to-m.filter.delta \
      -r ${REF} \
      -q ${QRY} \
      --prefix ${OUT_PREFIX} --no-chrmatch && \
-plotsr --sr ${OUT_PREFIX}.out \
-       --genomes genomes.txt \
-       -H 10 -W 15 \
-       -o flye_vs_canu_plot_mtom.pdf
+plotsr --sr ${OUT_PREFIX}syri.out \ --genomes genomes.txt \ -H 10 -W 15 \ -o flye_vs_canu_plot_mtom.pdf
 ```
