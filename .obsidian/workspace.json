@@ -11,12 +11,14 @@
             "id": "a2ab44afaf6e54f8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "flye_vs_canu_plot_gtog.pdf"
+                "file": "md/memo/daily/oct15.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "flye_vs_canu_plot_gtog"
+              "icon": "lucide-file",
+              "title": "oct15"
             }
           },
           {
@@ -132,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "flye_vs_canu_plot_gtog.pdf",
+                "file": "md/memo/daily/oct15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +144,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for flye_vs_canu_plot_gtog"
+              "title": "Backlinks for oct15"
             }
           },
           {
@@ -208,6 +210,11 @@
   },
   "active": "a2ab44afaf6e54f8",
   "lastOpenFiles": [
+    "md/memo/daily/oct8.md",
+    "flye_vs_canu_plot_mtom.pdf",
+    "Pasted image 20250625152807.png",
+    "flye_vs_canu_plot_gtog.pdf",
+    "flye_vs_canu_plot.pdf",
     "flye_vs_canu_filtered_q.png",
     "md/memo/daily/sep19.md",
     "md/memo/daily/sep26.md",
@@ -217,10 +224,6 @@
     "md/memo/daily/oct-1.md",
     "md/memo/daily/oct2.md",
     "md/memo/daily/oct15.md",
-    "flye_vs_canu_plot.pdf",
-    "flye_vs_canu_plot_mtom.pdf",
-    "Pasted image 20250625152807.png",
-    "flye_vs_canu_plot_gtog.pdf",
     "md/memo/daily/sep5.md",
     "md/memo/daily/sep8.md",
     "md/memo/daily/sep10.md",
@@ -230,7 +233,6 @@
     "assembly2/memo/final/DIRS1.md",
     "md/memo/daily/sep12.md",
     "md/memo/daily/sep4.md",
-    "md/memo/daily/oct8.md",
     "md/memo/daily/oct16.md",
     "md/memo/daily/Jul-14-memo.md",
     "flye_vs_canu_syrisyri.out",

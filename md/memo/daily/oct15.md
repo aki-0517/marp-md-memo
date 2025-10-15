@@ -67,3 +67,17 @@ mummerplot --png -p ${PREFIX}_unfiltered ${PREFIX}.delta --layout
 ### ## まとめ
 
 まずは **手順1** の `grep` コマンドで、アラインメントの有無をチェックするのが最も効率的です。そこから、`nucmer` に戻るべきか、`syri` の挙動を詳しく見るべきかの判断ができます。
+
+
+## mergeのやり方
+
+quickmerge
+https://github.com/mahulchak/quickmerge
+
+longstitch
+https://github.com/bcgsc/LongStitch
+
+ragtag
+https://github.com/malonge/RagTag
+
+galaxyのtutorialにやり方あるかも？
