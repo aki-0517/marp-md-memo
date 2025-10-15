@@ -72,7 +72,7 @@ syri -c ${PREFIX}.m-to-m.coords \
 Bash
 
 ```
-plotsr --sr ${OUT_PREFIX}.out \
+plotsr --sr flye_vs_canu_syri_mtomsyri.out \
        --genomes genomes.txt \
        -H 10 -W 15 \
        -o flye_vs_canu_plot_mtom.pdf
