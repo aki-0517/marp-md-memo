@@ -109,12 +109,6 @@ RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output_canu -engine
 
 ---
 
-### ## 2️⃣ DIRS のみ抽出（不要になります）
-
-`dd_dirs1.fasta`のみをライブラリとして使用したため、出力にはDIRS-1のヒットしか含まれません。したがって、`grep`で"DIRS"を抽出するこのステップは**不要**です。
-
----
-
 ### ## 3️⃣ BED 形式に変換
 
 `grep`が不要になったので、RepeatMaskerが直接出力したGFFファイルを`gff2bed`の入力として使います。
