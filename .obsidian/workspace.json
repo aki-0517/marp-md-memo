@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a2ab44afaf6e54f8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "assembly2/merged/report.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "report"
-            }
-          },
-          {
-            "id": "6879f4ffd243f6a1",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "flye_vs_canu_plot.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "flye_vs_canu_plot"
-            }
-          },
-          {
             "id": "3509b37514aa6fe4",
             "type": "leaf",
             "state": {
@@ -59,8 +35,7 @@
               "title": "ltr-retriver_TEsorter"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,21 +184,22 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
+    "assembly2/merged/report.pdf",
+    "plot_flye89_vs_canu90.pdf",
+    "md/memo/daily/oct18.md",
+    "md/memo/daily/sep26.md",
+    "flye_vs_canu_plot.pdf",
     "md/memo/daily/Jul-14-memo.md",
     "assembly2/memo/read-mapping-to-assembly.md",
-    "md/memo/daily/oct18.md",
     "assembly2/quast/scaffolding-pilon/report.pdf",
     "md/memo/summary.md",
     "md/memo/shasta-break-analyze.md",
     "md/memo/daily/sep19.md",
-    "md/memo/daily/sep26.md",
     "Untitled.base",
     "md/memo/daily/oct17.md",
     "md/memo/daily/aug13.md",
     "md/memo/daily/aug-8.md",
     "md/memo/daily/aug-5.md",
-    "flye_vs_canu_plot.pdf",
-    "assembly2/merged/report.pdf",
     "assembly2/memo/ragtag-pilon-canu-flye.md",
     "md/memo/daily/aug-12.md",
     "md/memo/daily/aug19.md",
@@ -237,7 +213,6 @@
     "merged.DIRS.bed",
     "assembly2/merged/fasta/merged_canu_flye_merged.fasta.fai",
     "assembly2/merged/fasta/merged_canu_flye_merged.fasta",
-    "merged_canu_flye_merged.fasta",
     "assembly2/memo/final/rDNA.md",
     "assembly2/memo/final/DIRS1.md",
     "md/memo/daily/oct15.md",
