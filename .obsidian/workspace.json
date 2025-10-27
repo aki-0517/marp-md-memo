@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/oct18.md",
+                "file": "md/memo/daily/oct27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "oct18"
+              "title": "oct27"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/oct18.md",
+                "file": "md/memo/daily/oct27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for oct18"
+              "title": "Backlinks for oct27"
             }
           },
           {
@@ -184,9 +184,15 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
+    "flye_vs_canu_filtered_q.png",
+    "flye_vs_canu.png",
+    "flye_vs_canu_plot_gtog.pdf",
+    "flye_vs_canu_plot_mtom.pdf",
+    "flye_vs_canu_unfiltered.png",
+    "md/memo/daily/oct27.md",
+    "md/memo/daily/oct18.md",
     "assembly2/merged/report.pdf",
     "plot_flye89_vs_canu90.pdf",
-    "md/memo/daily/oct18.md",
     "md/memo/daily/sep26.md",
     "flye_vs_canu_plot.pdf",
     "md/memo/daily/Jul-14-memo.md",
@@ -211,18 +217,12 @@
     "assembly2/merged/fasta/merged.rDNA.bed",
     "merged.rDNA.bed",
     "merged.DIRS.bed",
-    "assembly2/merged/fasta/merged_canu_flye_merged.fasta.fai",
-    "assembly2/merged/fasta/merged_canu_flye_merged.fasta",
     "assembly2/memo/final/rDNA.md",
     "assembly2/memo/final/DIRS1.md",
     "md/memo/daily/oct15.md",
-    "flye_vs_canu_unfiltered.png",
     "md/memo/daily/oct8.md",
     "Pasted image 20250625152807.png",
-    "flye_vs_canu_filtered_q.png",
     "md/memo/daily/Jun-25-memo.md",
-    "md/memo/daily/may-28-memo.md",
-    "flye_vs_canu.png",
     "flye_vs_canu_plot.png",
     "Pasted image 20250919163820.png",
     "Pasted image 20250926150234.png",
