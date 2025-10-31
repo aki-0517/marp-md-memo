@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/oct29.md",
+                "file": "md/memo/daily/oct31.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "oct29"
+              "title": "oct31"
             }
           },
           {
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 461.5
+    "width": 217.50418853759766
   },
   "right": {
     "id": "086d12dbcca2797a",
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/oct29.md",
+                "file": "md/memo/daily/oct31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for oct29"
+              "title": "Backlinks for oct31"
             }
           },
           {
@@ -184,28 +184,36 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
+    "assembly2/mapping/fasta/mapping_final_q30.sorted.bam.bai",
+    "assembly2/mapping/fasta/mapping_final_q30.sorted.bam",
+    "mapping_final_q30.sorted.bam.bai",
+    "mapping_final_q30.sorted.bam",
+    "Pasted image 20251031150909.png",
+    "Pasted image 20251031150431.png",
+    "plot_flye89_vs_canu90.pdf",
+    "Pasted image 20251031143159.png",
+    "Pasted image 20251031143548.png",
+    "md/memo/daily/oct31.md",
+    "Pasted image 20251031140744.png",
+    "Pasted image 20251031132606.png",
+    "md/memo/daily/oct29.md",
+    "mapping_final.sorted.bam",
+    "Pasted image 20251029175328.png",
+    "flye_vs_canu.png",
+    "Pasted image 20250625152807.png",
     "assembly2/mapping/fasta/mapping_final.sorted.bam.bai",
     "assembly2/mapping/fasta/mapping_final.sorted.bam",
     "assembly2/mapping/fasta/mapping_final_canu.sorted.bam.bai",
     "assembly2/mapping/fasta/mapping_final_canu.sorted.bam",
     "assembly2/mapping/fasta",
-    "assembly2/mapping",
-    "mapping_final_canu.sorted.bam.bai",
-    "mapping_final.sorted.bam.bai",
-    "mapping_final_canu.sorted.bam",
-    "mapping_final.sorted.bam",
     "md/memo/daily/Jul-14-memo.md",
-    "md/memo/daily/oct29.md",
     "md/memo/daily/oct27.md",
     "assembly2/memo/read-mapping-to-assembly.md",
-    "mapping_minimap2_sorted.renamed_v2.bam.bai",
     "md/memo/daily/oct18.md",
     "md/memo/daily/aug13.md",
     "assembly2/memo/ax2.md",
     "md/memo/daily/aug29.md",
     "flye_vs_canu_filtered_q.png",
-    "flye_vs_canu.png",
-    "flye_vs_canu_unfiltered.png",
     "md/memo/daily/sep26.md",
     "md/memo/summary.md",
     "md/memo/shasta-break-analyze.md",
@@ -222,14 +230,6 @@
     "md/memo/daily/Jun-3-memo.md",
     "assembly2/memo/final/rDNA.md",
     "assembly2/memo/final/DIRS1.md",
-    "md/memo/daily/oct15.md",
-    "Pasted image 20250625152807.png",
-    "flye_vs_canu_plot.png",
-    "Pasted image 20250919163820.png",
-    "Pasted image 20250926150234.png",
-    "Pasted image 20250912150840.png",
-    "synteny_comparison.png",
-    "Pasted image 20250908154103.png",
     "Untitled.canvas"
   ]
 }

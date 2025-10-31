@@ -152,4 +152,3 @@ minimap2 -ax map-ont \
   samtools sort -o mapping_final_canu.sorted.bam && \
 samtools index mapping_final_canu.sorted.bam
 ```
-
