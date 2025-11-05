@@ -8,26 +8,40 @@
 ![[Pasted image 20251031140744.png]]
 
 
-
+ 
+ 
+ 
+ ---
 # chromesome2
 ## canu
 ![[Pasted image 20251031150431.png]]
 
+![[Pasted image 20251105102625.png]]
+
+
+
 ## flye
 ![[Pasted image 20251031150909.png]]
 
+![[Pasted image 20251105105437.png]]
 
+
+
+
+---
 # chromesome6
 
 
 ## canu
-
+![[Pasted image 20251031143548.png]]
 
 
 
 ## flye
 ![[Pasted image 20251031143159.png]]
-![[Pasted image 20251031143548.png]]
+
+
+
 
 
 
