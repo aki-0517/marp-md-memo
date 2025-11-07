@@ -128,3 +128,47 @@ gff2bed < DIRS_masked_output/ragtag_polished_round1.fasta.out.gff > DIRS_masked_
 ![[Pasted image 20250908124351.png]]
 
 
+
+
+
+# flye-fixed
+---
+
+## 1️⃣ RepeatMasker 実行
+
+`dd_dirs1.fasta` をライブラリに指定し、シンプルリピートを無視して DIRS-1 配列のみを検出します。
+
+```bash
+RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output_flye -engine ncbi -nolow flye_repaired_assembly_v4.5_final/flye_assembly_FIXED_v4.5.fasta
+```
+
+- `-dir DIRS_masked_output_flye` は出力ディレクトリの名前です。わかりやすく `_flye` と付けました。
+    
+- `-pa 4` はマルチスレッド 4 で実行。
+    
+- 出力は GFF と FASTA に生成されます。
+    
+
+---
+
+## 2️⃣ BED 形式に変換
+
+`gff2bed` を使って、GFF ファイルを BED に変換します。
+
+```bash
+gff2bed < DIRS_masked_output_flye/flye_assembly_FIXED_v4.5.fasta.out.gff > DIRS_masked_output_flye/flye.DIRS.bed
+```
+
+- これで、アセンブリ中の DIRS-1 配列に相同性のある領域だけを BED 形式で抽出できます。
+    
+
+---
+
+💡 **ポイント**:
+
+1. `-nolow` を付けることで、単純反復配列（low complexity sequences）は無視されます。
+    
+2. 出力 GFF は RepeatMasker が自動で作るので `grep` は不要です。
+    
+3. BED ファイル名は後で他の解析に使いやすいように、元の FASTA 名に対応させると便利です。
+    

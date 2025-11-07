@@ -46,7 +46,51 @@ gff2bed < rDNA_masked_output_canu/ragtag_polished_round1.fasta.out.gff > rDNA_ma
 
 
 
+# flye-fixed
+もちろんです！同じ手順を **`flye_repaired_assembly_v4.5_final/flye_assembly_FIXED_v4.5.fasta`** に対して適用すると、次のようになります。
 
+---
+
+## 1️⃣ RepeatMasker 実行
+
+rDNA 配列ライブラリを指定して、シンプルリピートを無視して検索します。
+
+```bash
+RepeatMasker -pa 4 -lib rdna_sequence.fasta -gff -dir rDNA_masked_output_flye -engine ncbi -nolow flye_repaired_assembly_v4.5_final/flye_assembly_FIXED_v4.5.fasta
+```
+
+- `-dir rDNA_masked_output_flye` で出力ディレクトリを Flye 用に変更。
+    
+- `-pa 4` は 4 スレッドで実行。
+    
+
+---
+
+## 2️⃣ BED 形式に変換
+
+RepeatMasker が出力した GFF ファイルを BED 形式に変換します。
+
+```bash
+gff2bed < rDNA_masked_output_flye/flye_assembly_FIXED_v4.5.fasta.out.gff > rDNA_masked_output_flye/flye.rDNA.bed
+```
+
+- これで、Flye アセンブリ中の rDNA 配列と相同性のある領域だけが BED 形式で抽出されます。
+    
+
+---
+
+💡 **ポイント**:
+
+1. `-nolow` で低複雑性領域を無視しているので、正確に rDNA 領域のみが検出されます。
+    
+2. BED ファイル名はアセンブリ名に対応させると後で解析しやすくなります。
+    
+3. 以前の DIRS マスク結果と混ざらないようにディレクトリを分けておくのがおすすめです。
+    
+
+---
+
+必要であれば、**DIRS と rDNA の両方をまとめて Flye, Canu, RagTag に対して一括処理する Bash スクリプト**も作れます。作ってほしいですか？
 
 
 

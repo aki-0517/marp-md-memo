@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/memo/daily/oct31.md",
+                "file": "md/memo/daily/nov7.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "oct31"
+              "title": "nov7"
+            }
+          },
+          {
+            "id": "5988d9a329ff80d4",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "assembly2/quast/scaffolding-pilon/report.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "report"
             }
           },
           {
@@ -106,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "md/memo/daily/oct31.md",
+                "file": "md/memo/daily/nov7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for oct31"
+              "title": "Backlinks for nov7"
             }
           },
           {
@@ -182,51 +194,52 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
-    "flye_vs_canu_plot_gtog.pdf",
-    "assembly2/memo/final/ltr-retriver_TEsorter.md",
-    "md/memo/daily/oct31.md",
-    "md/memo/daily/nov5.md",
-    "flye_vs_canu_plot_mtom.pdf",
-    "flye_vs_canu_unfiltered.png",
-    "md/memo/daily/oct18.md",
-    "md/memo/daily/oct8.md",
-    "plot_flye89_vs_canu90.pdf",
-    "md/memo/daily/sep26.md",
-    "md/memo/daily/sep19.md",
-    "flye_vs_canu_plot.pdf",
-    "flye_vs_canu.png",
-    "flye_vs_canu_filtered_q.png",
-    "md/memo/daily/oct2.md",
-    "md/memo/daily/oct-1.md",
-    "md/memo/daily/oct17.md",
-    "md/memo/daily/sep5.md",
-    "md/memo/daily/sep12.md",
-    "md/memo/daily/sep8.md",
-    "md/memo/daily/sep4.md",
-    "md/memo/daily/sep3.md",
-    "Pasted image 20251105105437.png",
-    "Pasted image 20251105102625.png",
-    "assembly2/mapping/fasta/mapping_final_q30.sorted.bam.bai",
-    "assembly2/mapping/fasta/mapping_final_q30.sorted.bam",
-    "mapping_final_q30.sorted.bam.bai",
-    "mapping_final_q30.sorted.bam",
-    "Pasted image 20251031150909.png",
-    "Pasted image 20251031150431.png",
-    "Pasted image 20251031143159.png",
-    "Pasted image 20251031143548.png",
-    "Pasted image 20251031140744.png",
+    "assembly2/memo/assembly-fix.md",
+    "md/memo/daily/nov7.md",
     "md/memo/daily/oct29.md",
-    "mapping_final.sorted.bam",
-    "assembly2/mapping/fasta/mapping_final.sorted.bam.bai",
-    "md/memo/daily/Jul-14-memo.md",
-    "md/memo/daily/oct27.md",
-    "assembly2/memo/read-mapping-to-assembly.md",
-    "md/memo/daily/aug13.md",
-    "assembly2/memo/ax2.md",
-    "md/memo/daily/aug29.md",
+    "md/memo/daily/oct31.md",
+    "md/memo/daily/may-29-memo.md",
+    "md/memo/daily/nov5.md",
+    "Pasted image 20251107151302.png",
+    "assembly2/memo/final/rDNA.md",
+    "assembly2/flye_fixed/fasta/flye.rDNA.bed",
+    "assembly2/flye_fixed/fasta/flye.DIRS.bed",
+    "assembly2/flye_fixed/flye.rDNA.bed",
+    "assembly2/flye_fixed/flye.DIRS.bed",
+    "flye.rDNA.bed",
+    "assembly2/memo/final/DIRS1.md",
+    "flye.DIRS.bed",
+    "assembly2/flye_fixed/fasta/flye_assembly_FIXED_v4.5.fasta.fai",
+    "assembly2/flye_fixed/fasta/flye_assembly_FIXED_v4.5.fasta",
+    "assembly2/flye_fixed/flye_assembly_FIXED_v4.5.fasta.fai",
+    "assembly2/flye_fixed/flye_assembly_FIXED_v4.5.fasta",
+    "flye_vs_canu_filtered_q.png",
+    "flye_vs_canu.png",
+    "flye_vs_canu_unfiltered.png",
+    "check_v4_plot.png",
+    "md/memo/dd.md",
+    "md/memo/daily-summary.md",
+    "md/memo/assenbly-assesment.md",
     "md/memo/summary.md",
+    "md/memo/daily/Jul-9-memo.md",
+    "md/memo/daily/Jul-14-memo.md",
+    "md/memo/daily/jul-16.md",
+    "md/memo/daily/jul-17.md",
+    "md/memo/daily/may-28-memo.md",
+    "md/memo/daily/Jun-3-memo.md",
+    "md/memo/daily/Jun-10-memo.md",
+    "md/memo/daily/jun-16-memo.md",
+    "md/memo/daily/jun-17-memo.md",
+    "md/memo/daily/Jun-25-memo.md",
+    "Pasted image 20251107131846.png",
+    "Pasted image 20251107125453.png",
+    "assembly2/memo/assembly-point.md",
+    "assembly2/memo/assembly-assesment.md",
+    "assembly2/memo/ragtag-pilon-canu-flye.md",
+    "Pasted image 20251107105129.png",
+    "Pasted image 20251107104936.png",
+    "Pasted image 20251107104554.png",
     "md/memo/shasta-break-analyze.md",
-    "md/memo/daily/aug-8.md",
     "Untitled.canvas"
   ]
 }
