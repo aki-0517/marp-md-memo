@@ -94,3 +94,5 @@ minimap2 -ax map-ont \
   samtools sort -o mapping_flye_fixed.sorted.bam && \
 samtools index mapping_flye_fixed.sorted.bam
 ```
+
+https://www.sciencedirect.com/science/article/pii/S0960982225005081?via%3Dihub#abs0015

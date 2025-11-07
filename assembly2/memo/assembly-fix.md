@@ -69,7 +69,7 @@ nano を使うと、このようなペーストエラーが起こりやすいで
 
 Bash
 
-```
+```python
 cat << 'EOF' > run_fix_v4.5.sh
 #!/bin/bash
 
