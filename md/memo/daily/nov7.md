@@ -96,3 +96,9 @@ samtools index mapping_flye_fixed.sorted.bam
 ```
 
 https://www.sciencedirect.com/science/article/pii/S0960982225005081?via%3Dihub#abs0015
+
+
+
+次
+scp aki@100.84.9.80:mapping_flye_fixed.sorted.bam .
+scp aki@100.84.9.80:mapping_flye_fixed.sorted.bam.bai .

@@ -11,12 +11,14 @@
             "id": "3509b37514aa6fe4",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "flye__fixed_vs_canu_plot_gtog.pdf"
+                "file": "md/memo/daily/nov7.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "flye__fixed_vs_canu_plot_gtog"
+              "icon": "lucide-file",
+              "title": "nov7"
             }
           },
           {
@@ -128,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "flye__fixed_vs_canu_plot_gtog.pdf",
+                "file": "md/memo/daily/nov7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +140,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for flye__fixed_vs_canu_plot_gtog"
+              "title": "Backlinks for nov7"
             }
           },
           {
@@ -204,13 +206,13 @@
   },
   "active": "3509b37514aa6fe4",
   "lastOpenFiles": [
+    "flye__fixed_vs_canu_plot_gtog.pdf",
     "mapping_flye_fixed.sorted.bam",
     "assembly2/memo/pilon_1.md",
     "assembly2/memo/pilon_1-assesment.md",
     "assembly2/memo/scaffolding-polishing-assesment.md",
     "assembly2/memo/ragtag-pilon-canu-flye.md",
     "flye_vs_canu_plot_gtog.pdf",
-    "flye__fixed_vs_canu_plot_gtog.pdf",
     "flye_vs_canu_plot.pdf",
     "flye_vs_canu_filtered_q.png",
     "assembly2/memo/assembly-fix.md",
