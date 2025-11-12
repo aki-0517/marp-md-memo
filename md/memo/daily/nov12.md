@@ -215,4 +215,33 @@ bash
 
 # merged_final_merge.fasta
 
-quick mergeのパラメータ調整
+
+
+
+# 873341.pts-53.tardis
+```bash
+minimap2 -ax map-ont \
+  merged_final_merge.fasta \
+  Dicty_gDNA_NEB-2.fastq | \
+  samtools view -bS - | \
+  samtools sort -o mapping_merged.sorted.bam && \
+samtools index mapping_merged.sorted.bam
+```
+
+
+```bash
+RepeatMasker -pa 4 -lib dd_dirs1.fasta -gff -dir DIRS_masked_output_merged -engine ncbi -nolow merged_final_merge.fasta && \
+gff2bed < DIRS_masked_output_merged/merged_final_merge.fasta.out.gff > DIRS_masked_output_merged/merged.DIRS.bed
+```
+
+```bash
+RepeatMasker -pa 4 -lib rdna_sequence.fasta -gff -dir rDNA_masked_output_merged -engine ncbi -nolow merged_final_merge.fasta && \
+gff2bed < rDNA_masked_output_merged/merged_final_merge.fasta.out.gff > rDNA_masked_output_merged/merged.rDNA.bed
+```
+
+
+
+
+やること: quick mergeのパラメータ調整
+
+
