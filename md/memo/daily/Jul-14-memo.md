@@ -10,7 +10,7 @@ assembly2/assembly-results/medaka_canu_round2/consensus.fasta
 assembly2/assembly-results/quast_medaka_combined/contigs_reports/Flye_Medaka.mis_contigs.fa
 assembly2/assembly-results/quast_medaka_combined/contigs_reports/Canu_Medaka.mis_contigs.fa
 assembly2/assembly-results/ragtag_flye_scaffold/ragtag.scaffold.fasta
-assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta<!-- これ -->
+assembly2/assembly-results/ragtag_flye_scaffold/ragtag_polished_round1.fasta
 assembly2/assembly-results/ragtag_flye_scaffold/ragtag_medaka_polished.fasta 
 assembly2/assembly-results/ragtag_flye_scaffold/quast_ragtag_comparison/contigs_reports/pilon_polished.mis_contigs.fa
 assembly2/assembly-results/ragtag_flye_scaffold/quast_ragtag_comparison/contigs_reports/scaffold_only.mis_contigs.fa
@@ -26,6 +26,8 @@ assembly2/assembly-results/quast_scaffold_combined/contigs_reports/Flye_Scaffold
 assembly2/assembly-results/quast_scaffold_combined/contigs_reports/Canu_Scaffold.mis_contigs.fa
 assembly2/quast_results_polished/contigs_reports/Canu_Polished.mis_contigs.fa
 assembly2/quast_results_polished/contigs_reports/Flye_Polished.mis_contigs.fa
+
+flye_repaired_assembly_v4.5_final/flye_assembly_FIXED_v4.5.fasta<!-- これ -->
 
 
 /home/aki/ncbi_dataset/ncbi_dataset/data/GCF_000004695.1/GCF_000004695.1_dicty_2.7_genomic.fna
